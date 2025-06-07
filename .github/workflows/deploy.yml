@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # This workflow will run every time you push changes to the 'main' branch
+
+  # Allows you to run this workflow manually from the Actions tab on GitHub
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # The type of machine to run the job on
+
+    # Permissions needed for GitHub Pages deployment
+    permissions:
+      contents: write # Allows the workflow to checkout code and write artifacts
+      pages: write    # Allows deployment to GitHub Pages
+      id-token: write # Required for secure deployment with OIDC
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Action to clone your repository
+
+      # This step sets up the GitHub Pages environment
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # This step uploads your site's content as an artifact
+      # For a static site, your entire repository is the content.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './' # This tells the action to upload everything in the root of your repo
+
+      # This step deploys the uploaded artifact to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
