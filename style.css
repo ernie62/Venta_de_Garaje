@@ -124,3 +124,110 @@ footer {
     color: #6c757d;
     border-top: 1px solid #e0e0e0;
 }
+
+/* Estilos para el Modal de Imagen */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Permanece en su lugar */
+    z-index: 100; /* Se superpone a todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Permite desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.9); /* Fondo negro con transparencia */
+    padding-top: 60px; /* Espacio desde la parte superior para dejar el botón de cerrar visible */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Contenido del modal que contiene la imagen y los botones de navegación */
+.modal-content {
+    display: flex; /* Usar flexbox para la imagen y los botones */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: space-between; /* Espaciar imagen y botones */
+    position: relative; /* Para que los botones se posicionen absolutamente dentro de él */
+    max-width: 90%; /* Ancho máximo del contenido del modal */
+    max-height: 90vh; /* Altura máxima del contenido del modal */
+    background-color: transparent; /* No background needed here, handled by modal overlay */
+    padding: 0 50px; /* Añade un padding a los lados para que los botones queden fuera de la imagen */
+    box-sizing: border-box; /* Incluye padding en el ancho/alto */
+}
+
+/* La imagen dentro del modal */
+#modalImage {
+    max-width: 100%; /* La imagen no debe exceder el ancho de su contenedor */
+    max-height: 80vh; /* La imagen no debe exceder la altura de su contenedor */
+    object-fit: contain; /* Ajusta la imagen sin recortar, manteniendo la proporción */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro del flex item */
+}
+
+/* Botón de cerrar (X) */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 101; /* Asegura que esté por encima de la imagen */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botones de navegación (anterior/siguiente) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute; /* Posicionamiento absoluto relativo a .modal-content */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente de forma más precisa */
+    width: auto;
+    padding: 16px 20px; /* Ajusta padding para que sean más grandes */
+    color: white;
+    font-weight: bold;
+    font-size: 25px; /* Aumenta el tamaño de la flecha */
+    transition: 0.6s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    border-radius: 50%; /* Hace los botones circulares */
+    z-index: 10; /* Asegura que estén por encima de la imagen */
+}
+
+/* Posición del botón "anterior" a la izquierda */
+.prev {
+    left: 10px; /* Desplazamiento desde el borde izquierdo del modal-content */
+}
+
+/* Posición del botón "siguiente" a la derecha */
+.next {
+    right: 10px; /* Desplazamiento desde el borde derecho del modal-content */
+}
+
+/* Efecto hover en los botones */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Contador de imágenes (ej. "1 / 5") */
+.image-counter {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute; /* Posicionamiento absoluto relativo a .modal-content */
+    bottom: 10px; /* Posicionado cerca de la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    border-radius: 5px;
+    z-index: 10;
+}

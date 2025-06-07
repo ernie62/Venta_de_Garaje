@@ -22,85 +22,153 @@
             <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
         </div>
     </div>
+    <div id="imageModal" class="modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="Imagen del artículo">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div id="imageCounter" class="image-counter"></div>
+            </div>
+    </div>
 
+    <footer>
+        <p>&copy; 2025 Venta de Garaje Familia Moreno Davis. Todos los derechos reservados.</p>
+    </footer>
     <footer>
         <p>&copy; 2025 Venta de Garaje Familia Moreno Davis. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const itemListContainer = document.querySelector('.item-list');
+    let currentModalImages = []; // Stores images for the currently open item
+    let currentImageIndex = 0;   // Current image index in the modal
+    let allItemsData = [];       // Store all fetched items for easy access
 
-            fetch('data.json')
-                .then(response => {
-                    // Verifica si la respuesta de la red fue exitosa
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+    // Get the modal elements
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const imageCounter = document.getElementById('imageCounter');
+    const closeButton = document.querySelector('.close-button');
+
+    // Function to open the modal and display images
+    function openModal(itemImages, startingIndex = 0) {
+        currentModalImages = itemImages;
+        currentImageIndex = startingIndex;
+        imageModal.style.display = 'block';
+        showSlides(currentImageIndex);
+    }
+
+    // Function to navigate through images in the modal
+    function plusSlides(n) {
+        currentImageIndex += n;
+        if (currentImageIndex >= currentModalImages.length) {
+            currentImageIndex = 0; // Loop back to the first image
+        }
+        if (currentImageIndex < 0) {
+            currentImageIndex = currentModalImages.length - 1; // Loop back to the last image
+        }
+        showSlides(currentImageIndex);
+    }
+
+    // Function to display a specific image in the modal
+    function showSlides(index) {
+        if (currentModalImages.length > 0) {
+            modalImage.src = currentModalImages[index];
+            imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
+        } else {
+            modalImage.src = 'https://via.placeholder.com/600x400?text=Sin+Foto'; // Fallback
+            imageCounter.textContent = '';
+        }
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        imageModal.style.display = 'none';
+        currentModalImages = []; // Clear images
+        currentImageIndex = 0;   // Reset index
+    }
+
+    // Close button event listener
+    closeButton.onclick = closeModal;
+
+    // Close modal when clicking outside the image (on the overlay)
+    window.onclick = function(event) {
+        if (event.target == imageModal) {
+            closeModal();
+        }
+    };
+
+    // Main DOMContentLoaded logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const itemListContainer = document.querySelector('.item-list');
+
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(items => {
+                allItemsData = items; // Store fetched data globally
+
+                items.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item');
+
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('item-image-container');
+                    const img = document.createElement('img');
+                    img.src = item.fotos && item.fotos.length > 0 ? item.fotos[0] : 'https://via.placeholder.com/400x300?text=Sin+Foto';
+                    img.alt = item.descripcion;
+
+                    // Make the image clickable to open the modal
+                    if (item.fotos && item.fotos.length > 0) {
+                        img.style.cursor = 'pointer'; // Indicate it's clickable
+                        img.onclick = () => openModal(item.fotos, 0); // Open modal with all photos
+                    } else {
+                        // If no photos, make placeholder clickable but show placeholder in modal
+                         img.style.cursor = 'default';
+                         img.onclick = () => openModal(['https://via.placeholder.com/600x400?text=Sin+Foto'], 0);
                     }
-                    // Convierte la respuesta a formato JSON
-                    return response.json();
-                })
-                .then(items => {
-                    // Itera sobre cada artículo obtenido del JSON
-                    items.forEach(item => {
-                        // Crea el div principal para cada artículo
-                        const itemDiv = document.createElement('div');
-                        itemDiv.classList.add('item'); // Añade la clase CSS 'item'
 
-                        // Contenedor para la imagen
-                        const imageContainer = document.createElement('div');
-                        imageContainer.classList.add('item-image-container');
-                        const img = document.createElement('img');
-                        // Asigna la fuente de la imagen (la primera foto del array 'fotos' o un placeholder si no hay fotos)
-                        img.src = item.fotos && item.fotos.length > 0 ? item.fotos[0] : 'https://via.placeholder.com/400x300?text=Sin+Foto';
-                        // Asigna el texto alternativo para la imagen (importante para accesibilidad)
-                        img.alt = item.descripcion;
-                        imageContainer.appendChild(img);
-                        itemDiv.appendChild(imageContainer);
+                    imageContainer.appendChild(img);
+                    itemDiv.appendChild(imageContainer);
 
-                        // Contenedor para la información del artículo (descripción, precio, disponibilidad)
-                        const itemInfo = document.createElement('div');
-                        itemInfo.classList.add('item-info');
+                    const itemInfo = document.createElement('div');
+                    itemInfo.classList.add('item-info');
 
-                        // Título del artículo (descripción)
-                        const h2 = document.createElement('h2');
-                        h2.textContent = item.descripcion;
-                        itemInfo.appendChild(h2);
+                    const h2 = document.createElement('h2');
+                    h2.textContent = item.descripcion;
+                    itemInfo.appendChild(h2);
 
-                        // Detalles adicionales (si existen)
-                        if (item.detallesAdicionales) {
-                            const pDetails = document.createElement('p');
-                            pDetails.textContent = item.detallesAdicionales;
-                            itemInfo.appendChild(pDetails);
-                        }
+                    if (item.detallesAdicionales) {
+                        const pDetails = document.createElement('p');
+                        pDetails.textContent = item.detallesAdicionales;
+                        itemInfo.appendChild(pDetails);
+                    }
 
-                        // Precio del artículo
-                        const priceSpan = document.createElement('span');
-                        priceSpan.classList.add('price');
-                        priceSpan.textContent = item.precio;
-                        itemInfo.appendChild(priceSpan);
+                    const priceSpan = document.createElement('span');
+                    priceSpan.classList.add('price');
+                    priceSpan.textContent = item.precio;
+                    itemInfo.appendChild(priceSpan);
 
-                        // Disponibilidad del artículo
-                        const availabilityP = document.createElement('p');
-                        // Determina la clase CSS según la disponibilidad para aplicar color
-                        const availabilityClass = item.disponibilidad.toLowerCase() === 'sí' || item.disponibilidad.toLowerCase() === 'si' ? 'available' : 'unavailable';
-                        availabilityP.classList.add('availability', availabilityClass);
-                        availabilityP.textContent = `Disponibilidad: ${item.disponibilidad}`;
-                        itemInfo.appendChild(availabilityP);
+                    const availabilityP = document.createElement('p');
+                    const availabilityClass = item.disponibilidad.toLowerCase() === 'sí' || item.disponibilidad.toLowerCase() === 'si' ? 'available' : 'unavailable';
+                    availabilityP.classList.add('availability', availabilityClass);
+                    availabilityP.textContent = `Disponibilidad: ${item.disponibilidad}`;
+                    itemInfo.appendChild(availabilityP);
 
-                        // Añade el bloque de información al div del artículo
-                        itemDiv.appendChild(itemInfo);
-                        // Añade el artículo completo al contenedor principal de la lista
-                        itemListContainer.appendChild(itemDiv);
-                    });
-                })
-                .catch(error => {
-                    // Manejo de errores: si data.json no se carga o tiene un error
-                    console.error('Error al cargar los artículos:', error);
-                    itemListContainer.innerHTML = '<p style="text-align: center; color: red;">No se pudieron cargar los artículos. Por favor, inténtalo de nuevo más tarde.</p>';
+                    itemDiv.appendChild(itemInfo);
+                    itemListContainer.appendChild(itemDiv);
                 });
-        });
-    </script>
+            })
+            .catch(error => {
+                console.error('Error al cargar los artículos:', error);
+                itemListContainer.innerHTML = '<p style="text-align: center; color: red;">No se pudieron cargar los artículos. Por favor, inténtalo de nuevo más tarde.</p>';
+            });
+    });
+</script>
 
 </body>
 </html>
