@@ -137,7 +137,7 @@ footer {
     overflow: auto; /* Permite desplazamiento si es necesario */
     background-color: rgba(0,0,0,0.9); /* Fondo negro con transparencia */
     padding-top: 60px; /* Espacio desde la parte superior para dejar el botón de cerrar visible */
-    display: flex; /* Usar flexbox para centrar el contenido */
+    /*display: none;  Usar flexbox para centrar el contenido */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
 }
