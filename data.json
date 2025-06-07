@@ -10,18 +10,6 @@
       "https://images.pexels.com/photos/1034091/pexels-photo-1034091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ]
   },
- 
-  {
-    "id": "item-003",
-    "descripcion": "Juego de Ollas y Sartenes (5 piezas)",
-    "detallesAdicionales": "Set completo para tu cocina, poco uso.",
-    "precio": "$120.000 COP",
-    "disponibilidad": "Sí",
-    "fotos": [
-      "https://images.pexels.com/photos/4049887/pexels-photo-4049887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ]
-  },
    {
     "id": "item-002",
     "descripcion": "Televisor Smart TV 32 pulgadas",
