@@ -17,6 +17,9 @@ jobs:
       contents: write # Allows the workflow to checkout code and write artifacts
       pages: write    # Allows deployment to GitHub Pages
       id-token: write # Required for secure deployment with OIDC
+    
+    environment:
+      name: github-pages
 
     steps:
       - name: Checkout code
