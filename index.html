@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Venta de Garaje Moreno Davis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Catálogo de la Venta de Garaje Moreno Davis</h1>
+
+        <div class="item-list">
+            </div>
+
+        <div class="contact-info">
+            <h2>¡Contáctanos!</h2>
+            <p>Para más información o para coordinar una compra, no dudes en contactarnos:</p>
+            <p>Email: <a href="mailto:ernie.moreno62@gmail.com">ernie.moreno62@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:+573108791067">+57 310 879 1067</a></p>
+            <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Venta de Garaje Familia Moreno Davis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const itemListContainer = document.querySelector('.item-list');
+
+            fetch('data.json')
+                .then(response => {
+                    // Verifica si la respuesta de la red fue exitosa
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    // Convierte la respuesta a formato JSON
+                    return response.json();
+                })
+                .then(items => {
+                    // Itera sobre cada artículo obtenido del JSON
+                    items.forEach(item => {
+                        // Crea el div principal para cada artículo
+                        const itemDiv = document.createElement('div');
+                        itemDiv.classList.add('item'); // Añade la clase CSS 'item'
+
+                        // Contenedor para la imagen
+                        const imageContainer = document.createElement('div');
+                        imageContainer.classList.add('item-image-container');
+                        const img = document.createElement('img');
+                        // Asigna la fuente de la imagen (la primera foto del array 'fotos' o un placeholder si no hay fotos)
+                        img.src = item.fotos && item.fotos.length > 0 ? item.fotos[0] : 'https://via.placeholder.com/400x300?text=Sin+Foto';
+                        // Asigna el texto alternativo para la imagen (importante para accesibilidad)
+                        img.alt = item.descripcion;
+                        imageContainer.appendChild(img);
+                        itemDiv.appendChild(imageContainer);
+
+                        // Contenedor para la información del artículo (descripción, precio, disponibilidad)
+                        const itemInfo = document.createElement('div');
+                        itemInfo.classList.add('item-info');
+
+                        // Título del artículo (descripción)
+                        const h2 = document.createElement('h2');
+                        h2.textContent = item.descripcion;
+                        itemInfo.appendChild(h2);
+
+                        // Detalles adicionales (si existen)
+                        if (item.detallesAdicionales) {
+                            const pDetails = document.createElement('p');
+                            pDetails.textContent = item.detallesAdicionales;
+                            itemInfo.appendChild(pDetails);
+                        }
+
+                        // Precio del artículo
+                        const priceSpan = document.createElement('span');
+                        priceSpan.classList.add('price');
+                        priceSpan.textContent = item.precio;
+                        itemInfo.appendChild(priceSpan);
+
+                        // Disponibilidad del artículo
+                        const availabilityP = document.createElement('p');
+                        // Determina la clase CSS según la disponibilidad para aplicar color
+                        const availabilityClass = item.disponibilidad.toLowerCase() === 'sí' || item.disponibilidad.toLowerCase() === 'si' ? 'available' : 'unavailable';
+                        availabilityP.classList.add('availability', availabilityClass);
+                        availabilityP.textContent = `Disponibilidad: ${item.disponibilidad}`;
+                        itemInfo.appendChild(availabilityP);
+
+                        // Añade el bloque de información al div del artículo
+                        itemDiv.appendChild(itemInfo);
+                        // Añade el artículo completo al contenedor principal de la lista
+                        itemListContainer.appendChild(itemDiv);
+                    });
+                })
+                .catch(error => {
+                    // Manejo de errores: si data.json no se carga o tiene un error
+                    console.error('Error al cargar los artículos:', error);
+                    itemListContainer.innerHTML = '<p style="text-align: center; color: red;">No se pudieron cargar los artículos. Por favor, inténtalo de nuevo más tarde.</p>';
+                });
+        });
+    </script>
+
+</body>
+</html>

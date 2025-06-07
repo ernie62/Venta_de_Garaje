@@ -1,0 +1,45 @@
+[
+  {
+    "id": "item-001",
+    "descripcion": "Cama Doble con Colchón",
+    "detallesAdicionales": "Cama doble, incluye base y colchón. Buen estado. Perfecta para un dormitorio principal.",
+    "precio": "$500.000 COP",
+    "disponibilidad": "Sí",
+    "fotos": [
+      "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/1034091/pexels-photo-1034091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ]
+  },
+  {
+    "id": "item-002",
+    "descripcion": "Televisor Smart TV 32 pulgadas",
+    "detallesAdicionales": "Televisor Samsung, funcionando perfectamente. Con control remoto.",
+    "precio": "$350.000 COP",
+    "disponibilidad": "No",
+    "fotos": [
+      "https://images.pexels.com/photos/196656/pexels-photo-196656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3358763/pexels-photo-3358763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ]
+  },
+  {
+    "id": "item-003",
+    "descripcion": "Juego de Ollas y Sartenes (5 piezas)",
+    "detallesAdicionales": "Set completo para tu cocina, poco uso.",
+    "precio": "$120.000 COP",
+    "disponibilidad": "Sí",
+    "fotos": [
+      "https://images.pexels.com/photos/4049887/pexels-photo-4049887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ]
+  },
+  {
+    "id": "item-004",
+    "descripcion": "Bicicleta de Montaña",
+    "detallesAdicionales": "Bicicleta para adulto, en buen estado, ideal para paseos.",
+    "precio": "$450.000 COP",
+    "disponibilidad": "Sí",
+    "fotos": [
+      "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ]
+  }
+]
