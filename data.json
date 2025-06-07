@@ -6,8 +6,9 @@
     "precio": "$500.000 COP",
     "disponibilidad": "Sí",
     "fotos": [
-      "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/196656/pexels-photo-196656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ".images/Bowls-porcelana-blanca-1.jpg",
+      ".images/Bowls-porcelana-blanca-2.jpg",
+      ".images/Bowls-porcelana-blanca-3.jpg"
     ]
   },
   {
