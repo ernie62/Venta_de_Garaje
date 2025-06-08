@@ -331,11 +331,17 @@ header {
     background-color: #c82333;
 }
 
+/* Styling for Result Count within the Filters Sidebar */
 .result-count {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-    text-align: right;
+    margin-top: 20px; /* Add some space from filters above */
+    padding: 10px 15px;
+    background-color: #e0f2f7; /* Light blue background */
+    border: 1px solid #cce9f5; /* Matching border */
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #0056b3; /* Darker blue text */
+    text-align: center; /* Center the text */
 }
 
 

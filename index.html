@@ -44,15 +44,17 @@
 
                 <div class="filter-group">
                     <h3>Disponibilidad</h3>
-                    <label><input type="checkbox" id="availableOnly"> Solo disponibles</label>
+                    <label><input type="checkbox" id="availableOnly" checked> Solo disponibles</label>
                 </div>
+
+                <div class="result-count" id="resultCount"></div> 
             </aside>
 
             <section class="item-gallery">
                 <p id="loading-message">Cargando productos...</p>
                 <div class="applied-filters" id="appliedFiltersContainer">
                     </div>
-                <div class="result-count" id="resultCount"></div>
+                
                 <div class="item-list" id="items-display-area">
                     </div>
                 <button id="loadMoreButton" class="load-more-button" style="display: none;">Cargar más</button>
@@ -97,7 +99,7 @@
         const imageModal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
         const imageCounter = document.getElementById('imageCounter');
-        const closeButton = document.querySelector('.close-button'); // Selected correctly
+        const closeButton = document.querySelector('.close-button'); 
 
         // Filter and Load More elements
         const filterToggleButton = document.getElementById('filterToggleButton');
@@ -195,10 +197,12 @@
                 filters.priceSort = language === 'es' ? 'Precio: Descendente' : 'Price: Descending';
             }
 
-            const availableOnly = document.getElementById('availableOnly').checked;
-            if (availableOnly) {
-                filters.availableOnly = language === 'es' ? 'Solo Disponibles' : 'Available Only';
+            // MODIFIED LOGIC FOR 'Solo Disponibles' FILTER CHIP
+            const availableOnlyChecked = document.getElementById('availableOnly').checked;
+            if (!availableOnlyChecked) { // If the checkbox is *unchecked* (meaning we're showing all)
+                filters.availableOnly = language === 'es' ? 'Mostrando Todos (incl. No Disponibles)' : 'Showing All (incl. Unavailable)';
             }
+
 
             // Create filter chips
             for (const key in filters) {
@@ -225,7 +229,9 @@
             } else if (key === 'priceSort') {
                 document.querySelector('input[name="priceSort"][value="none"]').checked = true;
             } else if (key === 'availableOnly') {
-                document.getElementById('availableOnly').checked = false;
+                // When the 'Show All' chip is removed, revert to the default state,
+                // which is showing only available items (checkbox checked).
+                document.getElementById('availableOnly').checked = true; 
             }
             applyFiltersAndRender();
         }
@@ -233,7 +239,8 @@
         function clearAllFilters() {
             document.getElementById('categoryFilter').value = 'all';
             document.querySelector('input[name="priceSort"][value="none"]').checked = true;
-            document.getElementById('availableOnly').checked = false;
+            // When clearing all, revert 'availableOnly' to its default (checked) state
+            document.getElementById('availableOnly').checked = true; 
             applyFiltersAndRender();
         }
 
@@ -302,6 +309,9 @@
 
                 const h2 = document.createElement('h2');
                 h2.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
+                // ADDED: Make h2 clickable to open modal
+                h2.style.cursor = 'pointer'; // Visual cue for clickable
+                h2.onclick = () => openModal(photosForModal, 0); // Open modal just like image
                 itemInfo.appendChild(h2);
 
                 const descriptionTextForCheck = language === 'es' ? item.descripcion : item.descripcionIngles;
@@ -365,9 +375,9 @@
                 currentItems = currentItems.filter(item => item.categoria === selectedCategory);
             }
 
-            // 2. Filter by availability
+            // 2. Filter by availability (This logic remains the same, as it correctly filters based on checkbox state)
             const showAvailableOnly = document.getElementById('availableOnly').checked;
-            if (showAvailableOnly) {
+            if (showAvailableOnly) { 
                 currentItems = currentItems.filter(item => item.disponibilidad.toLowerCase() === 'si' || item.disponibilidad.toLowerCase() === 'sí');
             }
 
@@ -432,8 +442,17 @@
                         const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
                         renderItems(filteredItems, selectedLanguage, true); // Append more items
                     });
-                    // NEW: Event listener for the close button of the modal
+                    
+                    // Event listener for the close button of the modal
                     closeButton.addEventListener('click', closeModal);
+                    
+                    // Close modal when clicking outside its content
+                    imageModal.addEventListener('click', function(event) {
+                        // If the click target is the modal element itself (the background), close the modal
+                        if (event.target === imageModal) {
+                            closeModal();
+                        }
+                    });
 
 
                     // Close sidebar if window resized to desktop from mobile and it's open as overlay
