@@ -581,7 +581,9 @@
     "categoria": "Deportes",
     "precio": "$60.000 COP",
     "disponibilidad": "si",
-    "fotos": ["./images/hockey-stick-marca.jpg"]
+    "fotos": [
+        "./images/hockey-stick-marca-1.jpg",
+         "./images/hockey-stick-marca-2.jpg"]
   },
   {
     "id": "item-162",
@@ -608,7 +610,8 @@
     "categoria": "Deportes",
     "precio": "$280.000 COP",
     "disponibilidad": "si",
-    "fotos": ["./images/hockey-casco-marca.jpg"]
+    "fotos": ["./images/hockey-casco-marca-1.jpg",
+             "./images/hockey-casco-marca-2.jpg"]
   },
   {
     "id": "item-165",
@@ -657,12 +660,12 @@
   },
   {
     "id": "item-170 COP",
-    "descripcion": "Hockey PaĄalera",
+    "descripcion": "Hockey Pañalera",
     "descripcionIngles": "Hockey diaper bag (assuming \"paĄalera\" is a typo and meant for gear bag).",
     "categoria": "Deportes",
     "precio": "$80.000 COP",
     "disponibilidad": "si",
-    "fotos": ["./images/hockey-paaalera.jpg"]
+    "fotos": ["./images/hockey-panalera.jpg"]
   },
   {
     "id": "item-171",
