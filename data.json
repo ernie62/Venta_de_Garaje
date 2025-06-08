@@ -1,46 +1,1794 @@
 [
   {
     "id": "item-001",
-    "descripcion": "Cama Doble con Colchón",
-    "detallesAdicionales": "Cama doble, incluye base y colchón. Buen estado. Perfecta para un dormitorio principal.",
-    "precio": "$500.000 COP",
-    "disponibilidad": "Sí",
+    "descripcion": "Lámpara colgante vintage de 4 platos para sala o comedor",
+    "descripcionIngles": "Vintage 4-tier pendant lamp for living or dining room.",
+    "categoria": "Hogar",
+    "precio": "$300.000 COP",
+    "disponibilidad": "si",
     "fotos": [
-      "./images/Bowls-porcelana-blanca-1.jpg",
-      "./images/Bowls-porcelana-blanca-2.jpg",
-      "./images/Bowls-porcelana-blanca-3.jpg"
+      "Imagen",
+      "Imagen",
+      "Imagen"
     ]
   },
   {
     "id": "item-002",
-    "descripcion": "Televisor Smart TV 32 pulgadas",
-    "detallesAdicionales": "Televisor Samsung, funcionando perfectamente. Con control remoto.",
-    "precio": "$350.000 COP",
-    "disponibilidad": "No",
+    "descripcion": "Elíptica Athletic Advanced 460 EP en optimas condiciones",
+    "descripcionIngles": "Athletic Advanced 460 EP elliptical machine, excellent condition.",
+    "categoria": "Deportes",
+    "precio": "$700.000 COP",
+    "disponibilidad": "si",
     "fotos": [
-      "https://images.pexels.com/photos/196656/pexels-photo-196656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "Imagen",
+      "Imagen",
+      "Imagen",
+      "Imagen",
+      "Imagen"
     ]
   },
   {
     "id": "item-003",
-    "descripcion": "Juego de Ollas y Sartenes (5 piezas)",
-    "detallesAdicionales": "Set completo para tu cocina, poco uso.",
-    "precio": "$120.000 COP",
-    "disponibilidad": "Sí",
+    "descripcion": "Cama doble en Cedro con su respectivo colchón",
+    "descripcionIngles": "Cedar double bed with mattress.",
+    "categoria": "Muebles",
+    "precio": "$800.000 COP",
+    "disponibilidad": "si",
     "fotos": [
-      "https://images.pexels.com/photos/4049887/pexels-photo-4049887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "Imagen",
+      "Imagen",
+      "Imagen",
+      "Imagen",
+      "Imagen"
     ]
   },
   {
     "id": "item-004",
-    "descripcion": "Bicicleta de Montaña",
-    "detallesAdicionales": "Bicicleta para adulto, en buen estado, ideal para paseos.",
-    "precio": "$450.000 COP",
-    "disponibilidad": "Sí",
+    "descripcion": "Mueble de madera de 2 puertas con 15 entrepaĄos de 1.97 alto por 90 cm ancho y 27 de fondo",
+    "descripcionIngles": "Wooden cabinet, 2 doors, 15 shelves. 1.97m H x 90cm W x 27cm D.",
+    "categoria": "Muebles",
+    "precio": "$700.000 COP",
+    "disponibilidad": "si",
     "fotos": [
-      "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "Imagen",
+      "Imagen"
     ]
+  },
+  {
+    "id": "item-005",
+    "descripcion": "2 Mesas de noche con sus lámparas",
+    "descripcionIngles": "2 nightstands with lamps.",
+    "categoria": "Muebles",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-006",
+    "descripcion": "Mesa grande plegable de madera de x 2.24 de largo x 80 de ancho",
+    "descripcionIngles": "Large wooden folding table, 2.24m L x 80cm W.",
+    "categoria": "Muebles",
+    "precio": "$300.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-007",
+    "descripcion": "Escritorio en madera de largo de 1.20 Mt de largo x 42 cm de ancho y 75 cm de alto",
+    "descripcionIngles": "Wooden desk, 1.20m L x 42cm W x 75cm H.",
+    "categoria": "Muebles",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-008",
+    "descripcion": "Comedor redondo de 2.20 Mt diámetro con vidrio y 6 sillas tapizadas y espaldar en mimbre",
+    "descripcionIngles": "Round dining set, 2.20m diameter glass top, 6 upholstered chairs with wicker backs.",
+    "categoria": "Muebles",
+    "precio": "$500.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-009",
+    "descripcion": "Mesa sala con 4 cajones laterales y 2 entrepaĄos, con tapa de vidrio biselado",
+    "descripcionIngles": "Coffee table with 4 side drawers, 2 shelves, and beveled glass top.",
+    "categoria": "Muebles",
+    "precio": "$1.000.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-010 COP",
+    "descripcion": "Orquidea Blanca",
+    "descripcionIngles": "White Orchid.",
+    "categoria": "Jardineria",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-011",
+    "descripcion": "Mesa madera rectangular de 80 cm ancho x 41.5 ancho X 70 cm alto",
+    "descripcionIngles": "Rectangular wooden table, 80cm L x 41.5cm W x 70cm H.",
+    "categoria": "Muebles",
+    "precio": "$120.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-012",
+    "descripcion": "Poltrona clásica sala tapizada",
+    "descripcionIngles": "Classic upholstered living room armchair.",
+    "categoria": "Muebles",
+    "precio": "$700.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-013",
+    "descripcion": "Zapatera blanca de madera forrada en formica y ruedas bloqueantes 134m L X 35 cm P X 52 cm A",
+    "descripcionIngles": "White wooden shoe rack, formica-covered, with locking wheels. 134cm L x 35cm D x 52cm H.",
+    "categoria": "Muebles",
+    "precio": "$300.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-014",
+    "descripcion": "Nevera Nofrost Samsung con congelador superior y dispensador de agua de 301 L",
+    "descripcionIngles": "Samsung No Frost refrigerator with top freezer and water dispenser, 301L.",
+    "categoria": "Electrodomesticos",
+    "precio": "$1.300.000 COP",
+    "disponibilidad": "no",
+    "fotos": []
+  },
+  {
+    "id": "item-015",
+    "descripcion": "Lavadora Samsung Modelo WA19T6260BV Capacidad de 19 kg",
+    "descripcionIngles": "Samsung WA19T6260BV washing machine, 19kg capacity.",
+    "categoria": "Electrodomesticos",
+    "precio": "$1.500.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-016",
+    "descripcion": "Vácula análoga de peso",
+    "descripcionIngles": "Analog weighing scale.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-017",
+    "descripcion": "Waflera eléctrica",
+    "descripcionIngles": "Electric waffle maker.",
+    "categoria": "Electrodomesticos",
+    "precio": "$30.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-018",
+    "descripcion": "Parrila eléctrica para interiores",
+    "descripcionIngles": "Electric indoor grill.",
+    "categoria": "Electrodomesticos",
+    "precio": "$80.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-019",
+    "descripcion": "Licuadora Portátil Inalámbrica para Smoothies - şRecargable por USB! ( 2 Unidades - precio por unidad)",
+    "descripcionIngles": "Portable wireless smoothie blender - USB rechargeable! (2 units, price per unit).",
+    "categoria": "Electrodomesticos",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-020 COP",
+    "descripcion": "Olla arrozera marca Samurai",
+    "descripcionIngles": "Samurai brand rice cooker.",
+    "categoria": "Electrodomesticos",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-021",
+    "descripcion": "Batidora eléctrica Marca Rival de 3 velocidades",
+    "descripcionIngles": "Rival brand 3-speed electric mixer.",
+    "categoria": "Electrodomesticos",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-022",
+    "descripcion": "Parrilla eléctrica para asar",
+    "descripcionIngles": "Electric grilling pan.",
+    "categoria": "Electrodomesticos",
+    "precio": "$250.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-023",
+    "descripcion": "Esmeril de banco",
+    "descripcionIngles": "Bench grinder.",
+    "categoria": "Herramientas",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-024",
+    "descripcion": "Licuadora Oster con vaso plástico",
+    "descripcionIngles": "Oster blender with plastic cup.",
+    "categoria": "Electrodomesticos",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-025",
+    "descripcion": "Molino Café Eléctrico - Acero Inoxidable",
+    "descripcionIngles": "Electric coffee grinder - Stainless Steel.",
+    "categoria": "Electrodomesticos",
+    "precio": "$100.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-026",
+    "descripcion": "Mesa de plancha ajustable con diferentes alturas, plegable y colgable",
+    "descripcionIngles": "Adjustable ironing board, foldable and hangable.",
+    "categoria": "Hogar",
+    "precio": "$90.000 COP",
+    "disponibilidad": "no",
+    "fotos": []
+  },
+  {
+    "id": "item-027",
+    "descripcion": "Escalera metálica plegable 140cm",
+    "descripcionIngles": "Foldable metal ladder, 140cm.",
+    "categoria": "Herramientas",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-028",
+    "descripcion": "Lámpara eléctrica en madera blanca",
+    "descripcionIngles": "White wooden electric lamp.",
+    "categoria": "Hogar",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-029",
+    "descripcion": "Bombonera en cerámica pintada a mando de 9 cm de alta Peque Luna - en Terracota",
+    "descripcionIngles": "Hand-painted ceramic candy box, 9cm H, \"Peque Luna\" design, terracotta.",
+    "categoria": "Decoración",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-030 COP",
+    "descripcion": "Porta retratos plateados para fotos de 10 X 15cm (1 unidad) (Valor por unidad)",
+    "descripcionIngles": "Silver-plated photo frame, 10x15cm (1 unit, price per unit).",
+    "categoria": "Decoración",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-031",
+    "descripcion": "Porta retratos plateados para fotos de 13 X 18cm (2 unidades) (Valor por unidad)",
+    "descripcionIngles": "Silver-plated photo frame, 13x18cm (2 units, price per unit).",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-032",
+    "descripcion": "Porta retratos plateados para fotos de 20 X 30cm",
+    "descripcionIngles": "Silver-plated photo frame, 20x30cm.",
+    "categoria": "Decoración",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-033",
+    "descripcion": "Porta retratos plateados para fotos de 10 X 15cm 1 unidad",
+    "descripcionIngles": "Silver-plated photo frame, 10x15cm (1 unit).",
+    "categoria": "Decoración",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-034",
+    "descripcion": "Porta retratos plateados para fotos de 10 X 15cm 1 unidad",
+    "descripcionIngles": "Silver-plated photo frame, 10x15cm (1 unit).",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-035",
+    "descripcion": "Porta retratos plateados para fotos de 10 X 15cm 2 unidad (valor por unidad)",
+    "descripcionIngles": "Silver-plated photo frame, 10x15cm (2 units, price per unit).",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-036",
+    "descripcion": "Porta retratos plateados para fotos de 30 X 52 cm",
+    "descripcionIngles": "Silver-plated photo frame, 30x52cm.",
+    "categoria": "Decoración",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-037",
+    "descripcion": "Vestiombin clasico talla 51",
+    "descripcionIngles": "Classic size 51 dress/suit.",
+    "categoria": "Ropa",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-038",
+    "descripcion": "Bolso de la marca Nicole Miller",
+    "descripcionIngles": "Nicole Miller brand handbag.",
+    "categoria": "Ropa",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-039",
+    "descripcion": "Cartera artesanal de mimbre",
+    "descripcionIngles": "Handcrafted wicker purse.",
+    "categoria": "Ropa",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-040 COP",
+    "descripcion": "Plato en porcelana con decoracion navideĄa de 5 cm de alto",
+    "descripcionIngles": "Porcelain plate with Christmas decoration, 5cm H.",
+    "categoria": "Decoración",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-041",
+    "descripcion": "Porta retrato en acrilico para dos fotos de 10X15,Acrylic picture frame for two 10x15 photos",
+    "descripcionIngles": "Acrylic picture frame for two 10x15 photos.",
+    "categoria": "Decoración",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-042",
+    "descripcion": "Teléfono de disco vintage en buenas condiciones",
+    "descripcionIngles": "Vintage rotary dial phone, good condition.",
+    "categoria": "Electrónica",
+    "precio": "$15.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-043",
+    "descripcion": "Microscopio Portátil con Batería y Accesorios",
+    "descripcionIngles": "Portable microscope with battery and accessories.",
+    "categoria": "Electrónica",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-044",
+    "descripcion": "Frisbee - şDiversión al Aire Libre para Todas las Edades!",
+    "descripcionIngles": "Frisbee - Outdoor fun for all ages!",
+    "categoria": "Deportes",
+    "precio": "$50.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-045",
+    "descripcion": "Arpón - Objeto Decorativo Náutico o para Coleccionistas",
+    "descripcionIngles": "Harpoon - Nautical decorative item or collector's piece.",
+    "categoria": "Decoración",
+    "precio": "$10.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-046",
+    "descripcion": "Espuma para Ejercicios (Mat de Yoga",
+    "descripcionIngles": "Exercise foam (Yoga mat).",
+    "categoria": "Deportes",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-047",
+    "descripcion": "Espuma para Ejercicios (Mat de Yoga",
+    "descripcionIngles": "Exercise foam (Yoga mat).",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-048",
+    "descripcion": "Equipo de proytecccion para patinaje",
+    "descripcionIngles": "Skateboarding protection gear.",
+    "categoria": "Deportes",
+    "precio": "$25.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-049",
+    "descripcion": "Rodilleras Adidas",
+    "descripcionIngles": "Adidas knee pads.",
+    "categoria": "Deportes",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-050 COP",
+    "descripcion": "Diabolo",
+    "descripcionIngles": "Diabolo.",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP",
+    "disponibilidad": "no",
+    "fotos": []
+  },
+  {
+    "id": "item-051",
+    "descripcion": "Pelota de Basquet",
+    "descripcionIngles": "Basketball.",
+    "categoria": "Deportes",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-052",
+    "descripcion": "balon de futbul americando",
+    "descripcionIngles": "American football.",
+    "categoria": "Deportes",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-053",
+    "descripcion": "laso de saltar mangos en madera",
+    "descripcionIngles": "Jump rope with wooden handles.",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-054",
+    "descripcion": "laso de saltar mangos plasticos",
+    "descripcionIngles": "Jump rope with plastic handles.",
+    "categoria": "Deportes",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-055",
+    "descripcion": "bomba de aire manual",
+    "descripcionIngles": "Manual air pump.",
+    "categoria": "Deportes",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-056",
+    "descripcion": "botelito profesional para maratones",
+    "descripcionIngles": "Professional marathon water bottle.",
+    "categoria": "Deportes",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-057",
+    "descripcion": "slake line gibson",
+    "descripcionIngles": "Slackline (Gibson).",
+    "categoria": "Deportes",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-058",
+    "descripcion": "Casco de para bicicleta",
+    "descripcionIngles": "Bicycle helmet.",
+    "categoria": "Deportes",
+    "precio": "$300.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-059",
+    "descripcion": "Cinta De Estiramiento Para Fisioterapia, Pilates Y Yoga",
+    "descripcionIngles": "Stretch band for physical therapy, Pilates, and yoga.",
+    "categoria": "Deportes",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-060 COP",
+    "descripcion": "Guantes de MMA",
+    "descripcionIngles": "MMA gloves.",
+    "categoria": "Deportes",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-061",
+    "descripcion": "Un conjunto de anillos de gimnasia de madera",
+    "descripcionIngles": "Set of wooden gymnastics rings.",
+    "categoria": "Deportes",
+    "precio": "$250.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-062",
+    "descripcion": "Botella para mantener liquidos frios o calientes",
+    "descripcionIngles": "Insulated bottle for hot or cold liquids.",
+    "categoria": "Hogar",
+    "precio": "$300.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-063",
+    "descripcion": "Vaso plástico Tupperwear Juan Valdez",
+    "descripcionIngles": "Juan Valdez Tupperware plastic cup.",
+    "categoria": "Hogar",
+    "precio": "10,00 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-064",
+    "descripcion": "Botella para mantener liquidos frios o calientes",
+    "descripcionIngles": "Insulated bottle for hot or cold liquids.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-065",
+    "descripcion": "Vaso plástico Tupperwear Juan Valdez",
+    "descripcionIngles": "Juan Valdez Tupperware plastic cup.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-066",
+    "descripcion": "Tupperware plastic cup",
+    "descripcionIngles": "Tupperware plastic cup.",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-067",
+    "descripcion": "Jarra de plastico",
+    "descripcionIngles": "Plastic pitcher.",
+    "categoria": "Hogar",
+    "precio": "$2.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-068",
+    "descripcion": "Jarra de plastico",
+    "descripcionIngles": "Plastic pitcher.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-069",
+    "descripcion": "Jarra de Vidrio de 1 Lt 1 Lt Glass Jug",
+    "descripcionIngles": "1 Liter Glass Jug.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-070 COP",
+    "descripcion": "Cafetera Tipo Prensa Francesa - şExcelente Estado!",
+    "descripcionIngles": "French Press coffee maker - Excellent condition!",
+    "categoria": "Electrodomesticos",
+    "precio": "$25.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-071",
+    "descripcion": "Jarra de vidrio con su tapa (2 Unidades - valor por unidad)",
+    "descripcionIngles": "Glass pitcher with lid (2 units, price per unit).",
+    "categoria": "Hogar",
+    "precio": "$35.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-072",
+    "descripcion": "Juego de te japones original en porcelana",
+    "descripcionIngles": "Original Japanese porcelain tea set.",
+    "categoria": "Hogar",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-073",
+    "descripcion": "Tetera en vidrio",
+    "descripcionIngles": "Glass teapot.",
+    "categoria": "Hogar",
+    "precio": "$350.000 COP",
+    "disponibilidad": "no",
+    "fotos": []
+  },
+  {
+    "id": "item-074",
+    "descripcion": "Olla hervidora De Té",
+    "descripcionIngles": "Tea kettle.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-075",
+    "descripcion": "Copa de Vidrio Multiusos - şElegancia y Versatilidad en una Sola Pieza!",
+    "descripcionIngles": "-Multipurpose glass cup - Elegance and versatility in one piece!",
+    "categoria": "Hogar",
+    "precio": "$40.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-076",
+    "descripcion": "Florero solitario en cristal labrado Cut Glass Bud Vase",
+    "descripcionIngles": "Cut glass bud vase.",
+    "categoria": "Decoración",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-077",
+    "descripcion": "Florero en vidrio rectangular para lucir tus arreglos florales 30 cm Alto (3 unidades)",
+    "descripcionIngles": "Rectangular glass vase for floral arrangements, 30cm H (3 units).",
+    "categoria": "Decoración",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-078",
+    "descripcion": "Florero en vidrio cilindrico para lucir tus arreglos florales 20 cm Alto(3 unidades)",
+    "descripcionIngles": "Cylindrical glass vase for floral arrangements, 20cm H (3 units).",
+    "categoria": "Decoración",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-079",
+    "descripcion": "Florero en vidrio para lucir tus arreglos florales 25 cm Alto (3 unidades)",
+    "descripcionIngles": "Glass vase for floral arrangements, 25cm H (3 units).",
+    "categoria": "Decoración",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-080 COP",
+    "descripcion": "Juego de 4 copas para Margarita en vidrio",
+    "descripcionIngles": "Set of 4 glass Margarita glasses.",
+    "categoria": "Hogar",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-081",
+    "descripcion": "Juego de 4 copas de vidrio",
+    "descripcionIngles": "Set of 4 glass cups.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-082",
+    "descripcion": "Juego de 4 copas para vino",
+    "descripcionIngles": "Set of 4 wine glasses.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-083",
+    "descripcion": "Juego de 6 copas de vidrio para helado",
+    "descripcionIngles": "Set of 6 glass ice cream cups.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-084",
+    "descripcion": "1 Copa en vidrio labrado",
+    "descripcionIngles": "1 cut glass cup.",
+    "categoria": "Hogar",
+    "precio": "$65.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-085",
+    "descripcion": "Kit de bar con hielera, saca corchos, separador de huevos, medidor de licor, Mixer, decoración navidella para botellas de vidri1o",
+    "descripcionIngles": "Bar kit with ice bucket, corkscrew, egg separator, liquor jigger, mixer, and holiday bottle decor.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-086",
+    "descripcion": "Tetera en porcelana",
+    "descripcionIngles": "Porcelain teapot.",
+    "categoria": "Hogar",
+    "precio": "$70.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-087",
+    "descripcion": "Frutera de vidrio",
+    "descripcionIngles": "Glass fruit bowl.",
+    "categoria": "Hogar",
+    "precio": "$70.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-088",
+    "descripcion": "Ensaladera en porcelana blanca",
+    "descripcionIngles": "White porcelain salad bowl.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-089",
+    "descripcion": "2 Cazuela de barro negras de raquira con su canasto artesanal",
+    "descripcionIngles": "2 black Raquira clay pots with artisan basket.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-090 COP",
+    "descripcion": "2 Cazuela de barro terracota de raquira con su canasto artesanal",
+    "descripcionIngles": "2 terracotta Raquira clay pots with artisan basket.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-091",
+    "descripcion": "Panera",
+    "descripcionIngles": "Bread box.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-092",
+    "descripcion": "Canasta artesanal multiusos",
+    "descripcionIngles": "Multipurpose artisan basket.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-093",
+    "descripcion": "Panera",
+    "descripcionIngles": "Bread box.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-094",
+    "descripcion": "Panera metálica",
+    "descripcionIngles": "Metal bread box.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-095",
+    "descripcion": "Panera",
+    "descripcionIngles": "Bread box.",
+    "categoria": "Hogar",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-096",
+    "descripcion": "Guantes de carnaza",
+    "descripcionIngles": "Leather work gloves.",
+    "categoria": "Herramientas",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-097",
+    "descripcion": "Juego para Asar en Parrilla - şTodo lo que Necesitas para una Barbacoa Perfecta!",
+    "descripcionIngles": "Grilling set - Everything for a perfect BBQ!",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-098",
+    "descripcion": "Bandeja para 12 Muffins con moldes de silicona - şHornea Deliciosos Muffins y Cupcakes!",
+    "descripcionIngles": "12-muffin tray with silicone molds - Bake delicious muffins & cupcakes!",
+    "categoria": "Cocina",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-099",
+    "descripcion": "Refractaria de vidrio de 27.5 x 19 cm",
+    "descripcionIngles": "Glass baking dish, 27.5 x 19 cm.",
+    "categoria": "Cocina",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-100 COP",
+    "descripcion": "Refractaria con tapa plástica Horneable, de 33 x 22 cm",
+    "descripcionIngles": "Oven-safe baking dish with plastic lid, 33 x 22 cm.",
+    "categoria": "Cocina",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-101",
+    "descripcion": "Refractaria de vidrio de 30 x 19 cm",
+    "descripcionIngles": "Glass baking dish, 30 x 19 cm.",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-102",
+    "descripcion": "Refractaria cuadrada de vidrio de 21 x 21 cm",
+    "descripcionIngles": "Square glass baking dish, 21 x 21 cm.",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-103",
+    "descripcion": "Set de repostería en silicona con 2 moldes, brocha y 6 capacillos",
+    "descripcionIngles": "Silicone baking set with 2 molds, brush, and 6 cupcake liners.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-104",
+    "descripcion": "Bandeja Betty Cracker con su respectiva rejilla para hornear",
+    "descripcionIngles": "Betty Crocker baking pan with rack.",
+    "categoria": "Cocina",
+    "precio": "$60.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-105",
+    "descripcion": "Aislador para la mesa metálico",
+    "descripcionIngles": "Metal table insulator (trivet).",
+    "categoria": "Cocina",
+    "precio": "$20.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-106",
+    "descripcion": "Bandejas para hornear pizza con diámetros de 30 cm y 27.5cm",
+    "descripcionIngles": "Pizza baking trays, 30cm and 27.5cm diameters.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-107",
+    "descripcion": "Molde de aluminio para hornear largo 38 cm, ancho 28 cm, profundo 7cm",
+    "descripcionIngles": "Aluminum baking mold, 38cm L x 28cm W x 7cm D.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-108",
+    "descripcion": "Cortadores de galletas",
+    "descripcionIngles": "Cookie cutters.",
+    "categoria": "Cocina",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-109",
+    "descripcion": "Juego de guantes para hornear",
+    "descripcionIngles": "Baking glove set.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-110 COP",
+    "descripcion": "Caja de cubiertos en madera",
+    "descripcionIngles": "Wooden cutlery box.",
+    "categoria": "Cocina",
+    "precio": "$12.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-111",
+    "descripcion": "Juego de 4 individuales plásticos",
+    "descripcionIngles": "Set of 4 plastic placemats.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-112",
+    "descripcion": "Juego de 8 individuales plásticos (2 unidades - precio por unidad)",
+    "descripcionIngles": "Set of 8 plastic placemats (2 units, price per unit).",
+    "categoria": "Hogar",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-113",
+    "descripcion": "Juego de 3 individuales en tela",
+    "descripcionIngles": "Set of 3 fabric placemats.",
+    "categoria": "Hogar",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-114",
+    "descripcion": "Carpeta blanca",
+    "descripcionIngles": "White folder.",
+    "categoria": "Hogar",
+    "precio": "$6.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-115",
+    "descripcion": "Carpeta abana en crochet",
+    "descripcionIngles": "Havana crochet folder.",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-116",
+    "descripcion": "Panera blanca de Brujas",
+    "descripcionIngles": "White Bruges bread basket.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-117",
+    "descripcion": "Carpeta redonda habana en crochet",
+    "descripcionIngles": "Round Havana crochet folder.",
+    "categoria": "Hogar",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-118",
+    "descripcion": "Carpeta blanca ovalada en crochet",
+    "descripcionIngles": "White oval crochet folder.",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-119",
+    "descripcion": "Juego de anillos para servilletas pintados a mano",
+    "descripcionIngles": "Set of hand-painted napkin rings.",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-120 COP",
+    "descripcion": "Kit de 4 Bowls de porcelana blanca de 7 cm de alto",
+    "descripcionIngles": "Set of 4 white porcelain bowls, 7cm H.",
+    "categoria": "Hogar",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-121",
+    "descripcion": "Plato cuadrado en porcelana blanco",
+    "descripcionIngles": "White square porcelain plate.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-122",
+    "descripcion": "Juego de 2 refractarias para porción personal",
+    "descripcionIngles": "Set of 2 personal-portion baking dishes.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-123",
+    "descripcion": "1 ensaladeras en porcelana blanca",
+    "descripcionIngles": "1 white porcelain salad bowl.",
+    "categoria": "Hogar",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-124",
+    "descripcion": "Bandeja para servir aperitivos, juego de 5 platos extraíbles para papas fritas y salsas",
+    "descripcionIngles": "Appetizer serving tray, 5 removable dishes for chips and dips.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-125",
+    "descripcion": "Mugs únicos, perfectos para regalar o disfrutar tu bebida favorita con estilo (Valor por unidad)",
+    "descripcionIngles": "Unique mugs, perfect for gifts or stylish sips (price per unit).",
+    "categoria": "Hogar",
+    "precio": "$120.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-126",
+    "descripcion": "Mugs de Cachivaches, perfectos para regalar o disfrutar tu bebida favorita con estilo",
+    "descripcionIngles": "Cachivaches mugs, perfect for gifts or stylish sips.",
+    "categoria": "Hogar",
+    "precio": "$3.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-127",
+    "descripcion": "Sartén profesional de acero al carbono. Excelente para freír y hornear, muy duradera. Alternativa al teflón. Diámetro 28 cm, volumen 1,5 l.",
+    "descripcionIngles": "Professional carbon steel pan. Excellent for frying and baking, very durable. Teflon alternative. 28cm diameter, 1.5L volume.",
+    "categoria": "Cocina",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-128",
+    "descripcion": "Olla a presión marca Universal",
+    "descripcionIngles": "Universal brand pressure cooker.",
+    "categoria": "Cocina",
+    "precio": "$120.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-129",
+    "descripcion": "Olla de cocción lenta",
+    "descripcionIngles": "Slow cooker.",
+    "categoria": "Cocina",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-130 COP",
+    "descripcion": "Olla con tapa ajustable.",
+    "descripcionIngles": "Pot with adjustable lid.",
+    "categoria": "Cocina",
+    "precio": "$200.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-131",
+    "descripcion": "Contenedor con tapa L 20cm A 15cm P 10cm",
+    "descripcionIngles": "Container with lid. 20cm L x 15cm W x 10cm D.",
+    "categoria": "Cocina",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-132",
+    "descripcion": "Set de cucharas para servir",
+    "descripcionIngles": "Serving spoon set.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-133",
+    "descripcion": "Set de tazas medidoras para repostería",
+    "descripcionIngles": "Baking measuring cup set.",
+    "categoria": "Cocina",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-134",
+    "descripcion": "Cuenco japones de porcelana",
+    "descripcionIngles": "Japanese porcelain bowl.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-135",
+    "descripcion": "Set Vajilla de pascua",
+    "descripcionIngles": "Easter dinnerware set.",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-136",
+    "descripcion": "cucharitas en plata",
+    "descripcionIngles": "Silver teaspoons.",
+    "categoria": "Hogar",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-137",
+    "descripcion": "bandeja en porcelana",
+    "descripcionIngles": "Porcelain tray.",
+    "categoria": "Hogar",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-138",
+    "descripcion": "Juego de 6 tazas para tinto",
+    "descripcionIngles": "Set of 6 small coffee cups.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-139",
+    "descripcion": "Soporte para colgar cubiertos",
+    "descripcionIngles": "Utensil hanging rack.",
+    "categoria": "Cocina",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-140 COP",
+    "descripcion": "Soporte para colgar mugs",
+    "descripcionIngles": "Mug hanging rack.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-141",
+    "descripcion": "Juego de recipientes mezcladores en aluminio",
+    "descripcionIngles": "Aluminum mixing bowl set.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-142",
+    "descripcion": "Recipiente coladera 2 en 1 de plastico",
+    "descripcionIngles": "2-in-1 plastic colander container.",
+    "categoria": "Cocina",
+    "precio": "$70.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-143",
+    "descripcion": "Taza medidora pyrex",
+    "descripcionIngles": "Pyrex measuring cup.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-144",
+    "descripcion": "Jarra plastica",
+    "descripcionIngles": "Plastic pitcher.",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-145",
+    "descripcion": "Frasco Vidrio Para Conservar Alimentos Recipiente Hermetico.",
+    "descripcionIngles": "Glass food storage jar with airtight seal.",
+    "categoria": "Cocina",
+    "precio": "$8.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-146",
+    "descripcion": "Juego de Recipientes en vidrio",
+    "descripcionIngles": "Glass container set.",
+    "categoria": "Cocina",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-147",
+    "descripcion": "Recipiente metálico con cierre hermético",
+    "descripcionIngles": "Metal container with airtight seal.",
+    "categoria": "Cocina",
+    "precio": "$35.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-148",
+    "descripcion": "Recipiente metálico con cierre hermético",
+    "descripcionIngles": "Metal container with airtight seal.",
+    "categoria": "Cocina",
+    "precio": "$25.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-149",
+    "descripcion": "2 Contenedores de plastico . Precio de una unidad .",
+    "descripcionIngles": "2 plastic containers (price per unit).",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-150 COP",
+    "descripcion": "Recipiente plástico",
+    "descripcionIngles": "Plastic container.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-151",
+    "descripcion": "Bandeja metálica giratoria",
+    "descripcionIngles": "Rotating metal tray.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "no",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-152",
+    "descripcion": "Pesa Gramera Cocina",
+    "descripcionIngles": "Kitchen gram scale.",
+    "categoria": "Cocina",
+    "precio": "80,000 cada uno",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-153",
+    "descripcion": "5 Tablas para cortar.",
+    "descripcionIngles": "5 cutting boards.",
+    "categoria": "Cocina",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-154",
+    "descripcion": "Set de utencilios de cocina",
+    "descripcionIngles": "Kitchen utensil set.",
+    "categoria": "Cocina",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-155",
+    "descripcion": "Set de utencilios de cocina",
+    "descripcionIngles": "Kitchen utensil set.",
+    "categoria": "Cocina",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-156",
+    "descripcion": "Tapon para botella de vino reutilizables x 4",
+    "descripcionIngles": "4 reusable wine bottle stoppers.",
+    "categoria": "Hogar",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-157",
+    "descripcion": "Cortador de huevo cocido",
+    "descripcionIngles": "Hard-boiled egg slicer.",
+    "categoria": "Cocina",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-158",
+    "descripcion": "Rallador Metalico",
+    "descripcionIngles": "Metal grater.",
+    "categoria": "Cocina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-159",
+    "descripcion": "Juego de coladeras metálicas",
+    "descripcionIngles": "Metal colander set.",
+    "categoria": "Cocina",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-160 COP",
+    "descripcion": "Mortero",
+    "descripcionIngles": "Mortero.",
+    "categoria": "Cocina",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-161",
+    "descripcion": "Hockey Stick Marca CCM",
+    "descripcionIngles": "CCM brand hockey stick.",
+    "categoria": "Deportes",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "Imagen",
+      "Imagen"
+    ]
+  },
+  {
+    "id": "item-162",
+    "descripcion": "Hockey Pucks x 2",
+    "descripcionIngles": "2 hockey pucks.",
+    "categoria": "Deportes",
+    "precio": "$500.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-163",
+    "descripcion": "Hockey Pechera Marca JOFA",
+    "descripcionIngles": "JOFA brand hockey chest protector.",
+    "categoria": "Deportes",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-164",
+    "descripcion": "Hockey Casco Marca ITECH con rejilla",
+    "descripcionIngles": "ITECH brand hockey helmet with cage.",
+    "categoria": "Deportes",
+    "precio": "$280.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-165",
+    "descripcion": "Hockey Espinilleras 2500 Marca JOFA",
+    "descripcionIngles": "JOFA brand 2500 hockey shin guards.",
+    "categoria": "Deportes",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-166",
+    "descripcion": "Hockey Coderas Marca ITECH",
+    "descripcionIngles": "ITECH brand hockey elbow pads.",
+    "categoria": "Deportes",
+    "precio": "$230.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-167",
+    "descripcion": "Hockey Guantes Marca COHO",
+    "descripcionIngles": "COHO brand hockey gloves.",
+    "categoria": "Deportes",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-168",
+    "descripcion": "Hockey Rollo cinta negra para Stick",
+    "descripcionIngles": "Roll of black hockey stick tape.",
+    "categoria": "Deportes",
+    "precio": "$180.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-169",
+    "descripcion": "Hockey Pantalón entrenamiento",
+    "descripcionIngles": "Hockey training pants.",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-170 COP",
+    "descripcion": "Hockey PaĄalera",
+    "descripcionIngles": "Hockey diaper bag (assuming \"paĄalera\" is a typo and meant for gear bag).",
+    "categoria": "Deportes",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-171",
+    "descripcion": "Hockey Patines de Hockey Marca NIKE",
+    "descripcionIngles": "NIKE brand hockey skates.",
+    "categoria": "Deportes",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-172",
+    "descripcion": "Hockey copas x 2",
+    "descripcionIngles": "2 hockey cups (athletic supporters).",
+    "categoria": "Deportes",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
+  },
+  {
+    "id": "item-173",
+    "descripcion": "Tula para equipo de Hockey",
+    "descripcionIngles": "Hockey equipment duffel bag.",
+    "categoria": "Deportes",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": []
   }
 ]
