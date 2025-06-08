@@ -566,15 +566,6 @@
     "fotos": ["./images/zapatera-blanca-de.jpg"]
   },
   {
-    "id": "item-001",
-    "descripcion": "Lámpara colgante vintage de 4 platos para sala o comedor",
-    "descripcionIngles": "Vintage 4-tier pendant lamp for living or dining room.",
-    "categoria": "Hogar",
-    "precio": "$300.000 COP",
-    "disponibilidad": "si",
-    "fotos": []
-  },
-  {
     "id": "item-161",
     "descripcion": "Hockey Stick Marca CCM",
     "descripcionIngles": "CCM brand hockey stick.",
@@ -656,7 +647,8 @@
     "categoria": "Deportes",
     "precio": "$20.000 COP",
     "disponibilidad": "si",
-    "fotos": ["./images/hockey-pantalon-entrenamiento.jpg"]
+    "fotos": ["./images/hockey-pantalon-entrenamiento-1.jpg",
+             "./images/hockey-pantalon-entrenamiento-2.jpg"]
   },
   {
     "id": "item-170 COP",
