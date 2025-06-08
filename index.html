@@ -8,28 +8,61 @@
 </head>
 <body>
 
-    <div class="container">
+    <header>
         <h1>Catálogo de la Venta de Garaje Moreno Davis</h1>
+    </header>
 
-        <div class="item-list">
+    <main class="container">
+        <aside class="filters">
+            <h2>Filtros y Opciones</h2>
+
+            <div class="filter-group">
+                <h3>Idioma</h3>
+                <label><input type="radio" name="language" value="es" checked> Español</label>
+                <label><input type="radio" name="language" value="en"> English</label>
             </div>
 
-        <div class="contact-info">
-            <h2>¡Contáctanos!</h2>
-            <p>Para más información o para coordinar una compra, no dudes en contactarnos:</p>
-            <p>Email: <a href="mailto:ernie.moreno62@gmail.com">ernie.moreno62@gmail.com</a></p>
-            <p>Teléfono: <a href="tel:+573108791067">+57 310 879 1067</a></p>
-            <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
-        </div>
+            <div class="filter-group">
+                <h3>Categoría</h3>
+                <select id="categoryFilter">
+                    <option value="all">Todas las categorías</option>
+                    </select>
+            </div>
+
+            <div class="filter-group">
+                <h3>Precio</h3>
+                <label><input type="radio" name="priceSort" value="none" checked> Sin ordenar</label>
+                <label><input type="radio" name="priceSort" value="asc"> Ascendente</label>
+                <label><input type="radio" name="priceSort" value="desc"> Descendente</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Disponibilidad</h3>
+                <label><input type="checkbox" id="availableOnly"> Solo disponibles</label>
+            </div>
+        </aside>
+
+        <section class="item-list" id="items-display-area">
+            <p id="loading-message">Cargando productos...</p>
+        </section>
+    </main>
+
+    <div class="contact-info">
+        <h2>¡Contáctanos!</h2>
+        <p>Para más información o para coordinar una compra, no dudes en contactarnos:</p>
+        <p>Email: <a href="mailto:ernie.moreno62@gmail.com">ernie.moreno62@gmail.com</a></p>
+        <p>Teléfono: <a href="tel:+573108791067">+57 310 879 1067</a></p>
+        <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
     </div>
+
     <div id="imageModal" class="modal">
-            <span class="close-button">&times;</span>
-            <div class="modal-content">
-                <img id="modalImage" src="" alt="Imagen del artículo">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div id="imageCounter" class="image-counter"></div>
-            </div>
+        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Imagen del artículo">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div id="imageCounter" class="image-counter"></div>
+        </div>
     </div>
     
     <footer>
@@ -37,135 +70,247 @@
     </footer>
 
     <script>
-    let currentModalImages = []; // Stores images for the currently open item
-    let currentImageIndex = 0;   // Current image index in the modal
-    let allItemsData = [];       // Store all fetched items for easy access
+        let allItems = []; // Stores all fetched items for filtering/sorting
+        let filteredItems = []; // Stores items after applying filters
+        
+        // Modal-related variables (from your original code)
+        let currentModalImages = [];
+        let currentImageIndex = 0;
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const imageCounter = document.getElementById('imageCounter');
+        const closeButton = document.querySelector('.close-button');
 
-    // Get the modal elements
-    const imageModal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const imageCounter = document.getElementById('imageCounter');
-    const closeButton = document.querySelector('.close-button');
+        // Define the ultimate fallback image URL (standardized)
+        const ULTIMATE_FALLBACK_IMAGE = 'https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
-    // Function to open the modal and display images
-    function openModal(itemImages, startingIndex = 0) {
-        currentModalImages = itemImages;
-        currentImageIndex = startingIndex;
-        imageModal.style.display = 'flex';
-        showSlides(currentImageIndex);
-    }
-
-    // Function to navigate through images in the modal
-    function plusSlides(n) {
-        currentImageIndex += n;
-        if (currentImageIndex >= currentModalImages.length) {
-            currentImageIndex = 0; // Loop back to the first image
+        // Function to parse price for sorting
+        function parsePrice(priceString) {
+            if (typeof priceString !== 'string') {
+                return 0;
+            }
+            const cleanedPrice = priceString.replace(/[$,.]/g, '').trim();
+            return parseInt(cleanedPrice, 10) || 0;
         }
-        if (currentImageIndex < 0) {
-            currentImageIndex = currentModalImages.length - 1; // Loop back to the last image
+
+        // Function to open the modal and display images (from your original code)
+        function openModal(itemImages, startingIndex = 0) {
+            currentModalImages = itemImages;
+            currentImageIndex = startingIndex;
+            imageModal.style.display = 'flex'; // Use flex to center
+            showSlides(currentImageIndex);
         }
-        showSlides(currentImageIndex);
-    }
 
-    // Function to display a specific image in the modal
-    function showSlides(index) {
-        if (currentModalImages.length > 0) {
-            modalImage.src = currentModalImages[index];
-            imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
-        } else {
-            modalImage.src = 'https://via.placeholder.com/600x400?text=Sin+Foto'; // Fallback
-            imageCounter.textContent = '';
-        }
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        imageModal.style.display = 'none';
-        currentModalImages = []; // Clear images
-        currentImageIndex = 0;   // Reset index
-    }
-
-    // Close button event listener
-    closeButton.onclick = closeModal;
-
-    // Close modal when clicking outside the image (on the overlay)
-    window.onclick = function(event) {
-        if (event.target == imageModal) {
-            closeModal();
-        }
-    };
-
-    // Main DOMContentLoaded logic
-    document.addEventListener('DOMContentLoaded', function() {
-        const itemListContainer = document.querySelector('.item-list');
-
-        fetch('data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+        // Function to navigate through images in the modal (from your original code)
+        function plusSlides(n) {
+            // Only allow navigation if there are actual images to navigate
+            if (currentModalImages.length > 1) { 
+                currentImageIndex += n;
+                if (currentImageIndex >= currentModalImages.length) {
+                    currentImageIndex = 0;
                 }
-                return response.json();
-            })
-            .then(items => {
-                allItemsData = items; // Store fetched data globally
+                if (currentImageIndex < 0) {
+                    currentImageIndex = currentModalImages.length - 1;
+                }
+                showSlides(currentImageIndex);
+            } else {
+                console.log("No more images to display or only one image available.");
+            }
+        }
 
-                items.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.classList.add('item');
+        // Function to display a specific image in the modal (corrected logic)
+        function showSlides(index) {
+            if (currentModalImages.length > 0 && currentModalImages[index] && currentModalImages[index] !== 'Imagen') {
+                modalImage.src = currentModalImages[index];
+                // Add onerror to catch individual broken image URLs within the array
+                modalImage.onerror = () => {
+                    modalImage.src = ULTIMATE_FALLBACK_IMAGE; // Fallback for broken link
+                    modalImage.onerror = null; // Clear handler to prevent infinite loop
+                };
+                imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
+            } else {
+                // If currentModalImages is empty, or the current image is 'Imagen', or undefined/null
+                modalImage.src = ULTIMATE_FALLBACK_IMAGE; // Your fallback
+                imageCounter.textContent = ''; // No counter for fallback
+                modalImage.onerror = null; // Clear handler for fallback
+            }
+        }
 
-                    const imageContainer = document.createElement('div');
-                    imageContainer.classList.add('item-image-container');
-                    const img = document.createElement('img');
-                    img.src = item.fotos && item.fotos.length > 0 ? item.fotos[0] : 'https://via.placeholder.com/400x300?text=Sin+Foto';
-                    img.alt = item.descripcion;
+        // Function to close the modal (from your original code)
+        function closeModal() {
+            imageModal.style.display = 'none';
+            currentModalImages = [];
+            currentImageIndex = 0;
+        }
 
-                    // Make the image clickable to open the modal
-                    if (item.fotos && item.fotos.length > 0) {
-                        img.style.cursor = 'pointer'; // Indicate it's clickable
-                        img.onclick = () => openModal(item.fotos, 0); // Open modal with all photos
-                    } else {
-                        // If no photos, make placeholder clickable but show placeholder in modal
-                         img.style.cursor = 'default';
-                         img.onclick = () => openModal(['https://via.placeholder.com/600x400?text=Sin+Foto'], 0);
-                    }
+        // Event listeners for modal (from your original code)
+        closeButton.onclick = closeModal;
+        window.onclick = function(event) {
+            if (event.target == imageModal) {
+                closeModal();
+            }
+        };
 
-                    imageContainer.appendChild(img);
-                    itemDiv.appendChild(imageContainer);
+        // Function to render items based on current filters and language
+        function renderItems(itemsToRender, language) {
+            const itemListContainer = document.getElementById('items-display-area');
+            itemListContainer.innerHTML = ''; // Clear previous items
 
-                    const itemInfo = document.createElement('div');
-                    itemInfo.classList.add('item-info');
+            if (itemsToRender.length === 0) {
+                itemListContainer.innerHTML = '<p class="info-message">No se encontraron productos con los filtros seleccionados.</p>';
+                return;
+            }
 
-                    const h2 = document.createElement('h2');
-                    h2.textContent = item.descripcion;
-                    itemInfo.appendChild(h2);
+            itemsToRender.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
 
-                    if (item.detallesAdicionales) {
-                        const pDetails = document.createElement('p');
-                        pDetails.textContent = item.detallesAdicionales;
-                        itemInfo.appendChild(pDetails);
-                    }
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('item-image-container');
+                const img = document.createElement('img');
+                
+                // Determine initial image source for the card itself
+                let initialCardImageSrc = ULTIMATE_FALLBACK_IMAGE; // Start with fallback
+                if (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') {
+                    initialCardImageSrc = item.fotos[0];
+                }
+                img.src = initialCardImageSrc;
+                img.alt = language === 'es' ? item.descripcion : item.descripcionIngles;
 
-                    const priceSpan = document.createElement('span');
-                    priceSpan.classList.add('price');
-                    priceSpan.textContent = item.precio;
-                    itemInfo.appendChild(priceSpan);
+                // Add onerror handler for the card image
+                img.onerror = function() {
+                    this.onerror = null; // Prevent infinite loop
+                    this.src = ULTIMATE_FALLBACK_IMAGE; // Fallback to Pexels image
+                };
 
-                    const availabilityP = document.createElement('p');
-                    const availabilityClass = item.disponibilidad.toLowerCase() === 'sí' || item.disponibilidad.toLowerCase() === 'si' ? 'available' : 'unavailable';
-                    availabilityP.classList.add('availability', availabilityClass);
-                    availabilityP.textContent = `Disponibilidad: ${item.disponibilidad}`;
-                    itemInfo.appendChild(availabilityP);
+                // Make the image clickable to open the modal
+                const photosForModal = (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') ? item.fotos : [];
 
-                    itemDiv.appendChild(itemInfo);
-                    itemListContainer.appendChild(itemDiv);
-                });
-            })
-            .catch(error => {
-                console.error('Error al cargar los artículos:', error);
-                itemListContainer.innerHTML = '<p style="text-align: center; color: red;">No se pudieron cargar los artículos. Por favor, inténtalo de nuevo más tarde.</p>';
+                if (photosForModal.length > 0) {
+                    img.style.cursor = 'pointer';
+                    img.onclick = () => openModal(photosForModal, 0);
+                } else {
+                    // If no valid photos, still make it clickable but open modal with an empty array
+                    // so showSlides handles the Pexels fallback.
+                    img.style.cursor = 'pointer'; 
+                    img.onclick = () => openModal([], 0); // Pass an empty array
+                }
+
+                imageContainer.appendChild(img);
+                itemDiv.appendChild(imageContainer);
+
+                const itemInfo = document.createElement('div');
+                itemInfo.classList.add('item-info');
+
+                const h2 = document.createElement('h2');
+                h2.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
+                itemInfo.appendChild(h2);
+
+                // Check for details, using appropriate language if available
+                if (language === 'es' && item.detallesAdicionales && item.detallesAdicionales.trim() !== '') {
+                    const pDetails = document.createElement('p');
+                    pDetails.textContent = item.detallesAdicionales;
+                    itemInfo.appendChild(pDetails);
+                } else if (language === 'en' && item.detallesAdicionalesEnglish && item.detallesAdicionalesEnglish.trim() !== '') {
+                    const pDetails = document.createElement('p');
+                    pDetails.textContent = item.detallesAdicionalesEnglish;
+                    itemInfo.appendChild(pDetails);
+                }
+
+                const priceSpan = document.createElement('span');
+                priceSpan.classList.add('price');
+                priceSpan.textContent = item.precio;
+                itemInfo.appendChild(priceSpan);
+
+                const availabilityP = document.createElement('p');
+                const availabilityStatus = item.disponibilidad.toLowerCase();
+                const availabilityClass = (availabilityStatus === 'sí' || availabilityStatus === 'si') ? 'available' : 'unavailable';
+                availabilityP.classList.add('availability', availabilityClass);
+                availabilityP.textContent = `Disponibilidad: ${language === 'es' ? (availabilityStatus === 'sí' || availabilityStatus === 'si' ? 'Sí' : 'No') : (availabilityStatus === 'sí' || availabilityStatus === 'si' ? 'Yes' : 'No')}`;
+                itemInfo.appendChild(availabilityP);
+
+                itemDiv.appendChild(itemInfo);
+                itemListContainer.appendChild(itemDiv);
             });
-    });
-</script>
+        }
 
+        // Function to apply all filters and re-render
+        function applyFiltersAndRender() {
+            let currentItems = [...allItems]; // Start with a fresh copy of all items
+
+            // 1. Filter by category
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            if (selectedCategory !== 'all') {
+                currentItems = currentItems.filter(item => item.categoria === selectedCategory);
+            }
+
+            // 2. Filter by availability
+            const showAvailableOnly = document.getElementById('availableOnly').checked;
+            if (showAvailableOnly) {
+                currentItems = currentItems.filter(item => item.disponibilidad.toLowerCase() === 'si' || item.disponibilidad.toLowerCase() === 'sí');
+            }
+
+            // 3. Sort by price
+            const priceSort = document.querySelector('input[name="priceSort"]:checked').value;
+            if (priceSort === 'asc') {
+                currentItems.sort((a, b) => parsePrice(a.precio) - parsePrice(b.precio));
+            } else if (priceSort === 'desc') {
+                currentItems.sort((a, b) => parsePrice(b.precio) - parsePrice(a.precio));
+            }
+
+            filteredItems = currentItems; // Update global filteredItems
+
+            // Get selected language
+            const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
+
+            renderItems(filteredItems, selectedLanguage);
+        }
+
+        // Initial data fetch and setup
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allItems = data; // Store the original data
+                    const loadingMessage = document.getElementById('loading-message');
+                    if (loadingMessage) {
+                        loadingMessage.remove(); // Remove loading message
+                    }
+
+                    // Populate categories for the filter
+                    const categoryFilter = document.getElementById('categoryFilter');
+                    const categories = [...new Set(data.map(item => item.categoria))].sort();
+                    categories.forEach(category => {
+                        if (category && category.trim() !== '') {
+                            const option = document.createElement('option');
+                            option.value = category;
+                            option.textContent = category;
+                            categoryFilter.appendChild(option);
+                        }
+                    });
+
+                    // Add event listeners to filters and language selector
+                    document.querySelectorAll('input[name="language"]').forEach(radio => {
+                        radio.addEventListener('change', applyFiltersAndRender); // Re-render on language change
+                    });
+                    document.getElementById('categoryFilter').addEventListener('change', applyFiltersAndRender);
+                    document.querySelectorAll('input[name="priceSort"]').forEach(radio => {
+                        radio.addEventListener('change', applyFiltersAndRender);
+                    });
+                    document.getElementById('availableOnly').addEventListener('change', applyFiltersAndRender);
+
+                    applyFiltersAndRender(); // Initial render after data is loaded and filters are set up
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('items-display-area').innerHTML = `<p class="error-message" style="text-align: center; color: red;">Error al cargar los productos: ${error.message}</p>`;
+                });
+        });
+    </script>
 </body>
 </html>

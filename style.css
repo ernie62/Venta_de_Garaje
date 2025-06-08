@@ -2,31 +2,90 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Changed from 20px to 0 for better main layout control */
     background-color: #f8f9fa;
     color: #343a40;
     line-height: 1.6;
 }
-h1 {
-    color: #007bff;
+
+header {
+    background-color: #4CAF50; /* Green from previous solution */
+    color: white;
+    padding: 1rem 0;
     text-align: center;
-    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white; /* Changed to white for header */
+    text-align: center;
+    margin: 0; /* Remove default margin from h1 in header */
     font-size: 2.5em;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
+    /* Removed border-bottom and padding-bottom for header h1 */
 }
-.container {
+
+/* Main content area, acting as the container */
+main.container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto; /* Added margin-top/bottom */
     padding: 0 15px;
+    display: flex; /* Use flexbox for sidebar and content */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 25px; /* Gap between sidebar and item list */
 }
+
+/* Estilos para el Sidebar de Filtros */
+aside.filters {
+    flex: 0 0 280px; /* Fixed width sidebar for filters */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    align-self: flex-start; /* Stick to the top */
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-group h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
 
 /* Estilos para la Lista de Artículos (cómo se muestran los productos) */
 .item-list {
+    flex-grow: 1; /* Allow item list to take remaining space */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    padding: 20px 0;
+    padding: 0; /* Adjusted padding */
 }
 .item {
     background-color: #ffffff;
@@ -35,6 +94,9 @@ h1 {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s ease-in-out;
+    display: flex; /* For internal flex layout if needed */
+    flex-direction: column; /* Stack contents vertically */
+    justify-content: space-between; /* Push footer-like elements to bottom */
 }
 .item:hover {
     transform: translateY(-5px);
@@ -57,11 +119,17 @@ h1 {
     object-fit: cover; /* Recorta la imagen para que cubra el contenedor */
     display: block;
 }
+.item-info {
+    flex-grow: 1; /* Allows info to take up available space */
+    display: flex;
+    flex-direction: column;
+}
 .item-info h2 {
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 10px;
     color: #333;
+    min-height: 2.2em; /* Ensure consistent height for titles */
 }
 .item-info p {
     font-size: 0.95em;
@@ -72,28 +140,40 @@ h1 {
     font-weight: bold;
     color: #28a745; /* Verde para el precio */
     font-size: 1.3em;
-    margin-top: 15px;
-    display: block; /* Para que ocupe su propia línea */
+    margin-top: auto; /* Pushes price to the bottom if content above varies */
+    display: block;
 }
 .item-info .availability {
     font-style: italic;
     color: #6c757d;
     font-size: 0.9em;
+    margin-top: 5px; /* Add a bit space below price */
 }
 .item-info .availability.available {
     color: #28a745; /* Verde si está disponible */
+    font-weight: bold;
 }
 .item-info .availability.unavailable {
     color: #dc3545; /* Rojo si no está disponible */
     font-weight: bold;
 }
 
+.info-message { /* For "No items found" message */
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+
 /* Estilos para la Información de Contacto */
 .contact-info {
     background-color: #e9ecef;
     border-radius: 10px;
     padding: 30px;
-    margin-top: 50px;
+    margin: 50px auto 20px auto; /* Centered with top/bottom margin */
+    max-width: 1200px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -119,7 +199,7 @@ h1 {
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 20px; /* Adjusted margin-top */
     font-size: 0.85em;
     color: #6c757d;
     border-top: 1px solid #e0e0e0;
@@ -129,15 +209,15 @@ footer {
 .modal {
     display: none; /* Oculto por defecto */
     position: fixed; /* Permanece en su lugar */
-    z-index: 100; /* Se superpone a todo */
+    z-index: 1000; /* Increased z-index to ensure it's on top */
     left: 0;
     top: 0;
     width: 100%; /* Ancho completo */
     height: 100%; /* Altura completa */
     overflow: auto; /* Permite desplazamiento si es necesario */
     background-color: rgba(0,0,0,0.9); /* Fondo negro con transparencia */
-    padding-top: 60px; /* Espacio desde la parte superior para dejar el botón de cerrar visible */
-    /*display: none;  Usar flexbox para centrar el contenido */
+    padding-top: 0; /* Remove padding-top from here, managed by flexbox */
+    /*display: flex;  /*Use flexbox to center the content */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
 }
@@ -174,7 +254,7 @@ footer {
     font-weight: bold;
     transition: 0.3s;
     cursor: pointer;
-    z-index: 101; /* Asegura que esté por encima de la imagen */
+    z-index: 1010; /* Asegura que esté por encima de la imagen and modal */
 }
 
 .close-button:hover,
@@ -200,7 +280,7 @@ footer {
     -webkit-user-select: none;
     background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
     border-radius: 50%; /* Hace los botones circulares */
-    z-index: 10; /* Asegura que estén por encima de la imagen */
+    z-index: 1005; /* Asegura que estén por encima de la imagen */
 }
 
 /* Posición del botón "anterior" a la izquierda */
@@ -229,5 +309,53 @@ footer {
     transform: translateX(-50%); /* Centra horizontalmente */
     background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
     border-radius: 5px;
-    z-index: 10;
+    z-index: 1005;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main.container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    aside.filters {
+        flex: 0 0 auto; /* Allow filters to take full width */
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .item-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        width: 100%; /* Take full width below filters */
+    }
+
+    .contact-info {
+        margin: 30px 15px 20px 15px; /* Adjust margin for smaller screens */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .item {
+        padding: 15px;
+    }
+    .item-info h2 {
+        font-size: 1.3em;
+    }
+    .prev, .next {
+        font-size: 20px;
+        padding: 10px 12px;
+        width: 30px;
+        height: 30px;
+    }
+    .close-button {
+        font-size: 30px;
+        right: 20px;
+    }
 }
