@@ -78,8 +78,7 @@
                 <img id="modalImage" src="" alt="Imagen del artículo">
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div id="imageCounter" class="image-counter"></div>
+                <div id="imageCounter" class="image-counter"></div> </div>
         </div>
     </div>
     
@@ -114,6 +113,20 @@
         // Define the ultimate fallback image URL
         const ULTIMATE_FALLBACK_IMAGE = 'https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
+        // Panning variables
+        let isDragging = false;
+        let startPointerX = 0;
+        let startPointerY = 0;
+        let startImageX = 0; // The image's X position when drag starts
+        let startImageY = 0; // The image's Y position when drag starts
+        
+        let currentTranslateX = 0; // Current actual translation of the image
+        let currentTranslateY = 0; // Current actual translation of the image
+        
+        let panLimitX = 0; // Max allowed translation horizontally
+        let panLimitY = 0; // Max allowed translation vertically
+
+
         // Function to parse price for sorting
         function parsePrice(priceString) {
             if (typeof priceString !== 'string') {
@@ -123,12 +136,116 @@
             return parseInt(cleanedPrice, 10) || 0;
         }
 
+        // Resets the image pan position to center
+        function resetPan() {
+            currentTranslateX = 0;
+            currentTranslateY = 0;
+            modalImage.style.transform = `translate(0px, 0px)`;
+            modalImage.style.transition = 'none'; // Ensure no transition for instant reset
+        }
+
+        // Calculates the maximum pan limits based on image and wrapper size
+        function updatePanLimits() {
+            const wrapper = document.querySelector('.image-gallery-wrapper');
+            if (!wrapper || !modalImage || !modalImage.complete) {
+                // If elements not ready or image not loaded, cannot calculate
+                panLimitX = 0;
+                panLimitY = 0;
+                modalImage.style.cursor = 'default';
+                return;
+            }
+
+            const imgRect = modalImage.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+
+            // Calculate how much the image overflows its wrapper
+            // If image is smaller than wrapper, overflow is 0 or negative, so panLimit is 0
+            panLimitX = Math.max(0, (imgRect.width - wrapperRect.width) / 2);
+            panLimitY = Math.max(0, (imgRect.height - wrapperRect.height) / 2);
+
+            if (panLimitX > 0 || panLimitY > 0) {
+                modalImage.style.cursor = 'grab';
+            } else {
+                modalImage.style.cursor = 'default';
+            }
+        }
+
+        // Handles starting the drag action
+        function startDrag(e) {
+            // Only allow left mouse button (button 0) or touch events
+            if (e.button === 0 || e.type.includes('touch')) { 
+                e.preventDefault(); // Prevent default browser drag behavior
+                isDragging = true;
+                modalImage.style.cursor = 'grabbing';
+                modalImage.style.transition = 'none'; // Stop any transition for immediate response
+
+                // Get starting pointer coordinates (for both mouse and touch)
+                startPointerX = e.clientX || e.touches[0].clientX;
+                startPointerY = e.clientY || e.touches[0].clientY;
+
+                // Get current image translation (m41 for translateX, m42 for translateY)
+                const transformMatrix = new WebKitCSSMatrix(window.getComputedStyle(modalImage).transform);
+                startImageX = transformMatrix.m41;
+                startImageY = transformMatrix.m42;
+
+                // Recalculate pan limits in case image has just loaded or resized
+                updatePanLimits();
+            }
+        }
+
+        // Handles the dragging motion
+        function drag(e) {
+            if (!isDragging) return;
+
+            e.preventDefault(); // Prevent text selection, default browser drag, and page scrolling
+
+            const currentPointerX = e.clientX || e.touches[0].clientX;
+            const currentPointerY = e.clientY || e.touches[0].clientY;
+
+            // Calculate displacement from start of drag
+            const dx = currentPointerX - startPointerX;
+            const dy = currentPointerY - startPointerY;
+
+            // Calculate new desired translation, clamped within limits
+            let newTranslateX = Math.max(-panLimitX, Math.min(panLimitX, startImageX + dx));
+            let newTranslateY = Math.max(-panLimitY, Math.min(panLimitY, startImageY + dy));
+
+            // Apply translation to image
+            modalImage.style.transform = `translate(${newTranslateX}px, ${newTranslateY}px)`;
+        }
+
+        // Handles ending the drag action
+        function endDrag() {
+            if (isDragging) {
+                isDragging = false;
+                modalImage.style.cursor = 'grab'; // Revert cursor
+                // Update currentTranslateX/Y to reflect the final position
+                const transformMatrix = new WebKitCSSMatrix(window.getComputedStyle(modalImage).transform);
+                currentTranslateX = transformMatrix.m41;
+                currentTranslateY = transformMatrix.m42;
+            }
+        }
+
+
         // Function to open the modal and display images
         function openModal(itemImages, startingIndex = 0) {
             currentModalImages = itemImages;
             currentImageIndex = startingIndex;
-            imageModal.style.display = 'flex'; 
+            imageModal.style.display = 'flex';
+            
+            // Set image onload event for panning setup (important for async image loading)
+            modalImage.onload = () => {
+                resetPan();
+                updatePanLimits();
+            };
+
             showSlides(currentImageIndex);
+
+            // If image is already loaded (e.g., from cache), manually trigger setup
+            if (modalImage.complete) {
+                resetPan();
+                updatePanLimits();
+            }
         }
 
         // Function to navigate through images in the modal
@@ -149,17 +266,26 @@
 
         // Function to display a specific image in the modal
         function showSlides(index) {
+            // Reset pan when changing slides
+            resetPan(); 
+
             if (currentModalImages.length > 0 && currentModalImages[index] && currentModalImages[index] !== 'Imagen') {
                 modalImage.src = currentModalImages[index];
                 modalImage.onerror = () => {
                     modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
                     modalImage.onerror = null; 
+                    // Also reset pan for fallback image
+                    resetPan();
+                    updatePanLimits();
                 };
                 imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
             } else {
                 modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
                 imageCounter.textContent = ''; 
                 modalImage.onerror = null; 
+                // Also reset pan for fallback image
+                resetPan();
+                updatePanLimits();
             }
         }
 
@@ -168,6 +294,7 @@
             imageModal.style.display = 'none';
             currentModalImages = [];
             currentImageIndex = 0;
+            resetPan(); // Ensure pan is reset when modal closes
         }
 
         // --- Filter Toggle Logic ---
@@ -463,6 +590,17 @@
                         }
                     });
 
+                    // Panning Event Listeners
+                    modalImage.addEventListener('mousedown', startDrag);
+                    modalImage.addEventListener('mousemove', drag);
+                    document.addEventListener('mouseup', endDrag); // Changed to document
+                    modalImage.addEventListener('mouseleave', endDrag); // Keep for immediate stop if cursor just leaves
+
+                    // Touch events for mobile panning
+                    modalImage.addEventListener('touchstart', startDrag);
+                    modalImage.addEventListener('touchmove', drag);
+                    document.addEventListener('touchend', endDrag); // Changed to document
+                    document.addEventListener('touchcancel', endDrag); // Changed to document
 
                     applyFiltersAndRender(); 
                 })
