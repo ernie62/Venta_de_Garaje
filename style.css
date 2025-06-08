@@ -645,3 +645,16 @@ footer a:hover {
         grid-template-columns: 1fr; /* Single column on very small screens */
     }
 }
+
+/* Image Counter in Modal */
+.image-counter {
+    position: absolute; /* Position it relative to its parent .image-gallery-wrapper */
+    bottom: 10px; /* Distance from the bottom of the image */
+    right: 10px; /* Distance from the right of the image */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* White text for readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em; /* Adjust font size to be clear but not too large */
+    z-index: 10; /* Ensure it's above the image */
+}
