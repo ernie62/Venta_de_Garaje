@@ -508,25 +508,26 @@ footer a:hover {
     overflow: hidden; /* Important for border-radius */
 }
 
-/* New wrapper for image and navigation buttons */
+/* Image Gallery Wrapper (for navigation buttons) */
 .image-gallery-wrapper {
-    position: relative; /* For absolute positioning of prev/next */
+    position: relative;
     width: 100%;
-    max-height: 80vh; /* Control max height */
-    background-color: black; /* Background when image is smaller or loading */
-    display: flex; /* Use flex to center image */
-    align-items: center;
+    height: auto;
+    display: flex;
     justify-content: center;
-    overflow: hidden; /* Hide anything outside */
-    flex-grow: 1; /* Allow it to grow */
+    align-items: center;
+    max-height: calc(90vh - 50px); /* Adjust based on padding/counter height in modal-content */
+    overflow: hidden; /* Crucial: Hides overflowing image parts, enabling panning */
 }
 
 .modal-content img {
     max-width: 100%;
     max-height: 100%; /* Fill image-gallery-wrapper height */
     display: block;
-    object-fit: contain; /* Ensure full image is visible, scales down */
+    object-fit:fill /* Ensure full image is visible, scales down */
 }
+
+
 
 /* Next & previous buttons - positioned relative to .image-gallery-wrapper */
 .prev, .next {
