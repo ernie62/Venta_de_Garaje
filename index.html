@@ -8,28 +8,78 @@
 </head>
 <body>
 
-    <div class="container">
+    <header>
         <h1>Catálogo de la Venta de Garaje Moreno Davis</h1>
+    </header>
 
-        <div class="item-list">
-            </div>
+    <main class="container">
+        <button id="filterToggleButton" class="filter-toggle-button">
+            Filtros
+        </button>
 
-        <div class="contact-info">
-            <h2>¡Contáctanos!</h2>
-            <p>Para más información o para coordinar una compra, no dudes en contactarnos:</p>
-            <p>Email: <a href="mailto:ernie.moreno62@gmail.com">ernie.moreno62@gmail.com</a></p>
-            <p>Teléfono: <a href="tel:+573108791067">+57 310 879 1067</a></p>
-            <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
+        <div class="main-content">
+            <aside class="filters" id="filtersSidebar">
+                <button id="closeFilterButton" class="close-filter-button">&times;</button>
+                <h2>Filtros y Opciones</h2>
+
+                <div class="filter-group">
+                    <h3>Idioma</h3>
+                    <label><input type="radio" name="language" value="es" checked> Español</label>
+                    <label><input type="radio" name="language" value="en"> English</label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Categoría</h3>
+                    <select id="categoryFilter">
+                        <option value="all">Todas las categorías</option>
+                        </select>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <label><input type="radio" name="priceSort" value="none" checked> Sin ordenar</label>
+                    <label><input type="radio" name="priceSort" value="asc"> Ascendente</label>
+                    <label><input type="radio" name="priceSort" value="desc"> Descendente</label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Disponibilidad</h3>
+                    <label><input type="checkbox" id="availableOnly" checked> Solo disponibles</label>
+                </div>
+
+                <div class="result-count" id="resultCount"></div> 
+            </aside>
+
+            <section class="item-gallery">
+                <p id="loading-message">Cargando productos...</p>
+                <div class="applied-filters" id="appliedFiltersContainer">
+                    </div>
+                
+                <div class="item-list" id="items-display-area">
+                    </div>
+                <button id="loadMoreButton" class="load-more-button" style="display: none;">Cargar más</button>
+            </section>
         </div>
+    </main>
+
+    <div class="contact-info">
+        <h2>¡Contáctanos!</h2>
+        <p>Para más información o para coordinar una compra, no dudes en contactarnos:</p>
+        <p>Email: <a href="mailto:ernie.moreno62@gmail.com">ernie.moreno62@gmail.com</a></p>
+        <p>Teléfono: <a href="tel:+573108791067">+57 310 879 1067</a></p>
+        <p>Dirección: Carrera 71G 116 A - 13 Int 3 Apto 3-502 Conjunto: Lagartos 1</p>
     </div>
+
     <div id="imageModal" class="modal">
-            <span class="close-button">&times;</span>
-            <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-content">
+            <div class="image-gallery-wrapper">
                 <img id="modalImage" src="" alt="Imagen del artículo">
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div id="imageCounter" class="image-counter"></div>
             </div>
+            <div id="imageCounter" class="image-counter"></div>
+        </div>
     </div>
     
     <footer>
@@ -37,135 +87,389 @@
     </footer>
 
     <script>
-    let currentModalImages = []; // Stores images for the currently open item
-    let currentImageIndex = 0;   // Current image index in the modal
-    let allItemsData = [];       // Store all fetched items for easy access
+        let allItems = []; // Stores all fetched items for filtering/sorting
+        let filteredItems = []; // Stores items after applying filters
+        let itemsRenderedCount = 0; // Tracks how many items are currently displayed
+        const ITEMS_PER_LOAD = 12; // Number of items to load each time
+        const MIN_CHARS_FOR_EXPAND = 30; // Minimum characters to show expand button
 
-    // Get the modal elements
-    const imageModal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const imageCounter = document.getElementById('imageCounter');
-    const closeButton = document.querySelector('.close-button');
+        // Modal-related variables
+        let currentModalImages = [];
+        let currentImageIndex = 0;
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const imageCounter = document.getElementById('imageCounter');
+        const closeButton = document.querySelector('.close-button'); 
 
-    // Function to open the modal and display images
-    function openModal(itemImages, startingIndex = 0) {
-        currentModalImages = itemImages;
-        currentImageIndex = startingIndex;
-        imageModal.style.display = 'flex';
-        showSlides(currentImageIndex);
-    }
+        // Filter and Load More elements
+        const filterToggleButton = document.getElementById('filterToggleButton');
+        const filtersSidebar = document.getElementById('filtersSidebar');
+        const closeFilterButton = document.getElementById('closeFilterButton');
+        const loadMoreButton = document.getElementById('loadMoreButton');
+        const appliedFiltersContainer = document.getElementById('appliedFiltersContainer');
+        const resultCountElement = document.getElementById('resultCount');
 
-    // Function to navigate through images in the modal
-    function plusSlides(n) {
-        currentImageIndex += n;
-        if (currentImageIndex >= currentModalImages.length) {
-            currentImageIndex = 0; // Loop back to the first image
+
+        // Define the ultimate fallback image URL
+        const ULTIMATE_FALLBACK_IMAGE = 'https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+
+        // Function to parse price for sorting
+        function parsePrice(priceString) {
+            if (typeof priceString !== 'string') {
+                return 0;
+            }
+            const cleanedPrice = priceString.replace(/[$,.]/g, '').trim();
+            return parseInt(cleanedPrice, 10) || 0;
         }
-        if (currentImageIndex < 0) {
-            currentImageIndex = currentModalImages.length - 1; // Loop back to the last image
+
+        // Function to open the modal and display images
+        function openModal(itemImages, startingIndex = 0) {
+            currentModalImages = itemImages;
+            currentImageIndex = startingIndex;
+            imageModal.style.display = 'flex'; 
+            showSlides(currentImageIndex);
         }
-        showSlides(currentImageIndex);
-    }
 
-    // Function to display a specific image in the modal
-    function showSlides(index) {
-        if (currentModalImages.length > 0) {
-            modalImage.src = currentModalImages[index];
-            imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
-        } else {
-            modalImage.src = 'https://via.placeholder.com/600x400?text=Sin+Foto'; // Fallback
-            imageCounter.textContent = '';
-        }
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        imageModal.style.display = 'none';
-        currentModalImages = []; // Clear images
-        currentImageIndex = 0;   // Reset index
-    }
-
-    // Close button event listener
-    closeButton.onclick = closeModal;
-
-    // Close modal when clicking outside the image (on the overlay)
-    window.onclick = function(event) {
-        if (event.target == imageModal) {
-            closeModal();
-        }
-    };
-
-    // Main DOMContentLoaded logic
-    document.addEventListener('DOMContentLoaded', function() {
-        const itemListContainer = document.querySelector('.item-list');
-
-        fetch('data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+        // Function to navigate through images in the modal
+        function plusSlides(n) {
+            if (currentModalImages.length > 1) { 
+                currentImageIndex += n;
+                if (currentImageIndex >= currentModalImages.length) {
+                    currentImageIndex = 0;
                 }
-                return response.json();
-            })
-            .then(items => {
-                allItemsData = items; // Store fetched data globally
+                if (currentImageIndex < 0) {
+                    currentImageIndex = currentModalImages.length - 1;
+                }
+                showSlides(currentImageIndex);
+            } else {
+                console.log("No more images to display or only one image available.");
+            }
+        }
 
-                items.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.classList.add('item');
+        // Function to display a specific image in the modal
+        function showSlides(index) {
+            if (currentModalImages.length > 0 && currentModalImages[index] && currentModalImages[index] !== 'Imagen') {
+                modalImage.src = currentModalImages[index];
+                modalImage.onerror = () => {
+                    modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
+                    modalImage.onerror = null; 
+                };
+                imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
+            } else {
+                modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
+                imageCounter.textContent = ''; 
+                modalImage.onerror = null; 
+            }
+        }
 
-                    const imageContainer = document.createElement('div');
-                    imageContainer.classList.add('item-image-container');
-                    const img = document.createElement('img');
-                    img.src = item.fotos && item.fotos.length > 0 ? item.fotos[0] : 'https://via.placeholder.com/400x300?text=Sin+Foto';
-                    img.alt = item.descripcion;
+        // Function to close the modal
+        function closeModal() {
+            imageModal.style.display = 'none';
+            currentModalImages = [];
+            currentImageIndex = 0;
+        }
 
-                    // Make the image clickable to open the modal
-                    if (item.fotos && item.fotos.length > 0) {
-                        img.style.cursor = 'pointer'; // Indicate it's clickable
-                        img.onclick = () => openModal(item.fotos, 0); // Open modal with all photos
-                    } else {
-                        // If no photos, make placeholder clickable but show placeholder in modal
-                         img.style.cursor = 'default';
-                         img.onclick = () => openModal(['https://via.placeholder.com/600x400?text=Sin+Foto'], 0);
+        // --- Filter Toggle Logic ---
+        function openFilterSidebar() {
+            filtersSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling body when sidebar is open
+        }
+
+        function closeFilterSidebar() {
+            filtersSidebar.classList.remove('active');
+            document.body.style.overflow = ''; // Restore body scrolling
+        }
+
+        // --- UI Update Functions ---
+        function updateAppliedFiltersDisplay(language) {
+            appliedFiltersContainer.innerHTML = '';
+            const filters = {};
+
+            const category = document.getElementById('categoryFilter').value;
+            if (category !== 'all') {
+                filters.category = language === 'es' ? `Categoría: ${category}` : `Category: ${category}`;
+            }
+
+            const priceSort = document.querySelector('input[name="priceSort"]:checked').value;
+            if (priceSort === 'asc') {
+                filters.priceSort = language === 'es' ? 'Precio: Ascendente' : 'Price: Ascending';
+            } else if (priceSort === 'desc') {
+                filters.priceSort = language === 'es' ? 'Precio: Descendente' : 'Price: Descending';
+            }
+
+            // MODIFIED LOGIC FOR 'Solo Disponibles' FILTER CHIP
+            const availableOnlyChecked = document.getElementById('availableOnly').checked;
+            if (!availableOnlyChecked) { // If the checkbox is *unchecked* (meaning we're showing all)
+                filters.availableOnly = language === 'es' ? 'Mostrando Todos (incl. No Disponibles)' : 'Showing All (incl. Unavailable)';
+            }
+
+
+            // Create filter chips
+            for (const key in filters) {
+                const chip = document.createElement('span');
+                chip.classList.add('filter-chip');
+                chip.textContent = filters[key];
+                chip.dataset.filterKey = key; // Store key to allow removal
+                chip.addEventListener('click', () => removeFilter(key));
+                appliedFiltersContainer.appendChild(chip);
+            }
+
+            if (Object.keys(filters).length > 0) {
+                const clearAllBtn = document.createElement('button');
+                clearAllBtn.classList.add('clear-filters-button');
+                clearAllBtn.textContent = language === 'es' ? 'Limpiar todo' : 'Clear All';
+                clearAllBtn.addEventListener('click', clearAllFilters);
+                appliedFiltersContainer.appendChild(clearAllBtn);
+            }
+        }
+
+        function removeFilter(key) {
+            if (key === 'category') {
+                document.getElementById('categoryFilter').value = 'all';
+            } else if (key === 'priceSort') {
+                document.querySelector('input[name="priceSort"][value="none"]').checked = true;
+            } else if (key === 'availableOnly') {
+                // When the 'Show All' chip is removed, revert to the default state,
+                // which is showing only available items (checkbox checked).
+                document.getElementById('availableOnly').checked = true; 
+            }
+            applyFiltersAndRender();
+        }
+
+        function clearAllFilters() {
+            document.getElementById('categoryFilter').value = 'all';
+            document.querySelector('input[name="priceSort"][value="none"]').checked = true;
+            // When clearing all, revert 'availableOnly' to its default (checked) state
+            document.getElementById('availableOnly').checked = true; 
+            applyFiltersAndRender();
+        }
+
+        function updateResultCount(language) {
+            const total = filteredItems.length;
+            if (total === 0) {
+                resultCountElement.textContent = language === 'es' ? '0 resultados' : '0 results';
+            } else {
+                resultCountElement.textContent = language === 'es' ? `${total} resultados` : `${total} results`;
+            }
+        }
+
+
+        // Function to render items based on current filters and language
+        function renderItems(itemsToRender, language, append = false) {
+            const itemListContainer = document.getElementById('items-display-area');
+            if (!append) {
+                itemListContainer.innerHTML = ''; // Clear previous items if not appending
+            }
+
+            if (itemsToRender.length === 0 && !append) { // Only show message if no items at all initially
+                itemListContainer.innerHTML = `<p class="info-message">${language === 'es' ? 'No se encontraron productos con los filtros seleccionados.' : 'No products found with the selected filters.'}</p>`;
+                loadMoreButton.style.display = 'none';
+                return;
+            }
+
+            const startIndex = append ? itemsRenderedCount : 0;
+            const endIndex = Math.min(itemsRenderedCount + ITEMS_PER_LOAD, itemsToRender.length);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const item = itemsToRender[i];
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('item-image-container');
+                const img = document.createElement('img');
+                
+                let initialCardImageSrc = ULTIMATE_FALLBACK_IMAGE; 
+                if (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') {
+                    initialCardImageSrc = item.fotos[0];
+                }
+                img.src = initialCardImageSrc;
+                img.alt = language === 'es' ? item.descripcion : item.descripcionIngles;
+
+                img.onerror = function() {
+                    this.onerror = null; 
+                    this.src = ULTIMATE_FALLBACK_IMAGE; 
+                };
+
+                const photosForModal = (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') ? item.fotos : [];
+
+                if (photosForModal.length > 0) {
+                    img.style.cursor = 'pointer';
+                    img.onclick = () => openModal(photosForModal, 0);
+                } else {
+                    img.style.cursor = 'pointer'; 
+                    img.onclick = () => openModal([], 0); 
+                }
+
+                imageContainer.appendChild(img);
+                itemDiv.appendChild(imageContainer);
+
+                const itemInfo = document.createElement('div');
+                itemInfo.classList.add('item-info');
+
+                const h2 = document.createElement('h2');
+                h2.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
+                // ADDED: Make h2 clickable to open modal
+                h2.style.cursor = 'pointer'; // Visual cue for clickable
+                h2.onclick = () => openModal(photosForModal, 0); // Open modal just like image
+                itemInfo.appendChild(h2);
+
+                const descriptionTextForCheck = language === 'es' ? item.descripcion : item.descripcionIngles;
+
+                if (descriptionTextForCheck && descriptionTextForCheck.length > MIN_CHARS_FOR_EXPAND) {
+                    const pDetails = document.createElement('p');
+                    pDetails.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
+                    pDetails.classList.add('item-description'); 
+                    pDetails.classList.add('is-collapsible'); // Add a class indicating it's meant to be collapsed
+                    itemInfo.appendChild(pDetails); // Only append if it's collapsible
+                    
+                    const expandBtn = document.createElement('button');
+                    expandBtn.classList.add('expand-contract-button');
+                    expandBtn.textContent = language === 'es' ? 'Ver más' : 'Read more'; 
+
+                    expandBtn.addEventListener('click', () => {
+                        pDetails.classList.toggle('expanded'); 
+                        if (pDetails.classList.contains('expanded')) {
+                            expandBtn.textContent = language === 'es' ? 'Ver menos' : 'Show less'; 
+                        } else {
+                            expandBtn.textContent = language === 'es' ? 'Ver más' : 'Read more'; 
+                        }
+                    });
+                    itemInfo.appendChild(expandBtn);
+                } 
+                
+                const priceSpan = document.createElement('span');
+                priceSpan.classList.add('price');
+                priceSpan.textContent = item.precio;
+                itemInfo.appendChild(priceSpan);
+
+                const availabilityP = document.createElement('p');
+                const availabilityStatus = item.disponibilidad.toLowerCase();
+                const availabilityClass = (availabilityStatus === 'sí' || availabilityStatus === 'si') ? 'available' : 'unavailable';
+                availabilityP.classList.add('availability', availabilityClass);
+                availabilityP.textContent = `Disponibilidad: ${language === 'es' ? (availabilityStatus === 'sí' || availabilityStatus === 'si' ? 'Sí' : 'No') : (availabilityStatus === 'sí' || availabilityStatus === 'si' ? 'Yes' : 'No')}`;
+                itemInfo.appendChild(availabilityP);
+
+                itemDiv.appendChild(itemInfo);
+                itemListContainer.appendChild(itemDiv);
+            }
+            itemsRenderedCount = endIndex; // Update count of rendered items
+
+            // Show/hide load more button
+            if (itemsRenderedCount < itemsToRender.length) {
+                loadMoreButton.style.display = 'block';
+            } else {
+                loadMoreButton.style.display = 'none';
+            }
+        }
+
+        // Function to apply all filters and re-render
+        function applyFiltersAndRender() {
+            let currentItems = [...allItems]; 
+
+            const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
+
+            // 1. Filter by category
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            if (selectedCategory !== 'all') {
+                currentItems = currentItems.filter(item => item.categoria === selectedCategory);
+            }
+
+            // 2. Filter by availability (This logic remains the same, as it correctly filters based on checkbox state)
+            const showAvailableOnly = document.getElementById('availableOnly').checked;
+            if (showAvailableOnly) { 
+                currentItems = currentItems.filter(item => item.disponibilidad.toLowerCase() === 'si' || item.disponibilidad.toLowerCase() === 'sí');
+            }
+
+            // 3. Sort by price
+            const priceSort = document.querySelector('input[name="priceSort"]:checked').value;
+            if (priceSort === 'asc') {
+                currentItems.sort((a, b) => parsePrice(a.precio) - parsePrice(b.precio));
+            } else if (priceSort === 'desc') {
+                currentItems.sort((a, b) => parsePrice(b.precio) - parsePrice(a.precio));
+            }
+
+            filteredItems = currentItems; // Update global filteredItems
+            itemsRenderedCount = 0; // Reset rendered count for new filter set
+
+            updateAppliedFiltersDisplay(selectedLanguage);
+            updateResultCount(selectedLanguage);
+            renderItems(filteredItems, selectedLanguage, false); // Initial render (not appending)
+        }
+
+        // Initial data fetch and setup
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allItems = data; 
+                    const loadingMessage = document.getElementById('loading-message');
+                    if (loadingMessage) {
+                        loadingMessage.remove(); 
                     }
 
-                    imageContainer.appendChild(img);
-                    itemDiv.appendChild(imageContainer);
+                    // Populate categories for the filter
+                    const categoryFilter = document.getElementById('categoryFilter');
+                    const categories = [...new Set(data.map(item => item.categoria))].sort();
+                    categories.forEach(category => {
+                        if (category && category.trim() !== '') {
+                            const option = document.createElement('option');
+                            option.value = category;
+                            option.textContent = category;
+                            categoryFilter.appendChild(option);
+                        }
+                    });
 
-                    const itemInfo = document.createElement('div');
-                    itemInfo.classList.add('item-info');
+                    // Add event listeners to filters and language selector
+                    document.querySelectorAll('input[name="language"]').forEach(radio => {
+                        radio.addEventListener('change', applyFiltersAndRender); 
+                    });
+                    document.getElementById('categoryFilter').addEventListener('change', applyFiltersAndRender);
+                    document.querySelectorAll('input[name="priceSort"]').forEach(radio => {
+                        radio.addEventListener('change', applyFiltersAndRender);
+                    });
+                    document.getElementById('availableOnly').addEventListener('change', applyFiltersAndRender);
 
-                    const h2 = document.createElement('h2');
-                    h2.textContent = item.descripcion;
-                    itemInfo.appendChild(h2);
+                    // --- Event Listeners for UI elements ---
+                    filterToggleButton.addEventListener('click', openFilterSidebar);
+                    closeFilterButton.addEventListener('click', closeFilterSidebar);
+                    loadMoreButton.addEventListener('click', () => {
+                        const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
+                        renderItems(filteredItems, selectedLanguage, true); // Append more items
+                    });
+                    
+                    // Event listener for the close button of the modal
+                    closeButton.addEventListener('click', closeModal);
+                    
+                    // Close modal when clicking outside its content
+                    imageModal.addEventListener('click', function(event) {
+                        // If the click target is the modal element itself (the background), close the modal
+                        if (event.target === imageModal) {
+                            closeModal();
+                        }
+                    });
 
-                    if (item.detallesAdicionales) {
-                        const pDetails = document.createElement('p');
-                        pDetails.textContent = item.detallesAdicionales;
-                        itemInfo.appendChild(pDetails);
-                    }
 
-                    const priceSpan = document.createElement('span');
-                    priceSpan.classList.add('price');
-                    priceSpan.textContent = item.precio;
-                    itemInfo.appendChild(priceSpan);
+                    // Close sidebar if window resized to desktop from mobile and it's open as overlay
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth > 768 && filtersSidebar.classList.contains('active')) {
+                            closeFilterSidebar();
+                        }
+                    });
 
-                    const availabilityP = document.createElement('p');
-                    const availabilityClass = item.disponibilidad.toLowerCase() === 'sí' || item.disponibilidad.toLowerCase() === 'si' ? 'available' : 'unavailable';
-                    availabilityP.classList.add('availability', availabilityClass);
-                    availabilityP.textContent = `Disponibilidad: ${item.disponibilidad}`;
-                    itemInfo.appendChild(availabilityP);
 
-                    itemDiv.appendChild(itemInfo);
-                    itemListContainer.appendChild(itemDiv);
+                    applyFiltersAndRender(); 
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('items-display-area').innerHTML = `<p class="error-message" style="text-align: center; color: red;">Error al cargar los productos: ${error.message}</p>`;
                 });
-            })
-            .catch(error => {
-                console.error('Error al cargar los artículos:', error);
-                itemListContainer.innerHTML = '<p style="text-align: center; color: red;">No se pudieron cargar los artículos. Por favor, inténtalo de nuevo más tarde.</p>';
-            });
-    });
-</script>
-
+        });
+    </script>
 </body>
 </html>
