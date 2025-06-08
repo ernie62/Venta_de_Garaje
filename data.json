@@ -53,8 +53,8 @@
     "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1034091/pexels-photo-1034091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "./images/2-mesas-de-1.jpg",
+      "./images/2-mesas-de-2.jpg"
     ]
   },
   {
