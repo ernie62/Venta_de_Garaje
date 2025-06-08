@@ -13,38 +13,51 @@
     </header>
 
     <main class="container">
-        <aside class="filters">
-            <h2>Filtros y Opciones</h2>
+        <button id="filterToggleButton" class="filter-toggle-button">
+            Filtros
+        </button>
 
-            <div class="filter-group">
-                <h3>Idioma</h3>
-                <label><input type="radio" name="language" value="es" checked> Español</label>
-                <label><input type="radio" name="language" value="en"> English</label>
-            </div>
+        <div class="main-content">
+            <aside class="filters" id="filtersSidebar">
+                <button id="closeFilterButton" class="close-filter-button">&times;</button>
+                <h2>Filtros y Opciones</h2>
 
-            <div class="filter-group">
-                <h3>Categoría</h3>
-                <select id="categoryFilter">
-                    <option value="all">Todas las categorías</option>
-                    </select>
-            </div>
+                <div class="filter-group">
+                    <h3>Idioma</h3>
+                    <label><input type="radio" name="language" value="es" checked> Español</label>
+                    <label><input type="radio" name="language" value="en"> English</label>
+                </div>
 
-            <div class="filter-group">
-                <h3>Precio</h3>
-                <label><input type="radio" name="priceSort" value="none" checked> Sin ordenar</label>
-                <label><input type="radio" name="priceSort" value="asc"> Ascendente</label>
-                <label><input type="radio" name="priceSort" value="desc"> Descendente</label>
-            </div>
+                <div class="filter-group">
+                    <h3>Categoría</h3>
+                    <select id="categoryFilter">
+                        <option value="all">Todas las categorías</option>
+                        </select>
+                </div>
 
-            <div class="filter-group">
-                <h3>Disponibilidad</h3>
-                <label><input type="checkbox" id="availableOnly"> Solo disponibles</label>
-            </div>
-        </aside>
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <label><input type="radio" name="priceSort" value="none" checked> Sin ordenar</label>
+                    <label><input type="radio" name="priceSort" value="asc"> Ascendente</label>
+                    <label><input type="radio" name="priceSort" value="desc"> Descendente</label>
+                </div>
 
-        <section class="item-list" id="items-display-area">
-            <p id="loading-message">Cargando productos...</p>
-        </section>
+                <div class="filter-group">
+                    <h3>Disponibilidad</h3>
+                    <label><input type="checkbox" id="availableOnly"> Solo disponibles</label>
+                </div>
+            </aside>
+
+            <section class="item-gallery">
+                <p id="loading-message">Cargando productos...</p>
+                <div class="applied-filters" id="appliedFiltersContainer">
+                    </div>
+                <div class="result-count" id="resultCount"></div>
+                <div class="item-list" id="items-display-area">
+                    </div>
+                <button id="loadMoreButton" class="load-more-button" style="display: none;">Cargar más</button>
+            </section>
+        </div>
     </main>
 
     <div class="contact-info">
@@ -58,9 +71,11 @@
     <div id="imageModal" class="modal">
         <span class="close-button">&times;</span>
         <div class="modal-content">
-            <img id="modalImage" src="" alt="Imagen del artículo">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="image-gallery-wrapper">
+                <img id="modalImage" src="" alt="Imagen del artículo">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
             <div id="imageCounter" class="image-counter"></div>
         </div>
     </div>
@@ -72,16 +87,28 @@
     <script>
         let allItems = []; // Stores all fetched items for filtering/sorting
         let filteredItems = []; // Stores items after applying filters
-        
-        // Modal-related variables (from your original code)
+        let itemsRenderedCount = 0; // Tracks how many items are currently displayed
+        const ITEMS_PER_LOAD = 12; // Number of items to load each time
+        const MIN_CHARS_FOR_EXPAND = 30; // Minimum characters to show expand button
+
+        // Modal-related variables
         let currentModalImages = [];
         let currentImageIndex = 0;
         const imageModal = document.getElementById('imageModal');
         const modalImage = document.getElementById('modalImage');
         const imageCounter = document.getElementById('imageCounter');
-        const closeButton = document.querySelector('.close-button');
+        const closeButton = document.querySelector('.close-button'); // Selected correctly
 
-        // Define the ultimate fallback image URL (standardized)
+        // Filter and Load More elements
+        const filterToggleButton = document.getElementById('filterToggleButton');
+        const filtersSidebar = document.getElementById('filtersSidebar');
+        const closeFilterButton = document.getElementById('closeFilterButton');
+        const loadMoreButton = document.getElementById('loadMoreButton');
+        const appliedFiltersContainer = document.getElementById('appliedFiltersContainer');
+        const resultCountElement = document.getElementById('resultCount');
+
+
+        // Define the ultimate fallback image URL
         const ULTIMATE_FALLBACK_IMAGE = 'https://images.pexels.com/photos/6606821/pexels-photo-6606821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
         // Function to parse price for sorting
@@ -93,17 +120,16 @@
             return parseInt(cleanedPrice, 10) || 0;
         }
 
-        // Function to open the modal and display images (from your original code)
+        // Function to open the modal and display images
         function openModal(itemImages, startingIndex = 0) {
             currentModalImages = itemImages;
             currentImageIndex = startingIndex;
-            imageModal.style.display = 'flex'; // Use flex to center
+            imageModal.style.display = 'flex'; 
             showSlides(currentImageIndex);
         }
 
-        // Function to navigate through images in the modal (from your original code)
+        // Function to navigate through images in the modal
         function plusSlides(n) {
-            // Only allow navigation if there are actual images to navigate
             if (currentModalImages.length > 1) { 
                 currentImageIndex += n;
                 if (currentImageIndex >= currentModalImages.length) {
@@ -118,50 +144,127 @@
             }
         }
 
-        // Function to display a specific image in the modal (corrected logic)
+        // Function to display a specific image in the modal
         function showSlides(index) {
             if (currentModalImages.length > 0 && currentModalImages[index] && currentModalImages[index] !== 'Imagen') {
                 modalImage.src = currentModalImages[index];
-                // Add onerror to catch individual broken image URLs within the array
                 modalImage.onerror = () => {
-                    modalImage.src = ULTIMATE_FALLBACK_IMAGE; // Fallback for broken link
-                    modalImage.onerror = null; // Clear handler to prevent infinite loop
+                    modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
+                    modalImage.onerror = null; 
                 };
                 imageCounter.textContent = `${index + 1} / ${currentModalImages.length}`;
             } else {
-                // If currentModalImages is empty, or the current image is 'Imagen', or undefined/null
-                modalImage.src = ULTIMATE_FALLBACK_IMAGE; // Your fallback
-                imageCounter.textContent = ''; // No counter for fallback
-                modalImage.onerror = null; // Clear handler for fallback
+                modalImage.src = ULTIMATE_FALLBACK_IMAGE; 
+                imageCounter.textContent = ''; 
+                modalImage.onerror = null; 
             }
         }
 
-        // Function to close the modal (from your original code)
+        // Function to close the modal
         function closeModal() {
             imageModal.style.display = 'none';
             currentModalImages = [];
             currentImageIndex = 0;
         }
 
-        // Event listeners for modal (from your original code)
-        closeButton.onclick = closeModal;
-        window.onclick = function(event) {
-            if (event.target == imageModal) {
-                closeModal();
+        // --- Filter Toggle Logic ---
+        function openFilterSidebar() {
+            filtersSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling body when sidebar is open
+        }
+
+        function closeFilterSidebar() {
+            filtersSidebar.classList.remove('active');
+            document.body.style.overflow = ''; // Restore body scrolling
+        }
+
+        // --- UI Update Functions ---
+        function updateAppliedFiltersDisplay(language) {
+            appliedFiltersContainer.innerHTML = '';
+            const filters = {};
+
+            const category = document.getElementById('categoryFilter').value;
+            if (category !== 'all') {
+                filters.category = language === 'es' ? `Categoría: ${category}` : `Category: ${category}`;
             }
-        };
+
+            const priceSort = document.querySelector('input[name="priceSort"]:checked').value;
+            if (priceSort === 'asc') {
+                filters.priceSort = language === 'es' ? 'Precio: Ascendente' : 'Price: Ascending';
+            } else if (priceSort === 'desc') {
+                filters.priceSort = language === 'es' ? 'Precio: Descendente' : 'Price: Descending';
+            }
+
+            const availableOnly = document.getElementById('availableOnly').checked;
+            if (availableOnly) {
+                filters.availableOnly = language === 'es' ? 'Solo Disponibles' : 'Available Only';
+            }
+
+            // Create filter chips
+            for (const key in filters) {
+                const chip = document.createElement('span');
+                chip.classList.add('filter-chip');
+                chip.textContent = filters[key];
+                chip.dataset.filterKey = key; // Store key to allow removal
+                chip.addEventListener('click', () => removeFilter(key));
+                appliedFiltersContainer.appendChild(chip);
+            }
+
+            if (Object.keys(filters).length > 0) {
+                const clearAllBtn = document.createElement('button');
+                clearAllBtn.classList.add('clear-filters-button');
+                clearAllBtn.textContent = language === 'es' ? 'Limpiar todo' : 'Clear All';
+                clearAllBtn.addEventListener('click', clearAllFilters);
+                appliedFiltersContainer.appendChild(clearAllBtn);
+            }
+        }
+
+        function removeFilter(key) {
+            if (key === 'category') {
+                document.getElementById('categoryFilter').value = 'all';
+            } else if (key === 'priceSort') {
+                document.querySelector('input[name="priceSort"][value="none"]').checked = true;
+            } else if (key === 'availableOnly') {
+                document.getElementById('availableOnly').checked = false;
+            }
+            applyFiltersAndRender();
+        }
+
+        function clearAllFilters() {
+            document.getElementById('categoryFilter').value = 'all';
+            document.querySelector('input[name="priceSort"][value="none"]').checked = true;
+            document.getElementById('availableOnly').checked = false;
+            applyFiltersAndRender();
+        }
+
+        function updateResultCount(language) {
+            const total = filteredItems.length;
+            if (total === 0) {
+                resultCountElement.textContent = language === 'es' ? '0 resultados' : '0 results';
+            } else {
+                resultCountElement.textContent = language === 'es' ? `${total} resultados` : `${total} results`;
+            }
+        }
+
 
         // Function to render items based on current filters and language
-        function renderItems(itemsToRender, language) {
+        function renderItems(itemsToRender, language, append = false) {
             const itemListContainer = document.getElementById('items-display-area');
-            itemListContainer.innerHTML = ''; // Clear previous items
+            if (!append) {
+                itemListContainer.innerHTML = ''; // Clear previous items if not appending
+            }
 
-            if (itemsToRender.length === 0) {
-                itemListContainer.innerHTML = '<p class="info-message">No se encontraron productos con los filtros seleccionados.</p>';
+            if (itemsToRender.length === 0 && !append) { // Only show message if no items at all initially
+                itemListContainer.innerHTML = `<p class="info-message">${language === 'es' ? 'No se encontraron productos con los filtros seleccionados.' : 'No products found with the selected filters.'}</p>`;
+                loadMoreButton.style.display = 'none';
                 return;
             }
 
-            itemsToRender.forEach(item => {
+            const startIndex = append ? itemsRenderedCount : 0;
+            const endIndex = Math.min(itemsRenderedCount + ITEMS_PER_LOAD, itemsToRender.length);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const item = itemsToRender[i];
                 const itemDiv = document.createElement('div');
                 itemDiv.classList.add('item');
 
@@ -169,31 +272,26 @@
                 imageContainer.classList.add('item-image-container');
                 const img = document.createElement('img');
                 
-                // Determine initial image source for the card itself
-                let initialCardImageSrc = ULTIMATE_FALLBACK_IMAGE; // Start with fallback
+                let initialCardImageSrc = ULTIMATE_FALLBACK_IMAGE; 
                 if (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') {
                     initialCardImageSrc = item.fotos[0];
                 }
                 img.src = initialCardImageSrc;
                 img.alt = language === 'es' ? item.descripcion : item.descripcionIngles;
 
-                // Add onerror handler for the card image
                 img.onerror = function() {
-                    this.onerror = null; // Prevent infinite loop
-                    this.src = ULTIMATE_FALLBACK_IMAGE; // Fallback to Pexels image
+                    this.onerror = null; 
+                    this.src = ULTIMATE_FALLBACK_IMAGE; 
                 };
 
-                // Make the image clickable to open the modal
                 const photosForModal = (item.fotos && item.fotos.length > 0 && item.fotos[0] !== 'Imagen') ? item.fotos : [];
 
                 if (photosForModal.length > 0) {
                     img.style.cursor = 'pointer';
                     img.onclick = () => openModal(photosForModal, 0);
                 } else {
-                    // If no valid photos, still make it clickable but open modal with an empty array
-                    // so showSlides handles the Pexels fallback.
                     img.style.cursor = 'pointer'; 
-                    img.onclick = () => openModal([], 0); // Pass an empty array
+                    img.onclick = () => openModal([], 0); 
                 }
 
                 imageContainer.appendChild(img);
@@ -206,17 +304,30 @@
                 h2.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
                 itemInfo.appendChild(h2);
 
-                // Check for details, using appropriate language if available
-                if (language === 'es' && item.detallesAdicionales && item.detallesAdicionales.trim() !== '') {
-                    const pDetails = document.createElement('p');
-                    pDetails.textContent = item.detallesAdicionales;
-                    itemInfo.appendChild(pDetails);
-                } else if (language === 'en' && item.detallesAdicionalesEnglish && item.detallesAdicionalesEnglish.trim() !== '') {
-                    const pDetails = document.createElement('p');
-                    pDetails.textContent = item.detallesAdicionalesEnglish;
-                    itemInfo.appendChild(pDetails);
-                }
+                const descriptionTextForCheck = language === 'es' ? item.descripcion : item.descripcionIngles;
 
+                if (descriptionTextForCheck && descriptionTextForCheck.length > MIN_CHARS_FOR_EXPAND) {
+                    const pDetails = document.createElement('p');
+                    pDetails.textContent = language === 'es' ? item.descripcion : item.descripcionIngles;
+                    pDetails.classList.add('item-description'); 
+                    pDetails.classList.add('is-collapsible'); // Add a class indicating it's meant to be collapsed
+                    itemInfo.appendChild(pDetails); // Only append if it's collapsible
+                    
+                    const expandBtn = document.createElement('button');
+                    expandBtn.classList.add('expand-contract-button');
+                    expandBtn.textContent = language === 'es' ? 'Ver más' : 'Read more'; 
+
+                    expandBtn.addEventListener('click', () => {
+                        pDetails.classList.toggle('expanded'); 
+                        if (pDetails.classList.contains('expanded')) {
+                            expandBtn.textContent = language === 'es' ? 'Ver menos' : 'Show less'; 
+                        } else {
+                            expandBtn.textContent = language === 'es' ? 'Ver más' : 'Read more'; 
+                        }
+                    });
+                    itemInfo.appendChild(expandBtn);
+                } 
+                
                 const priceSpan = document.createElement('span');
                 priceSpan.classList.add('price');
                 priceSpan.textContent = item.precio;
@@ -231,12 +342,22 @@
 
                 itemDiv.appendChild(itemInfo);
                 itemListContainer.appendChild(itemDiv);
-            });
+            }
+            itemsRenderedCount = endIndex; // Update count of rendered items
+
+            // Show/hide load more button
+            if (itemsRenderedCount < itemsToRender.length) {
+                loadMoreButton.style.display = 'block';
+            } else {
+                loadMoreButton.style.display = 'none';
+            }
         }
 
         // Function to apply all filters and re-render
         function applyFiltersAndRender() {
-            let currentItems = [...allItems]; // Start with a fresh copy of all items
+            let currentItems = [...allItems]; 
+
+            const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
 
             // 1. Filter by category
             const selectedCategory = document.getElementById('categoryFilter').value;
@@ -259,11 +380,11 @@
             }
 
             filteredItems = currentItems; // Update global filteredItems
+            itemsRenderedCount = 0; // Reset rendered count for new filter set
 
-            // Get selected language
-            const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
-
-            renderItems(filteredItems, selectedLanguage);
+            updateAppliedFiltersDisplay(selectedLanguage);
+            updateResultCount(selectedLanguage);
+            renderItems(filteredItems, selectedLanguage, false); // Initial render (not appending)
         }
 
         // Initial data fetch and setup
@@ -276,10 +397,10 @@
                     return response.json();
                 })
                 .then(data => {
-                    allItems = data; // Store the original data
+                    allItems = data; 
                     const loadingMessage = document.getElementById('loading-message');
                     if (loadingMessage) {
-                        loadingMessage.remove(); // Remove loading message
+                        loadingMessage.remove(); 
                     }
 
                     // Populate categories for the filter
@@ -296,7 +417,7 @@
 
                     // Add event listeners to filters and language selector
                     document.querySelectorAll('input[name="language"]').forEach(radio => {
-                        radio.addEventListener('change', applyFiltersAndRender); // Re-render on language change
+                        radio.addEventListener('change', applyFiltersAndRender); 
                     });
                     document.getElementById('categoryFilter').addEventListener('change', applyFiltersAndRender);
                     document.querySelectorAll('input[name="priceSort"]').forEach(radio => {
@@ -304,7 +425,26 @@
                     });
                     document.getElementById('availableOnly').addEventListener('change', applyFiltersAndRender);
 
-                    applyFiltersAndRender(); // Initial render after data is loaded and filters are set up
+                    // --- Event Listeners for UI elements ---
+                    filterToggleButton.addEventListener('click', openFilterSidebar);
+                    closeFilterButton.addEventListener('click', closeFilterSidebar);
+                    loadMoreButton.addEventListener('click', () => {
+                        const selectedLanguage = document.querySelector('input[name="language"]:checked').value;
+                        renderItems(filteredItems, selectedLanguage, true); // Append more items
+                    });
+                    // NEW: Event listener for the close button of the modal
+                    closeButton.addEventListener('click', closeModal);
+
+
+                    // Close sidebar if window resized to desktop from mobile and it's open as overlay
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth > 768 && filtersSidebar.classList.contains('active')) {
+                            closeFilterSidebar();
+                        }
+                    });
+
+
+                    applyFiltersAndRender(); 
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);

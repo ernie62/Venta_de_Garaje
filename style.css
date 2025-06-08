@@ -1,67 +1,76 @@
-/* Estilos Generales para el cuerpo de la página y el contenedor principal */
+/* General Body and Container Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; /* Changed from 20px to 0 for better main layout control */
-    background-color: #f8f9fa;
-    color: #343a40;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #4CAF50; /* Green from previous solution */
+    background-color: #0056b3;
     color: white;
     padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: white; /* Changed to white for header */
-    text-align: center;
-    margin: 0; /* Remove default margin from h1 in header */
-    font-size: 2.5em;
-    /* Removed border-bottom and padding-bottom for header h1 */
-}
-
-/* Main content area, acting as the container */
-main.container {
+.container {
     max-width: 1200px;
-    margin: 20px auto; /* Added margin-top/bottom */
+    margin: 20px auto;
     padding: 0 15px;
-    display: flex; /* Use flexbox for sidebar and content */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 25px; /* Gap between sidebar and item list */
 }
 
-/* Estilos para el Sidebar de Filtros */
-aside.filters {
-    flex: 0 0 280px; /* Fixed width sidebar for filters */
+/* Main Content Layout (Filters and Gallery) */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    gap: 20px; /* Space between filters and gallery */
+}
+
+/* Filters Section - MOBILE DEFAULT (HIDDEN OVERLAY) */
+.filters {
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    align-self: flex-start; /* Stick to the top */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-shrink: 0; 
+    
+    /* Mobile-specific properties (hidden by default) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%; /* Adjust as needed */
+    max-width: 350px;
+    transform: translateX(-100%); /* Hides it off-screen */
+    transition: transform 0.3s ease-out; /* Smooth transition */
+    z-index: 999; /* Ensure it's above other content */
+    padding-top: 60px; /* Space for close button */
+}
+
+/* Filters active state (mobile only) */
+.filters.active {
+    transform: translateX(0); /* Shows it on screen */
+}
+
+.filters h2 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
 .filter-group {
     margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.filter-group:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .filter-group h3 {
-    margin-top: 0;
     color: #555;
-    font-size: 1.1em;
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .filter-group label {
@@ -70,292 +79,490 @@ aside.filters {
     cursor: pointer;
 }
 
+.filter-group input[type="radio"],
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
 .filter-group select {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
 }
 
-
-/* Estilos para la Lista de Artículos (cómo se muestran los productos) */
-.item-list {
-    flex-grow: 1; /* Allow item list to take remaining space */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 0; /* Adjusted padding */
-}
-.item {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out;
-    display: flex; /* For internal flex layout if needed */
-    flex-direction: column; /* Stack contents vertically */
-    justify-content: space-between; /* Push footer-like elements to bottom */
-}
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-.item-image-container {
+/* Filter Toggle Button (Mobile Only by default) */
+.filter-toggle-button {
+    display: block; /* Shown by default on mobile */
     width: 100%;
-    height: 200px; /* Fija la altura de las imágenes */
-    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+    padding: 12px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Close Filter Button (Visible only when mobile sidebar is active) */
+.close-filter-button {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+}
+
+.filters.active .close-filter-button {
+    display: block; /* Show close button when active */
+}
+
+
+/* Item Gallery Section */
+.item-gallery {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 15px;
-    display: flex; /* Para centrar la imagen */
-    justify-content: center;
-    align-items: center;
-    background-color: #eee; /* Fondo para placeholders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Allows gallery to take up remaining space */
 }
-.item-image-container img {
-    width: 100%; /* Ajusta el ancho de la imagen */
-    height: 100%; /* Ajusta la altura de la imagen */
-    object-fit: cover; /* Recorta la imagen para que cubra el contenedor */
-    display: block;
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
-.item-info {
-    flex-grow: 1; /* Allows info to take up available space */
+
+.item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
 }
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item-image-container {
+    width: 100%;
+    height: 200px; /* Fixed height for image container */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9e9e9; /* Placeholder background */
+}
+
+.item-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block; /* Remove extra space below image */
+}
+
+.item-info {
+    padding: 15px;
+    flex-grow: 1; /* Allows info section to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .item-info h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 0;
     margin-bottom: 10px;
-    color: #333;
-    min-height: 2.2em; /* Ensure consistent height for titles */
-}
-.item-info p {
-    font-size: 0.95em;
-    margin-bottom: 8px;
-    color: #555;
-}
-.item-info .price {
-    font-weight: bold;
-    color: #28a745; /* Verde para el precio */
-    font-size: 1.3em;
-    margin-top: auto; /* Pushes price to the bottom if content above varies */
-    display: block;
-}
-.item-info .availability {
-    font-style: italic;
-    color: #6c757d;
-    font-size: 0.9em;
-    margin-top: 5px; /* Add a bit space below price */
-}
-.item-info .availability.available {
-    color: #28a745; /* Verde si está disponible */
-    font-weight: bold;
-}
-.item-info .availability.unavailable {
-    color: #dc3545; /* Rojo si no está disponible */
-    font-weight: bold;
+    color: #0056b3;
+    min-height: 2.6em; /* Ensure consistent height for titles */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
 }
 
-.info-message { /* For "No items found" message */
-    grid-column: 1 / -1;
+/* Item Description Styling (Default: for non-collapsible descriptions) */
+.item-description {
+    font-size: 0.9em;
+    line-height: 1.4em; /* Explicit line-height for consistent line height */
+    color: #666;
+    margin-bottom: 10px; /* Default margin for non-collapsible descriptions */
+    flex-grow: 1; 
+    overflow: visible; /* By default, descriptions are fully visible */
+    height: auto; /* By default, descriptions take natural height */
+    opacity: 1; /* By default, descriptions are fully visible */
+    white-space: normal; /* Ensure text wraps normally */
+    -webkit-line-clamp: unset; /* No line clamping by default */
+    text-overflow: unset; /* No ellipsis by default */
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out; /* Keep transitions */
+}
+
+/* Styles for collapsible descriptions when they are in their *contracted* state (initially hidden) */
+.item-description.is-collapsible:not(.expanded) {
+    height: 0; /* Hide height */
+    opacity: 0; /* Make invisible */
+    margin-bottom: 0; /* Remove margin when hidden */
+    overflow: hidden; /* Hide any overflow */
+    /* No need for line-clamp or text-overflow as it's hidden */
+}
+
+/* Styles for collapsible descriptions when they are *expanded* */
+.item-description.is-collapsible.expanded {
+    height: auto; /* Show full height */
+    opacity: 1; /* Make visible */
+    margin-bottom: 10px; /* Restore original margin */
+    overflow: visible; /* Allow content to flow */
+    white-space: normal; /* Ensure text wraps normally */
+    -webkit-line-clamp: unset; /* Ensure no clamping when expanded */
+    text-overflow: unset; /* Ensure no ellipsis when expanded */
+}
+
+/* Expand/Contract Button Styling */
+.expand-contract-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: auto; /* Push button to the bottom */
+    margin-bottom: 10px; /* Space from price */
+    align-self: center; /* Center the button */
+    transition: background-color 0.2s ease;
+}
+
+.expand-contract-button:hover {
+    background-color: #0056b3;
+}
+
+
+.price {
+    font-size: 1.4em;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block; /* Ensure it takes full width */
+}
+
+.availability {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.availability.available {
+    color: #28a745; /* Green for available */
+}
+
+.availability.unavailable {
+    color: #dc3545; /* Red for unavailable */
+}
+
+/* Load More Button */
+.load-more-button {
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.load-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* Applied Filters Display */
+.applied-filters {
+    margin-bottom: 15px;
+    min-height: 25px; /* Ensure space even if no filters are applied */
+}
+
+.filter-chip {
+    display: inline-block;
+    background-color: #e0f2f7;
+    color: #0056b3;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-chip:hover {
+    background-color: #cce9f5;
+}
+
+.clear-filters-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.clear-filters-button:hover {
+    background-color: #c82333;
+}
+
+.result-count {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+
+/* Info and Error Messages */
+.info-message, .error-message {
     text-align: center;
     padding: 20px;
-    font-style: italic;
-    color: #666;
+    background-color: #ffeeba;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+    color: #856404;
+    margin-top: 20px;
 }
 
+.error-message {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
 
-/* Estilos para la Información de Contacto */
+/* Contact Info */
 .contact-info {
-    background-color: #e9ecef;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 50px auto 20px auto; /* Centered with top/bottom margin */
-    max-width: 1200px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-top: 1px solid #ddd;
 }
+
 .contact-info h2 {
-    color: #007bff;
+    color: #0056b3;
     margin-bottom: 15px;
-    font-size: 2em;
 }
+
 .contact-info p {
-    font-size: 1.1em;
     margin-bottom: 10px;
 }
+
 .contact-info a {
     color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
+
 .contact-info a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para el Pie de Página */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 20px; /* Adjusted margin-top */
-    font-size: 0.85em;
-    color: #6c757d;
-    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
 }
 
-/* Estilos para el Modal de Imagen */
+/* Modal Styles */
 .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Permanece en su lugar */
-    z-index: 1000; /* Increased z-index to ensure it's on top */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: auto; /* Permite desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.9); /* Fondo negro con transparencia */
-    padding-top: 0; /* Remove padding-top from here, managed by flexbox */
-    /*display: flex;  /*Use flexbox to center the content */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    /*display: flex;  Use flex to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
 
-/* Contenido del modal que contiene la imagen y los botones de navegación */
+/* Modal Content Box */
 .modal-content {
-    display: flex; /* Usar flexbox para la imagen y los botones */
-    align-items: center; /* Centrar elementos verticalmente */
-    justify-content: space-between; /* Espaciar imagen y botones */
-    position: relative; /* Para que los botones se posicionen absolutamente dentro de él */
-    max-width: 90%; /* Ancho máximo del contenido del modal */
-    max-height: 90vh; /* Altura máxima del contenido del modal */
-    background-color: transparent; /* No background needed here, handled by modal overlay */
-    padding: 0 50px; /* Añade un padding a los lados para que los botones queden fuera de la imagen */
-    box-sizing: border-box; /* Incluye padding en el ancho/alto */
+    position: relative; /* Crucial for positioning close button */
+    background-color: #fefefe; /* This will be the background *behind* the image */
+    padding: 0; /* Remove padding here */
+    border: 1px solid #888;
+    width: 90%; /* Make it wider */
+    max-width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: flex;
+    flex-direction: column; /* Stack image gallery and counter */
+    align-items: center; /* Center horizontally */
+    border-radius: 8px;
+    overflow: hidden; /* Important for border-radius */
 }
 
-/* La imagen dentro del modal */
-#modalImage {
-    max-width: 100%; /* La imagen no debe exceder el ancho de su contenedor */
-    max-height: 80vh; /* La imagen no debe exceder la altura de su contenedor */
-    object-fit: contain; /* Ajusta la imagen sin recortar, manteniendo la proporción */
-    display: block; /* Elimina el espacio extra debajo de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente dentro del flex item */
+/* New wrapper for image and navigation buttons */
+.image-gallery-wrapper {
+    position: relative; /* For absolute positioning of prev/next */
+    width: 100%;
+    max-height: 80vh; /* Control max height */
+    background-color: black; /* Background when image is smaller or loading */
+    display: flex; /* Use flex to center image */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide anything outside */
+    flex-grow: 1; /* Allow it to grow */
 }
 
-/* Botón de cerrar (X) */
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-    z-index: 1010; /* Asegura que esté por encima de la imagen and modal */
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%; /* Fill image-gallery-wrapper height */
+    display: block;
+    object-fit: contain; /* Ensure full image is visible, scales down */
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Botones de navegación (anterior/siguiente) */
+/* Next & previous buttons - positioned relative to .image-gallery-wrapper */
 .prev, .next {
     cursor: pointer;
-    position: absolute; /* Posicionamiento absoluto relativo a .modal-content */
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centra verticalmente de forma más precisa */
+    transform: translateY(-50%); /* Centered vertically */
     width: auto;
-    padding: 16px 20px; /* Ajusta padding para que sean más grandes */
+    padding: 16px 20px; /* More horizontal padding */
     color: white;
     font-weight: bold;
-    font-size: 25px; /* Aumenta el tamaño de la flecha */
+    font-size: 25px; /* Slightly larger */
     transition: 0.6s ease;
     user-select: none;
     -webkit-user-select: none;
-    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
-    border-radius: 50%; /* Hace los botones circulares */
-    z-index: 1005; /* Asegura que estén por encima de la imagen */
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    z-index: 100; /* Ensure they are above the image */
 }
 
-/* Posición del botón "anterior" a la izquierda */
-.prev {
-    left: 10px; /* Desplazamiento desde el borde izquierdo del modal-content */
-}
-
-/* Posición del botón "siguiente" a la derecha */
+/* Position the "next button" to the right */
 .next {
-    right: 10px; /* Desplazamiento desde el borde derecho del modal-content */
+    right: 0;
+    border-radius: 3px 0 0 3px; /* Rounded on left side */
 }
 
-/* Efecto hover en los botones */
+/* Position the "prev button" to the left */
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0; /* Rounded on right side */
+}
+
+/* On hover, add a black background color with a little more opacity */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Contador de imágenes (ej. "1 / 5") */
 .image-counter {
-    color: #f2f2f2;
+    color: #f2f2f2; /* Changed color to be visible on modal-content background */
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute; /* Posicionamiento absoluto relativo a .modal-content */
-    bottom: 10px; /* Posicionado cerca de la parte inferior */
-    left: 50%;
-    transform: translateX(-50%); /* Centra horizontalmente */
-    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    background-color: rgba(0,0,0,0.7); /* Give it a background */
     border-radius: 5px;
-    z-index: 1005;
+    margin-top: 10px; /* Space from image */
+    position: static; /* No longer absolutely positioned */
+    color: white;
+}
+
+/* Close button - now always relative to .modal-content */
+.close-button {
+    color: #aaaaaa;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute; /* Relative to .modal-content */
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above modal content */
+    background-color: rgba(255,255,255,0.7); /* Slightly translucent white background */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Vertically center the X */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    background-color: rgba(255,255,255,1); /* Fully white on hover */
+    text-decoration: none;
+}
+
+/* Animations */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    main.container {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px auto;
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row; /* Side-by-side for desktop */
+        align-items: flex-start; /* Align filters and gallery at the top */
     }
 
-    aside.filters {
-        flex: 0 0 auto; /* Allow filters to take full width */
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
+    /* Filters Section - DESKTOP DEFAULT (VISIBLE AND STICKY) */
+    .filters {
+        position: sticky; /* Make filters sticky */
+        top: 20px; /* Distance from top when sticky */
+        width: 280px; /* Fixed width for desktop filters */
+        height: fit-content; /* Adjust height to content */
+        transform: translateX(0); /* Ensure it's visible on desktop */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow */
+        padding-top: 20px; /* Reset padding for desktop */
     }
 
-    .item-list {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        width: 100%; /* Take full width below filters */
+    .filter-toggle-button {
+        display: none; /* Hide toggle button on desktop */
     }
 
-    .contact-info {
-        margin: 30px 15px 20px 15px; /* Adjust margin for smaller screens */
-        padding: 20px;
+    .close-filter-button {
+        display: none; /* Hide close button on desktop */
     }
 }
 
+/* Small adjustments for very small screens */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
-    }
-    .item {
-        padding: 15px;
-    }
-    .item-info h2 {
-        font-size: 1.3em;
-    }
-    .prev, .next {
-        font-size: 20px;
-        padding: 10px 12px;
-        width: 30px;
-        height: 30px;
-    }
-    .close-button {
-        font-size: 30px;
-        right: 20px;
+    .item-list {
+        grid-template-columns: 1fr; /* Single column on very small screens */
     }
 }
