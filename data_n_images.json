@@ -4,7 +4,7 @@
     "descripcion": "2 Mesas de noche con sus lámparas",
     "descripcionIngles": "2 nightstands with lamps.",
     "categoria": "Muebles",
-    "precio": "$350.000 COP",
+    "precio": "$450.000 COP",
     "disponibilidad": "si",
     "fotos": ["./images/2-mesas-de-1.jpg", "./images/2-mesas-de-2.jpg"]
   },
@@ -138,7 +138,7 @@
     "descripcionIngles": "French Press coffee maker - Excellent condition!",
     "categoria": "Electrodomesticos",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/cafetera-tipo-prensa.jpg"]
   },
   {
@@ -167,7 +167,7 @@
     "descripcion": "Casco para bicicleta",
     "descripcionIngles": "Bicycle helmet.",
     "categoria": "Deportes",
-    "precio": "$300.000 COP",
+    "precio": "$60.000 COP",
     "disponibilidad": "si",
     "fotos": ["./images/casco-para-bicicleta.jpg"]
   },
@@ -213,7 +213,7 @@
     "descripcionIngles": "Exercise foam (Yoga mat).",
     "categoria": "Deportes",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/espuma-para-ejercicio-1.jpg"]
   },
   {
@@ -222,7 +222,7 @@
     "descripcionIngles": "Exercise foam (Yoga mat).",
     "categoria": "Deportes",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/espuma-para-ejercicio-2.jpg"]
   },
   {
@@ -240,7 +240,7 @@
     "descripcionIngles": "Frisbee - Outdoor fun for all ages!",
     "categoria": "Deportes",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/frisbe.jpg"]
   },
   {
@@ -303,7 +303,7 @@
     "descripcionIngles": "Baking glove set.",
     "categoria": "Cocina",
     "precio": "$12.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/juego-de-guantes.jpg"]
   },
   {
@@ -402,7 +402,7 @@
     "descripcionIngles": "Portable microscope with battery and accessories.",
     "categoria": "Electrónica",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/microscopio-portatil-con-1.jpg",
       "./images/microscopio-portatil-con-2.jpg"
@@ -426,7 +426,7 @@
     "descripcionIngles": "Electric coffee grinder - Stainless Steel.",
     "categoria": "Electrodomesticos",
     "precio": "$100.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/molino-cafe-electrico-1.jpg",
       "./images/molino-cafe-electrico-2.jpg"
@@ -450,7 +450,7 @@
     "descripcionIngles": "Tea kettle.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/olla-hervidora-de.jpg"]
   },
   {
@@ -489,7 +489,7 @@
     "descripcionIngles": "Acrylic picture frame for two 10x15 photos.",
     "categoria": "Decoración",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/porta-retrato-acrilico.jpg"]
   },
   {
@@ -498,7 +498,7 @@
     "descripcionIngles": "Oven-safe baking dish with plastic lid, 33 x 22 cm.",
     "categoria": "Cocina",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/refractaria-con-tapa.jpg"]
   },
   {
@@ -507,7 +507,7 @@
     "descripcionIngles": "Silicone baking set with 2 molds, brush, and 6 cupcake liners.",
     "categoria": "Cocina",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/set-de-reposteria.jpg"]
   },
   {
@@ -534,7 +534,7 @@
     "descripcionIngles": "Glass teapot.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/tetera-en-vidrio.jpg"]
   },
   {
@@ -553,7 +553,7 @@
     "descripcionIngles": "Electric waffle maker.",
     "categoria": "Electrodomesticos",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": ["./images/wafflera-electrica.jpg"]
   },
   {
