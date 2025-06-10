@@ -101,7 +101,7 @@
         ]
     },
     {
-        "id": "item-010 COP",
+        "id": "item-010",
         "descripcion": "Orquidea Blanca",
         "descripcionIngles": "White Orchid.",
         "categoria": "Jardineria",
@@ -212,7 +212,7 @@
         ]
     },
     {
-        "id": "item-020 COP",
+        "id": "item-020",
         "descripcion": "Olla arrozera marca Samurai",
         "descripcionIngles": "Samurai brand rice cooker.",
         "categoria": "Electrodomesticos",
@@ -326,7 +326,7 @@
         ]
     },
     {
-        "id": "item-030 COP",
+        "id": "item-030",
         "descripcion": "Porta retratos plateados para fotos de 10 X 15cm (1 unidad) (Valor por unidad)",
         "descripcionIngles": "Silver-plated photo frame, 10x15cm (1 unit, price per unit).",
         "categoria": "Decoración",
@@ -436,7 +436,7 @@
         ]
     },
     {
-        "id": "item-040 COP",
+        "id": "item-040",
         "descripcion": "Plato en porcelana con decoracion navidad de 5 cm de alto",
         "descripcionIngles": "Porcelain plate with Christmas decoration, 5cm H.",
         "categoria": "Decoración",
@@ -548,7 +548,7 @@
         ]
     },
     {
-        "id": "item-050 COP",
+        "id": "item-050",
         "descripcion": "Diabolo",
         "descripcionIngles": "Diabolo.",
         "categoria": "Deportes",
@@ -658,7 +658,7 @@
         ]
     },
     {
-        "id": "item-060 COP",
+        "id": "item-060",
         "descripcion": "Guantes de MMA",
         "descripcionIngles": "MMA gloves.",
         "categoria": "Deportes",
@@ -769,7 +769,7 @@
         ]
     },
     {
-        "id": "item-070 COP",
+        "id": "item-070",
         "descripcion": "Cafetera Tipo Prensa Francesa - Excelente Estado!",
         "descripcionIngles": "French Press coffee maker - Excellent condition!",
         "categoria": "Electrodomesticos",
@@ -879,7 +879,7 @@
         ]
     },
     {
-        "id": "item-080 COP",
+        "id": "item-080",
         "descripcion": "Juego de 4 copas para Margarita en vidrio",
         "descripcionIngles": "Set of 4 glass Margarita glasses.",
         "categoria": "Hogar",
@@ -989,7 +989,7 @@
         ]
     },
     {
-        "id": "item-090 COP",
+        "id": "item-090",
         "descripcion": "2 Cazuela de barro terracota de raquira con su canasto artesanal",
         "descripcionIngles": "2 terracotta Raquira clay pots with artisan basket.",
         "categoria": "Hogar",
@@ -1100,7 +1100,7 @@
         ]
     },
     {
-        "id": "item-100 COP",
+        "id": "item-100",
         "descripcion": "Refractaria con tapa plástica Horneable, de 33 x 22 cm",
         "descripcionIngles": "Oven-safe baking dish with plastic lid, 33 x 22 cm.",
         "categoria": "Cocina",
@@ -1211,7 +1211,7 @@
         ]
     },
     {
-        "id": "item-110 COP",
+        "id": "item-110",
         "descripcion": "Caja de cubiertos en madera",
         "descripcionIngles": "Wooden cutlery box.",
         "categoria": "Cocina",
@@ -1322,7 +1322,7 @@
         ]
     },
     {
-        "id": "item-120 COP",
+        "id": "item-120",
         "descripcion": "Kit de 4 Bowls de porcelana blanca de 7 cm de alto",
         "descripcionIngles": "Set of 4 white porcelain bowls, 7cm H.",
         "categoria": "Hogar",
@@ -1435,7 +1435,7 @@
         ]
     },
     {
-        "id": "item-130 COP",
+        "id": "item-130",
         "descripcion": "Olla con tapa ajustable.",
         "descripcionIngles": "Pot with adjustable lid.",
         "categoria": "Cocina",
@@ -1545,7 +1545,7 @@
         ]
     },
     {
-        "id": "item-140 COP",
+        "id": "item-140",
         "descripcion": "Soporte para colgar mugs",
         "descripcionIngles": "Mug hanging rack.",
         "categoria": "Cocina",
@@ -1655,7 +1655,7 @@
         ]
     },
     {
-        "id": "item-150 COP",
+        "id": "item-150",
         "descripcion": "Recipiente plástico",
         "descripcionIngles": "Plastic container.",
         "categoria": "Cocina",
@@ -1765,7 +1765,7 @@
         ]
     },
     {
-        "id": "item-160 COP",
+        "id": "item-160 ",
         "descripcion": "Mortero",
         "descripcionIngles": "Mortero.",
         "categoria": "Cocina",
@@ -1875,7 +1875,7 @@
         ]
     },
     {
-        "id": "item-170 COP",
+        "id": "item-170",
         "descripcion": "Hockey PaĄalera",
         "descripcionIngles": "Hockey diaper bag (assuming \"paĄalera\" is a typo and meant for gear bag).",
         "categoria": "Deportes",

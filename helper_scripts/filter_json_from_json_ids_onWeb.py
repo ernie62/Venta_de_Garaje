@@ -76,7 +76,7 @@ if __name__ == "__main__":
     # Define your actual file paths here
     ids_file_name = "json_ids_onWeb.txt"
     input_json_file_name = "data_n_images copy.json"
-    output_json_file_name = "filtered_data.json"
+    output_json_file_name = "missing_items_on_web_base_of_xl.json"
 
     print("--- Starting JSON Filtering Process ---")
 
