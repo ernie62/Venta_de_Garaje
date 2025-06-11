@@ -29,7 +29,7 @@
     "descripcion": "Mueble de madera de 2 puertas con 15 entrepaños de 1.97 alto por 90 cm ancho y 27 de fondo",
     "descripcionIngles": "Wooden cabinet, 2 doors, 15 shelves. 1.97m H x 90cm W x 27cm D.",
     "categoria": "Muebles",
-    "precio": "$700.000 COP",
+    "precio": "$800.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/mueble-de-madera.jpg",
@@ -509,7 +509,7 @@
   },
   {
     "id": "item-048",
-    "descripcion": "Equipo de proytección para patinaje",
+    "descripcion": "Equipo de protección para patinaje",
     "descripcionIngles": "Skateboarding protection gear.",
     "categoria": "Deportes",
     "precio": "$25.000 COP",
@@ -1424,9 +1424,8 @@
     "descripcionIngles": "Mug hanging rack.",
     "categoria": "Cocina",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
-      "./images/soporte-para-colgar.jpg"
     ]
   },
   {
@@ -1574,7 +1573,7 @@
   },
   {
     "id": "item-154",
-    "descripcion": "Set de utencilios de cocina",
+    "descripcion": "Set de utensilios de cocina A",
     "descripcionIngles": "Kitchen utensil set.",
     "categoria": "Cocina",
     "precio": "$80.000 COP",
@@ -1585,10 +1584,10 @@
   },
   {
     "id": "item-155",
-    "descripcion": "Set de utencilios de cocina",
+    "descripcion": "Set de utensilios de cocina B",
     "descripcionIngles": "Kitchen utensil set.",
     "categoria": "Cocina",
-    "precio": "$800.000 COP",
+    "precio": "$80.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/set-de-utencilios-2.jpg"
@@ -1632,7 +1631,7 @@
     "descripcion": "Juego de coladeras metálicas",
     "descripcionIngles": "Metal colander set.",
     "categoria": "Cocina",
-    "precio": "$15.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-coladeras.jpg"
@@ -1643,7 +1642,7 @@
     "descripcion": "Mortero",
     "descripcionIngles": "Mortero.",
     "categoria": "Cocina",
-    "precio": "$20.000 COP",
+    "precio": "$60.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/mortero.jpg"
@@ -1654,7 +1653,7 @@
     "descripcion": "Hockey Stick Marca CCM",
     "descripcionIngles": "CCM brand hockey stick.",
     "categoria": "Deportes",
-    "precio": "$60.000 COP",
+    "precio": "$500.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-stick-marca-1.jpg",
@@ -1666,7 +1665,7 @@
     "descripcion": "Hockey Pucks x 2",
     "descripcionIngles": "2 hockey pucks.",
     "categoria": "Deportes",
-    "precio": "$500.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-pucks-x.jpg"
@@ -1677,7 +1676,7 @@
     "descripcion": "Hockey Pechera Marca JOFA",
     "descripcionIngles": "JOFA brand hockey chest protector.",
     "categoria": "Deportes",
-    "precio": "$100.000 COP",
+    "precio": "$280.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-pechera-marca.jpg"
@@ -1688,7 +1687,7 @@
     "descripcion": "Hockey Casco Marca ITECH con rejilla",
     "descripcionIngles": "ITECH brand hockey helmet with cage.",
     "categoria": "Deportes",
-    "precio": "$280.000 COP",
+    "precio": "$100.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-casco-marca-1.jpg",
@@ -1700,7 +1699,7 @@
     "descripcion": "Hockey Espinilleras 2500 Marca JOFA",
     "descripcionIngles": "JOFA brand 2500 hockey shin guards.",
     "categoria": "Deportes",
-    "precio": "$100.000 COP",
+    "precio": "$230.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-espinilleras-2500.jpg"
@@ -1711,7 +1710,7 @@
     "descripcion": "Hockey Coderas Marca ITECH",
     "descripcionIngles": "ITECH brand hockey elbow pads.",
     "categoria": "Deportes",
-    "precio": "$230.000 COP",
+    "precio": "$50.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-coderas-marca.jpg"
@@ -1722,7 +1721,7 @@
     "descripcion": "Hockey Guantes Marca COHO",
     "descripcionIngles": "COHO brand hockey gloves.",
     "categoria": "Deportes",
-    "precio": "$50.000 COP",
+    "precio": "$180.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-guantes-marca.jpg"
@@ -1733,7 +1732,7 @@
     "descripcion": "Hockey Rollo cinta negra para Stick",
     "descripcionIngles": "Roll of black hockey stick tape.",
     "categoria": "Deportes",
-    "precio": "$180.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-rollo-cinta.jpg"
@@ -1767,7 +1766,7 @@
     "descripcion": "Hockey Patines de Hockey Marca NIKE",
     "descripcionIngles": "NIKE brand hockey skates.",
     "categoria": "Deportes",
-    "precio": "$80.000 COP",
+    "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-patines-de.jpg"
@@ -1775,10 +1774,10 @@
   },
   {
     "id": "item-172",
-    "descripcion": "Hockey copas x 2",
+    "descripcion": "Hockey copas x 2 precio por unidad",
     "descripcionIngles": "2 hockey cups (athletic supporters).",
     "categoria": "Deportes",
-    "precio": "$350.000 COP",
+    "precio": "$15.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-copas-x.jpg"
