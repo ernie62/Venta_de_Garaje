@@ -29,7 +29,7 @@
     "descripcion": "Mueble de madera de 2 puertas con 15 entrepaños de 1.97 alto por 90 cm ancho y 27 de fondo",
     "descripcionIngles": "Wooden cabinet, 2 doors, 15 shelves. 1.97m H x 90cm W x 27cm D.",
     "categoria": "Muebles",
-    "precio": "$800.000 COP",
+    "precio": "$700.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/mueble-de-madera.jpg",
@@ -41,7 +41,7 @@
     "descripcion": "2 Mesas de noche con sus lámparas",
     "descripcionIngles": "2 nightstands with lamps.",
     "categoria": "Muebles",
-    "precio": "$450.000 COP",
+    "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/2-mesas-de-1.jpg",
@@ -110,8 +110,8 @@
     "descripcion": "Poltrona clásica sala tapizada",
     "descripcionIngles": "Classic upholstered living room armchair.",
     "categoria": "Muebles",
-    "precio": "$700.000 COP",
-    "disponibilidad": "si",
+    "precio": "$500.000 COP",
+    "disponibilidad": "no",
     "fotos": [
       "./images/poltrona-clasica-sala.jpg"
     ]
@@ -178,7 +178,7 @@
     "descripcionIngles": "Portable wireless smoothie blender - USB rechargeable! (2 units, price per unit).",
     "categoria": "Electrodomesticos",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/licuadora-portatil-inalambrica.jpg"
     ]
@@ -201,7 +201,7 @@
     "descripcionIngles": "Rival brand 3-speed electric mixer.",
     "categoria": "Electrodomesticos",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/batidora-electrica-marca.jpg"
     ]
@@ -321,7 +321,7 @@
   {
     "id": "item-032",
     "descripcion": "Porta retratos plateados para fotos de 35 X 25cm",
-    "descripcionIngles": "Silver-plated photo frame, 20x30cm.",
+    "descripcionIngles": "Silver-plated photo frame, 35 x 25cm.",
     "categoria": "Decoración",
     "precio": "$25.000 COP",
     "disponibilidad": "si",
@@ -400,7 +400,7 @@
     "descripcion": "Bolso de la marca Nicole Miller",
     "descripcionIngles": "Nicole Miller brand handbag.",
     "categoria": "Ropa",
-    "precio": "$50.000 COP",
+    "precio": "$60.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/bolso-de-la.jpg"
@@ -542,10 +542,10 @@
   },
   {
     "id": "item-051",
-    "descripcion": "Pelota de Basquet",
+    "descripcion": "Balon de Basquet",
     "descripcionIngles": "Basketball.",
     "categoria": "Deportes",
-    "precio": "$25.000 COP",
+    "precio": "$50.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/pelota-de-basquet.jpg"
@@ -674,10 +674,10 @@
   },
   {
     "id": "item-064",
-    "descripcion": "Botella para mantener liquidos frios o calientes",
+    "descripcion": "Botella para mantener liquidos frios o calientes A",
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
-    "precio": "$15.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/botella-para-mantener.jpg"
@@ -685,7 +685,7 @@
   },
   {
     "id": "item-065",
-    "descripcion": "Botella para mantener liquidos frios o calientes",
+    "descripcion": "Botella para mantener liquidos frios o calientes B",
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
@@ -696,7 +696,7 @@
   },
   {
     "id": "item-176",
-    "descripcion": "Botella para mantener liquidos frios o calientes",
+    "descripcion": "Botella para mantener liquidos frios o calientes C",
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
@@ -718,7 +718,7 @@
   },
   {
     "id": "item-067",
-    "descripcion": "Jarra de plastico",
+    "descripcion": "Jarra de plastico tapa morada",
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
@@ -729,7 +729,7 @@
   },
   {
     "id": "item-068",
-    "descripcion": "Jarra de plastico",
+    "descripcion": "Jarra de plastico tapa verde",
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
@@ -798,7 +798,7 @@
     "descripcion": "Copa de Vidrio Multiusos - Elegancia y Versatilidad en una Sola Pieza!",
     "descripcionIngles": "-Multipurpose glass cup - Elegance and versatility in one piece!",
     "categoria": "Hogar",
-    "precio": "$40.000 COP",
+    "precio": "$10.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/copa-de-vidrio.jpg"
@@ -974,7 +974,7 @@
     "descripcion": "Panera metálica",
     "descripcionIngles": "Metal bread box.",
     "categoria": "Hogar",
-    "precio": "$15.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/panera-metalica-1.jpg",
@@ -999,7 +999,7 @@
     "descripcionIngles": "12-muffin tray with silicone molds - Bake delicious muffins & cupcakes!",
     "categoria": "Cocina",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bandeja-para-12.jpg"
     ]
@@ -1009,7 +1009,7 @@
     "descripcion": "Refractaria de vidrio de 27.5 x 19 cm",
     "descripcionIngles": "Glass baking dish, 27.5 x 19 cm.",
     "categoria": "Cocina",
-    "precio": "$25.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/refractaria-de-vidrio-27.5.jpg"
@@ -1132,7 +1132,7 @@
     "descripcion": "Juego de 4 individuales plásticos",
     "descripcionIngles": "Set of 4 plastic placemats.",
     "categoria": "Hogar",
-    "precio": "$50.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-4-individuales.jpg"
@@ -1154,7 +1154,7 @@
     "descripcion": "Juego de 3 individuales en tela",
     "descripcionIngles": "Set of 3 fabric placemats.",
     "categoria": "Hogar",
-    "precio": "$40.000 COP",
+    "precio": "$6.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-3-individuales.jpg"
@@ -1166,7 +1166,7 @@
     "descripcionIngles": "White folder.",
     "categoria": "Hogar",
     "precio": "$6.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/carpeta-blanca.jpg"
     ]
@@ -1177,7 +1177,7 @@
     "descripcionIngles": "Havana crochet folder.",
     "categoria": "Hogar",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/carpeta-abana-en.jpg"
     ]
@@ -1188,7 +1188,7 @@
     "descripcionIngles": "White Bruges bread basket.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/panera-blanca-de.jpg"
     ]
@@ -1199,7 +1199,7 @@
     "descripcionIngles": "Round Havana crochet folder.",
     "categoria": "Hogar",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/carpeta-redonda-habana.jpg"
     ]
@@ -1255,7 +1255,7 @@
     "descripcion": "Juego de 2 refractarias para porción personal",
     "descripcionIngles": "Set of 2 personal-portion baking dishes.",
     "categoria": "Hogar",
-    "precio": "$10.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-2-refractarias.jpg"
@@ -1289,7 +1289,7 @@
     "descripcion": "Sartén profesional de acero al carbono. Excelente para freír y hornear, muy duradera. Alternativa al teflón. Diámetro 28 cm, volumen 1,5 l.",
     "descripcionIngles": "Professional carbon steel pan. Excellent for frying and baking, very durable. Teflon alternative. 28cm diameter, 1.5L volume.",
     "categoria": "Cocina",
-    "precio": "$5.000 COP",
+    "precio": "$120.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/sarten-profesional-de.jpg"
@@ -1300,7 +1300,7 @@
     "descripcion": "Olla a presión marca Universal",
     "descripcionIngles": "Universal brand pressure cooker.",
     "categoria": "Cocina",
-    "precio": "$120.000 COP",
+    "precio": "$100.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/olla-a-presion.jpg"
@@ -1308,7 +1308,7 @@
   },
   {
     "id": "item-129",
-    "descripcion": "Olla de cocción lenta",
+    "descripcion": "Horno holandés",
     "descripcionIngles": "Dutch Oven.",
     "categoria": "Cocina",
     "precio": "$200.000 COP",
@@ -1368,7 +1368,7 @@
     "descripcion": "Set Vajilla de pascua",
     "descripcionIngles": "Easter dinnerware set.",
     "categoria": "Hogar",
-    "precio": "$5.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/set-vajilla-de.jpg"
@@ -1379,7 +1379,7 @@
     "descripcion": "cucharitas en plata",
     "descripcionIngles": "Silver teaspoons.",
     "categoria": "Hogar",
-    "precio": "$25.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/cucharitas-en-plata.jpg"
@@ -1390,7 +1390,7 @@
     "descripcion": "bandeja en porcelana",
     "descripcionIngles": "Porcelain tray.",
     "categoria": "Hogar",
-    "precio": "$20.000 COP",
+    "precio": "$15.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/bandeja-en-porcelana.jpg"
@@ -1401,7 +1401,7 @@
     "descripcion": "Juego de 6 tazas para tinto",
     "descripcionIngles": "Set of 6 small coffee cups.",
     "categoria": "Hogar",
-    "precio": "$15.000 COP",
+    "precio": "$40.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-6.jpg"
@@ -1433,7 +1433,7 @@
     "descripcion": "Juego de recipientes mezcladores en aluminio",
     "descripcionIngles": "Aluminum mixing bowl set.",
     "categoria": "Cocina",
-    "precio": "$15.000 COP",
+    "precio": "$50.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/juego-de-recipientes.jpg"
@@ -1444,7 +1444,7 @@
     "descripcion": "Recipiente coladera 2 en 1 de plastico",
     "descripcionIngles": "2-in-1 plastic colander container.",
     "categoria": "Cocina",
-    "precio": "$70.000 COP",
+    "precio": "$15.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/recipiente-coladera-2.jpg"
@@ -1466,7 +1466,7 @@
     "descripcion": "Jarra plastica",
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Cocina",
-    "precio": "$30.000 COP",
+    "precio": "$8.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/jarra-plastica.jpg"
@@ -1543,7 +1543,7 @@
     "descripcion": "Bandeja metálica giratoria",
     "descripcionIngles": "Rotating metal tray.",
     "categoria": "Cocina",
-    "precio": "$80.000 COP",
+    "precio": "$50.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/bandeja-metalica-giratoria.jpg"
@@ -1554,7 +1554,7 @@
     "descripcion": "Pesa Gramera Cocina",
     "descripcionIngles": "Kitchen gram scale.",
     "categoria": "Cocina",
-    "precio": "50,000 cada uno",
+    "precio": "40,000 cada uno",
     "disponibilidad": "si",
     "fotos": [
       "./images/pesa-gramera-cocina.jpg"
@@ -1565,7 +1565,7 @@
     "descripcion": "5 Tablas para cortar.",
     "descripcionIngles": "5 cutting boards.",
     "categoria": "Cocina",
-    "precio": "$20.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/5-tablas-para.jpg"
@@ -1598,7 +1598,7 @@
     "descripcion": "Tapon para botella de vino reutilizables x 4",
     "descripcionIngles": "4 reusable wine bottle stoppers.",
     "categoria": "Hogar",
-    "precio": "$100.000 COP",
+    "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/tapon-para-botella.jpg"
@@ -1653,7 +1653,7 @@
     "descripcion": "Hockey Stick Marca CCM",
     "descripcionIngles": "CCM brand hockey stick.",
     "categoria": "Deportes",
-    "precio": "$500.000 COP",
+    "precio": "$300.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-stick-marca-1.jpg",
@@ -1665,7 +1665,7 @@
     "descripcion": "Hockey Pucks x 2",
     "descripcionIngles": "2 hockey pucks.",
     "categoria": "Deportes",
-    "precio": "$20.000 COP",
+    "precio": "$25.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-pucks-x.jpg"
@@ -1676,7 +1676,7 @@
     "descripcion": "Hockey Pechera Marca JOFA",
     "descripcionIngles": "JOFA brand hockey chest protector.",
     "categoria": "Deportes",
-    "precio": "$280.000 COP",
+    "precio": "$80.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-pechera-marca.jpg"
@@ -1699,7 +1699,7 @@
     "descripcion": "Hockey Espinilleras 2500 Marca JOFA",
     "descripcionIngles": "JOFA brand 2500 hockey shin guards.",
     "categoria": "Deportes",
-    "precio": "$230.000 COP",
+    "precio": "$100.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-espinilleras-2500.jpg"
@@ -1721,7 +1721,7 @@
     "descripcion": "Hockey Guantes Marca COHO",
     "descripcionIngles": "COHO brand hockey gloves.",
     "categoria": "Deportes",
-    "precio": "$180.000 COP",
+    "precio": "$150.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-guantes-marca.jpg"
@@ -1753,9 +1753,9 @@
   {
     "id": "item-170",
     "descripcion": "Hockey Pañalera",
-    "descripcionIngles": "Hockey diaper bag (assuming \"paĄalera\" is a typo and meant for gear bag).",
+    "descripcionIngles": "Hockey pants ).",
     "categoria": "Deportes",
-    "precio": "$80.000 COP",
+    "precio": "$180.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-panalera.jpg"
@@ -1763,10 +1763,10 @@
   },
   {
     "id": "item-171",
-    "descripcion": "Hockey Patines de Hockey Marca NIKE",
+    "descripcion": "Patines de Hockey marca NIKE",
     "descripcionIngles": "NIKE brand hockey skates.",
     "categoria": "Deportes",
-    "precio": "$350.000 COP",
+    "precio": "$300.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/hockey-patines-de.jpg"
@@ -1788,7 +1788,7 @@
     "descripcion": "Tula para equipo de Hockey",
     "descripcionIngles": "Hockey equipment duffel bag.",
     "categoria": "Deportes",
-    "precio": "$100.000 COP",
+    "precio": "$150.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/tula-para-equipo.jpg"
