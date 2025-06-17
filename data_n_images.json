@@ -577,7 +577,7 @@
   },
   {
     "id": "item-051",
-    "descripcion": "Balon de Basquet",
+    "descripcion": "Balón de Basquet",
     "descripcionIngles": "Basketball.",
     "categoria": "Deportes",
     "precio": "$50.000 COP",
@@ -588,7 +588,7 @@
   },
   {
     "id": "item-052",
-    "descripcion": "Balon de futbol americando",
+    "descripcion": "Balón de fútbol americando",
     "descripcionIngles": "American football.",
     "categoria": "Deportes",
     "precio": "$20.000 COP",
@@ -755,7 +755,7 @@
   },
   {
     "id": "item-066",
-    "descripcion": "Vaso Tupperware plastic con tapa",
+    "descripcion": "Vaso Tupperware plastico con tapa",
     "descripcionIngles": "Tupperware plastic cup with lead .",
     "categoria": "Hogar",
     "precio": "$5.000 COP",
@@ -1021,7 +1021,7 @@
   },
   {
     "id": "item-089",
-    "descripcion": "2 Cazuela de barro negras de raquira con su canasto artesanal",
+    "descripcion": "2 Cazuela de barro negras de Raquira con su canasto artesanal",
     "descripcionIngles": "2 black Raquira clay pots with artisan basket.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
@@ -1032,7 +1032,7 @@
   },
   {
     "id": "item-090",
-    "descripcion": "2 Cazuela de barro terracota de raquira con su canasto artesanal",
+    "descripcion": "2 Cazuela de barro terracota de Raquira con su canasto artesanal",
     "descripcionIngles": "2 terracotta Raquira clay pots with artisan basket.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
@@ -1733,7 +1733,7 @@
   },
   {
     "id": "item-156",
-    "descripcion": "Tapon para botella de vino reutilizables x 4",
+    "descripcion": "Tapón para botella de vino reutilizables x 4",
     "descripcionIngles": "4 reusable wine bottle stoppers.",
     "categoria": "Hogar",
     "precio": "$20.000 COP",
@@ -1962,7 +1962,7 @@
     "descripcion": "Helicóptero a control remoto Sky Rover Bandit. Funcional, incluye control.",
     "descripcionIngles": "Sky Rover Bandit remote control helicopter. Functional, includes remote.",
     "categoria": "Juguetes y Peluches",
-    "precio": "$25.000 COP",
+    "precio": "$250.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/sky-rover-bandit-1.jpg"
@@ -2141,7 +2141,7 @@
     "precio": "$20.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/marco-43x33-1.jpg"
+      "./images/marco-31x24-1.jpg"
     ]
   },
   {
