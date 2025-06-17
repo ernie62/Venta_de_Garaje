@@ -98,7 +98,7 @@
     "id": "item-010 COP",
     "descripcion": "Orquidea Blanca",
     "descripcionIngles": "White Orchid.",
-    "categoria": "Jardineria",
+    "categoria": "Jardinería",
     "precio": "$60.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -112,7 +112,7 @@
     "descripcionIngles": "Rectangular wooden table, 80cm L x 41.5cm W x 70cm H.",
     "categoria": "Muebles",
     "precio": "$120.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "No",
     "fotos": [
       "./images/mesa-madera-rectangular.jpg"
     ]
@@ -143,7 +143,7 @@
     "id": "item-014",
     "descripcion": "Nevera Nofrost Samsung con congelador superior y dispensador de agua de 301 L",
     "descripcionIngles": "Samsung No Frost refrigerator with top freezer and water dispenser, 301L.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$1.300.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -154,7 +154,7 @@
     "id": "item-015",
     "descripcion": "Lavadora Samsung Modelo WA19T6260BV Capacidad de 19 kg",
     "descripcionIngles": "Samsung WA19T6260BV washing machine, 19kg capacity.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$1.500.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -177,7 +177,7 @@
     "id": "item-017",
     "descripcion": "Wafflera eléctrica",
     "descripcionIngles": "Electric waffle maker.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$30.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -188,7 +188,7 @@
     "id": "item-018",
     "descripcion": "Parrilla eléctrica para interiores",
     "descripcionIngles": "Electric indoor grill.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$80.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -199,7 +199,7 @@
     "id": "item-019",
     "descripcion": "Licuadora Portátil Inalámbrica para Smoothies - Recargable por USB! ( 2 Unidades - precio por unidad)",
     "descripcionIngles": "Portable wireless smoothie blender - USB rechargeable! (2 units, price per unit).",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$20.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -210,7 +210,7 @@
     "id": "item-020",
     "descripcion": "Olla arrozera marca Samurai",
     "descripcionIngles": "Samurai brand rice cooker.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$80.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -222,7 +222,7 @@
     "id": "item-021",
     "descripcion": "Batidora eléctrica Marca Rival de 3 velocidades",
     "descripcionIngles": "Rival brand 3-speed electric mixer.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$50.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -233,7 +233,7 @@
     "id": "item-022",
     "descripcion": "Parrilla eléctrica para asar",
     "descripcionIngles": "Electric grilling pan.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$250.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -245,7 +245,7 @@
     "id": "item-023",
     "descripcion": "Esmeril de banco",
     "descripcionIngles": "Bench grinder.",
-    "categoria": "Herramientas",
+    "categoria": "Herramienta",
     "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -256,7 +256,7 @@
     "id": "item-024",
     "descripcion": "Licuadora Oster con vaso plástico",
     "descripcionIngles": "Oster blender with plastic cup.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$100.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -267,7 +267,7 @@
     "id": "item-025",
     "descripcion": "Molino Café Eléctrico - Acero Inoxidable",
     "descripcionIngles": "Electric coffee grinder - Stainless Steel.",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$100.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -290,7 +290,7 @@
     "id": "item-027",
     "descripcion": "Escalera metálica plegable 140cm",
     "descripcionIngles": "Foldable metal ladder, 140cm.",
-    "categoria": "Herramientas",
+    "categoria": "Herramienta",
     "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -834,7 +834,7 @@
     "id": "item-070",
     "descripcion": "Cafetera Tipo Prensa Francesa - Excelente Estado!",
     "descripcionIngles": "French Press coffee maker - Excellent condition!",
-    "categoria": "Electrodomesticos",
+    "categoria": "Electrodomésticos",
     "precio": "$25.000 COP",
     "disponibilidad": "no",
     "fotos": [
@@ -1101,7 +1101,7 @@
     "id": "item-096",
     "descripcion": "Guantes de carnaza",
     "descripcionIngles": "Leather work gloves.",
-    "categoria": "Herramientas",
+    "categoria": "Herramienta",
     "precio": "$15.000 COP",
     "disponibilidad": "si",
     "fotos": [
@@ -1485,7 +1485,7 @@
     "descripcionIngles": "Serving spoon set.",
     "categoria": "Cocina",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "No",
     "fotos": [
       "./images/set-de-cucharas.jpg"
     ]
@@ -2009,7 +2009,7 @@
     "precio": "$15.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/oso-peluche-corbatin-1.jpg"
+      "./images/oso-peluche-corbatin.jpg"
     ]
   },
   {
@@ -2305,13 +2305,13 @@
   },
   {
     "id": "item-212",
-    "descripcion": "Kit de jardinería de 3 piezas. Incluye herramientas básicas para el cuidado de tu jardín.",
+    "descripcion": "Kit de jardinería de 3 piezas. Incluye Herramienta básicas para el cuidado de tu jardín.",
     "descripcionIngles": "3-piece gardening kit. Includes basic tools for caring for your garden.",
     "categoria": "Jardinería",
     "precio": "$30.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/kit-jardineria-1.jpg"
+      "./images/kit-Jardineria-1.jpg"
     ]
   },
   {
@@ -2397,7 +2397,7 @@
     "descripcion": "Monopatín Bodyflex profesional. Robusto y en buen estado, ideal para transporte o diversión.",
     "descripcionIngles": "Bodyflex professional scooter. Sturdy and in good condition, ideal for transport or fun.",
     "categoria": "Deportes",
-    "precio": "$120.000 COP",
+    "precio": "$80.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/monopatin-bodyflex-1.jpg",
@@ -2494,7 +2494,7 @@
   },
   {
     "id": "item-232",
-    "descripcion": "Candado de guaya de seguridad para bicicletas con combinación. Protege tu bicicleta de forma segura.",
+    "descripcion": "Candado de guaya de seguridad para bicicletas con combinación.",
     "descripcionIngles": "Bicycle cable lock with combination. Securely protect your bike.",
     "categoria": "Deportes",
     "precio": "$25.000 COP",
@@ -2505,7 +2505,7 @@
   },
   {
     "id": "item-233",
-    "descripcion": "Candado de guaya de seguridad para bicicletas con llave (2 unidades). Mayor seguridad para tu bicicleta.",
+    "descripcion": "Candado de guaya de seguridad para bicicletas con llave (2 unidades).",
     "descripcionIngles": "Bicycle cable lock with key (2 units). Enhanced security for your bike.",
     "categoria": "Deportes",
     "precio": "$20.000 COP (cada uno)",
@@ -2542,7 +2542,7 @@
     "id": "item-236",
     "descripcion": "Coca artesanal en madera. Decorativa y funcional para guardar pequeños objetos.",
     "descripcionIngles": "Artisanal wooden bowl. Decorative and functional for storing small items.",
-    "categoria": "Decoración",
+    "categoria": "Juguetes y Peluches",
     "precio": "$10.000 COP",
     "disponibilidad": "si",
     "fotos": [
