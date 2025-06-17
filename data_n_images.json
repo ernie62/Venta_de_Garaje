@@ -24,6 +24,18 @@
       "./images/eliptica-athletic-advanced-2.jpg"
     ]
   },
+   {
+    "id": "item-003",
+    "descripcion": "Cama doble en Cedro con su respectivo colchón",
+    "descripcionIngles": "Cedar double bed with mattress.",
+    "categoria": "Muebles",
+    "precio": "$800.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/cama-doble-en.jpg",
+      "./images/cama-doble-en-2.jpg"
+    ]
+  },
   {
     "id": "item-004",
     "descripcion": "Mueble de madera de 2 puertas con 15 entrepaños de 1.97 alto por 90 cm ancho y 27 de fondo",
@@ -148,6 +160,17 @@
     "fotos": [
       "./images/lavadora-samsung-modelo-1.jpg",
       "./images/lavadora-samsung-modelo-2.jpg"
+    ]
+  },
+  {
+    "id": "item-016",
+    "descripcion": "Váscula análoga de peso",
+    "descripcionIngles": "Analog weighing scale.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/vascula-analoga-de.jpg"
     ]
   },
   {
@@ -371,6 +394,18 @@
     "disponibilidad": "si",
     "fotos": [
       "./images/porta-retratos-4fotos.jpg"
+    ]
+  },
+  {
+    "id": "item-037",
+    "descripcion": "Bombin clasico talla 51",
+    "descripcionIngles": "Bowler hat classic size .",
+    "categoria": "Ropa",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/vestiombin-clasico-talla-1.jpg",
+      "./images/vestiombin-clasico-talla-2.jpg"
     ]
   },
   {
@@ -625,7 +660,8 @@
     "precio": "$60.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/casco-para-bicicleta.jpg"
+      "./images/casco-para-bicicleta.jpg",
+      "./images/casco-para-bicicleta-2.jpg"
     ]
   },
   {
@@ -661,6 +697,18 @@
       "./images/un-conjunto-de.jpg"
     ]
   },
+  {
+    "id": "item-062",
+    "descripcion": "Botella para mantener liquidos frios o calientes tapa de rosca",
+    "descripcionIngles": "Insulated bottle for hot or cold liquids.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/botella-termica-rosca.jpg"
+    ]
+  },
+
   {
     "id": "item-063",
     "descripcion": "Vaso plástico Tupperwear Juan Valdez",
@@ -717,6 +765,17 @@
     ]
   },
   {
+    "id": "item-177",
+    "descripcion": "Vaso Tupperware plastic con tapa",
+    "descripcionIngles": "Tupperware plastic cup with lead .",
+    "categoria": "Hogar",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/tupperware-plastic-cup-pink.jpg"
+    ]
+  },
+  {
     "id": "item-067",
     "descripcion": "Jarra de plastico tapa morada",
     "descripcionIngles": "Plastic pitcher.",
@@ -740,8 +799,8 @@
   },
   {
     "id": "item-069",
-    "descripcion": "Jarra de Vidrio de 1 L",
-    "descripcionIngles": "1 Liter Glass Jug.",
+    "descripcion": "Jarra de Vidrio de 1 L 3 unidades",
+    "descripcionIngles": "1 Liter Glass Jug 3 units.",
     "categoria": "Hogar",
     "precio": "$25.000 COP",
     "disponibilidad": "si",
@@ -758,6 +817,17 @@
     "disponibilidad": "si",
     "fotos": [
       "./images/jarra-de-vidrio-2.jpg"
+    ]
+  },
+  {
+    "id": "item-072",
+    "descripcion": "Juego de te japones original en porcelana",
+    "descripcionIngles": "Original Japanese porcelain tea set.",
+    "categoria": "Hogar",
+    "precio": "$350.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/juego-de-te.jpg"
     ]
   },
   {
@@ -813,6 +883,29 @@
     "disponibilidad": "si",
     "fotos": [
       "./images/florero-solitario.jpg"
+    ]
+  },
+  {
+    "id": "item-077",
+    "descripcion": "Florero en vidrio rectangular para lucir tus arreglos florales 30 cm Alto (3 unidades)",
+    "descripcionIngles": "Rectangular glass vase for floral arrangements, 30cm H (3 units).",
+    "categoria": "Decoración",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/florero-en-vidrio-rectangular.jpg"
+    ]
+  },
+  
+  {
+    "id": "item-078",
+    "descripcion": "Florero en vidrio cilindrico para lucir tus arreglos florales 20 cm Alto(3 unidades)",
+    "descripcionIngles": "Cylindrical glass vase for floral arrangements, 20cm H (3 units).",
+    "categoria": "Decoración",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/florero-en-vidrio-cilindrico.jpg"
     ]
   },
   {
@@ -893,6 +986,17 @@
     ]
   },
   {
+    "id": "item-085",
+    "descripcion": "Kit de bar con hielera, saca corchos, separador de huevos, medidor de licor, Mixer, decoración navidella para botellas de vidri1o",
+    "descripcionIngles": "Bar kit with ice bucket, corkscrew, egg separator, liquor jigger, mixer, and holiday bottle decor.",
+    "categoria": "Hogar",
+    "precio": "$70.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/kit-de-bar.jpg"
+    ]
+  },
+  {
     "id": "item-087",
     "descripcion": "Frutera de vidrio",
     "descripcionIngles": "Glass fruit bowl.",
@@ -900,7 +1004,8 @@
     "precio": "$50.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/frutera-de-vidrio.jpg"
+      "./images/frutera-de-vidrio.jpg",
+      "./images/frutera-de-vidrio-2.jpg"
     ]
   },
   {
@@ -982,6 +1087,28 @@
     ]
   },
   {
+    "id": "item-095",
+    "descripcion": "Panera",
+    "descripcionIngles": "Bread box.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/panera-3.jpg"
+    ]
+  },
+    {
+    "id": "item-096",
+    "descripcion": "Guantes de carnaza",
+    "descripcionIngles": "Leather work gloves.",
+    "categoria": "Herramientas",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/guantes-de-carnaza.jpg"
+    ]
+  },
+  {
     "id": "item-097",
     "descripcion": "Juego para Asar en Parrilla - Todo lo que Necesitas para una Barbacoa Perfecta!",
     "descripcionIngles": "Grilling set - Everything for a perfect BBQ!",
@@ -1035,6 +1162,17 @@
     "disponibilidad": "si",
     "fotos": [
       "./images/refractaria-de-vidrio30.jpg"
+    ]
+  },
+   {
+    "id": "item-102",
+    "descripcion": "Refractaria cuadrada de vidrio de 21 x 21 cm",
+    "descripcionIngles": "Square glass baking dish, 21 x 21 cm.",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/refractaria-cuadrada-de.jpg"
     ]
   },
   {
@@ -1793,5 +1931,750 @@
     "fotos": [
       "./images/tula-para-equipo.jpg"
     ]
+  },
+
+
+
+  {
+    "id": "item-178",
+    "descripcion": "Juego de cartas Parker Brothers: Mille Bornes (juego de mesa francés). Completo y en buen estado.",
+    "descripcionIngles": "Parker Brothers French card game: Mille Bornes. Complete and in good condition.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/mille-bornes-1.jpg"
+    ]
+  },
+  {
+    "id": "item-179",
+    "descripcion": "Oso de felpa con diseño de la bandera de USA. Ideal para decoración o colección.",
+    "descripcionIngles": "USA flag design plush bear. Great for decoration or collection.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/oso-felpa-usa-1.jpg"
+    ]
+  },
+  {
+    "id": "item-180",
+    "descripcion": "Helicóptero a control remoto Sky Rover Bandit. Funcional, incluye control.",
+    "descripcionIngles": "Sky Rover Bandit remote control helicopter. Functional, includes remote.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/sky-rover-bandit-1.jpg"
+    ]
+  },
+  {
+    "id": "item-181",
+    "descripcion": "Juego de Bingo de Looney Tunes. Completo y en buen estado, ideal para toda la familia.",
+    "descripcionIngles": "Looney Tunes Bingo game. Complete and in good condition, great for the whole family.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/bingo-looney-tunes-1.jpg"
+    ]
+  },
+  {
+    "id": "item-182",
+    "descripcion": "Juguete de avión de Batman, sin figura de Batman. Ideal para coleccionistas o niños.",
+    "descripcionIngles": "Batman airplane toy, without Batman figure. Great for collectors or kids.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/avion-batman-1.jpg"
+    ]
+  },
+  {
+    "id": "item-183",
+    "descripcion": "Espada de ThunderCats, juguete o réplica. En buen estado, para fans de la serie.",
+    "descripcionIngles": "ThunderCats sword, toy or replica. In good condition, for fans of the series.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$5000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/espada-thundercats-1.jpg"
+    ]
+  },
+  {
+    "id": "item-184",
+    "descripcion": "Oso de peluche con corbatín. Suave y en perfecto estado, ideal para regalo.",
+    "descripcionIngles": "Plush bear with bow tie. Soft and in perfect condition, ideal for a gift.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/oso-peluche-corbatin-1.jpg"
+    ]
+  },
+  {
+    "id": "item-185",
+    "descripcion": "Oso de peluche panda de Navidad. Perfecto para la temporada navideña o como decoración.",
+    "descripcionIngles": "Christmas panda plush bear. Perfect for the holiday season or as decoration.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/oso-panda-navidad-1.jpg"
+    ]
+  },
+  {
+    "id": "item-186",
+    "descripcion": "Almohada para amamantar. Cómoda y práctica para madres y bebés.",
+    "descripcionIngles": "Nursing pillow. Comfortable and practical for mothers and babies.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/almohada-amamantar-1.jpg"
+    ]
+  },
+  {
+    "id": "item-187",
+    "descripcion": "Set de juegos de mesa magnético 5 en 1. Incluye ajedrez, damas, backgammon, y más. Compacto y portátil.",
+    "descripcionIngles": "5-in-1 magnetic board game set. Includes chess, checkers, backgammon, and more. Compact and portable.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/juegos-mesa-magnetico-1.jpg"
+    ]
+  },
+  {
+    "id": "item-188",
+    "descripcion": "Set de LEGO Bionicle. Varias figuras o piezas, ideal para coleccionistas o armadores.",
+    "descripcionIngles": "LEGO Bionicle set. Various figures or pieces, great for collectors or builders.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/lego-bionicle-1.jpg"
+    ]
+  },
+  {
+    "id": "item-189",
+    "descripcion": "Balines para pistola de juguete. Paquete grande, ideal para recargas.",
+    "descripcionIngles": "Pellets for toy gun. Large pack, ideal for refills.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/balines-juguete-1.jpg"
+    ]
+  },
+  {
+    "id": "item-190",
+    "descripcion": "Set de guantes de boxeo de juguete marca Spalding. Ideal para niños y juegos.",
+    "descripcionIngles": "Spalding brand toy boxing gloves set. Ideal for kids and play.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/guantes-boxeo-spalding-1.jpg"
+    ]
+  },
+  {
+    "id": "item-191",
+    "descripcion": "Set de guantes para taekwondo. Talla adecuada para entrenamiento o práctica ligera.",
+    "descripcionIngles": "Taekwondo gloves set. Suitable size for training or light practice.",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/guantes-taekwondo-1.jpg"
+    ]
+  },
+  {
+    "id": "item-192",
+    "descripcion": "Variedad de canicas de múltiples tamaños y colores. Lote de 100 canicas, también disponibles grandes individualmente ($1.000 COP c/u).",
+    "descripcionIngles": "Variety of marbles in multiple sizes and colors. Lot of 100 marbles, large ones also available individually ($1,000 COP each).",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$5.000 COP (100 canicas) / $1.000 COP (canica grande c/u)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/canicas-varias-1.jpg"
+    ]
+  },
+  {
+    "id": "item-193",
+    "descripcion": "Set de 3 marcos para cuadros de 36x30 cm (1 sin vidrio). Ideales para fotos o arte.",
+    "descripcionIngles": "Set of 3 picture frames 36x30 cm (1 without glass). Ideal for photos or art.",
+    "categoria": "Decoración",
+    "precio": "$45.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/marcos-36x30-1.jpg"
+    ]
+  },
+  {
+    "id": "item-194",
+    "descripcion": "Marco para cuadro de 33x24 cm (1 unidad). Ideal para fotos o arte.",
+    "descripcionIngles": "Picture frame 33x24 cm (1 unit). Ideal for photos or art.",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/marco-33x24-1.jpg"
+    ]
+  },
+  {
+    "id": "item-195",
+    "descripcion": "Marco para cuadro de 31x24 cm (1 unidad). Ideal para fotos o arte.",
+    "descripcionIngles": "Picture frame 31x24 cm (1 unit). Ideal for photos or art.",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/marco-31x24-1.jpg"
+    ]
+  },
+  {
+    "id": "item-196",
+    "descripcion": "Marco para cuadro de 43x33 cm (1 unidad). Ideal para fotos o arte.",
+    "descripcionIngles": "Picture frame 43x33 cm (1 unit). Ideal for photos or art.",
+    "categoria": "Decoración",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/marco-43x33-1.jpg"
+    ]
+  },
+  {
+    "id": "item-197",
+    "descripcion": "Transparencias Xerox. Paquete de láminas para retroproyector o manualidades.",
+    "descripcionIngles": "Xerox transparencies. Pack of sheets for overhead projector or crafts.",
+    "categoria": "Oficina",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/transparencias-xerox-1.jpg"
+    ]
+  },
+  {
+    "id": "item-198",
+    "descripcion": "Router 3Com. Ideal para extender la conectividad de red en casa u oficina.",
+    "descripcionIngles": "3Com Router. Ideal for extending network connectivity at home or office.",
+    "categoria": "Electrónica",
+    "precio": "$5.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/router-3com-1.jpg"
+    ]
+  },
+  {
+    "id": "item-199",
+    "descripcion": "Reproductor de DVD portátil. Ideal para viajes o entretenimiento en cualquier lugar.",
+    "descripcionIngles": "Portable DVD player. Ideal for travel or entertainment anywhere.",
+    "categoria": "Electrónica",
+    "precio": "$200.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/dvd-portatil-1.jpg"
+    ]
+  },
+  {
+    "id": "item-200",
+    "descripcion": "Marco de fotos digital. Muestra tus fotos favoritas en rotación. Varias funciones.",
+    "descripcionIngles": "Digital photo frame. Displays your favorite photos in rotation. Multiple functions.",
+    "categoria": "Electrónica",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/digital-photo-frame-1.jpg"
+    ]
+  },
+  {
+    "id": "item-201",
+    "descripcion": "Mantel redondo de Navidad de 2.4 m de diámetro. Perfecto para mesas grandes en la temporada festiva.",
+    "descripcionIngles": "Round Christmas tablecloth 2.4 m in diameter. Perfect for large tables during the festive season.",
+    "categoria": "Hogar",
+    "precio": "$35.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/mantel-navidad-1.jpg"
+    ]
+  },
+  {
+    "id": "item-202",
+    "descripcion": "Mantel redondo blanco de 2.4 m de diámetro. Clásico y versátil para cualquier ocasión.",
+    "descripcionIngles": "Round white tablecloth 2.4 m in diameter. Classic and versatile for any occasion.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/mantel-blanco-1.jpg"
+    ]
+  },
+  {
+    "id": "item-203",
+    "descripcion": "Mantel redondo a cuadros blancos y verdes de 2.4 m de diámetro. Fresco y decorativo.",
+    "descripcionIngles": "Round green and white checkered tablecloth 2.4 m in diameter. Fresh and decorative.",
+    "categoria": "Hogar",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/mantel-cuadros-1.jpg"
+    ]
+  },
+
+
+  {
+    "id": "item-205",
+    "descripcion": "Portátil Dell (procesador Core Duo 2.16GHz, 4GB RAM, 295GB HDD). Windows 10 Pro. Requiere nueva batería.",
+    "descripcionIngles": "Dell laptop (Core Duo 2.16GHz processor, 4GB RAM, 295GB HDD). Windows 10 Pro. Requires new battery.",
+    "categoria": "Electrónica",
+    "precio": "$200.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/portatil-dell-1-1.jpg",
+      "./images/portatil-dell-1-2.jpg"
+    ]
+  },
+  {
+    "id": "item-206",
+    "descripcion": "Portátil Dell (procesador Core Duo 1.5GHz, 2GB RAM, 148GB HDD). Windows 7. Requiere nueva batería.",
+    "descripcionIngles": "Dell laptop (Core Duo 1.5GHz processor, 2GB RAM, 148GB HDD). Windows 7. Requires new battery.",
+    "categoria": "Electrónica",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/portatil-dell-2-1.jpg",
+      "./images/portatil-dell-2-2.jpg"
+    ]
+  },
+  {
+    "id": "item-207",
+    "descripcion": "iPad de 30GB, 3ª generación. Ideal para lectura, juegos ligeros o navegación.",
+    "descripcionIngles": "iPad 30GB, 3rd generation. Ideal for reading, light gaming, or Browse.",
+    "categoria": "Electrónica",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/ipad-3gen-1.jpg",
+      "./images/ipad-3gen-2.jpg"
+    ]
+  },
+  {
+    "id": "item-208",
+    "descripcion": "Set de LEGO Bionicle. Varias figuras o piezas, ideal para coleccionistas o armadores.",
+    "descripcionIngles": "LEGO Bionicle set. Various figures or pieces, great for collectors or builders.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/lego-bionicle-2.jpg"
+    ]
+  },
+  {
+    "id": "item-209",
+    "descripcion": "Canasta organizadora de plástico con manijas (29cm L x 15.5cm A x 21.5cm P). Perfecta para organizar espacios.",
+    "descripcionIngles": "Plastic organizing basket with handles (29cm L x 15.5cm W x 21.5cm D). Perfect for organizing spaces.",
+    "categoria": "Hogar",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/canasta-organizadora-1.jpg"
+    ]
+  },
+  {
+    "id": "item-210",
+    "descripcion": "Set de mandolina con 5 selectores de corte. Ideal para rebanar verduras y frutas con facilidad.",
+    "descripcionIngles": "Mandoline set with 5 cutting selectors. Ideal for easily slicing vegetables and fruits.",
+    "categoria": "Cocina",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/mandolina-1.jpg"
+    ]
+  },
+  {
+    "id": "item-211",
+    "descripcion": "Bastón de senderismo ajustable (Treking Anti Choque Telescópico). Ideal para caminatas y deportes al aire libre.",
+    "descripcionIngles": "Adjustable hiking pole (Anti-Shock Telescopic Trekking). Ideal for hiking and outdoor sports.",
+    "categoria": "Deportes",
+    "precio": "$45.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/baston-senderismo-1.jpg"
+    ]
+  },
+  {
+    "id": "item-212",
+    "descripcion": "Kit de jardinería de 3 piezas. Incluye herramientas básicas para el cuidado de tu jardín.",
+    "descripcionIngles": "3-piece gardening kit. Includes basic tools for caring for your garden.",
+    "categoria": "Jardinería",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/kit-jardineria-1.jpg"
+    ]
+  },
+  {
+    "id": "item-213",
+    "descripcion": "Joystick Microsoft SideWinder. Ideal para juegos de PC retro o simulación.",
+    "descripcionIngles": "Microsoft SideWinder joystick. Ideal for retro PC games or simulation.",
+    "categoria": "Electrónica",
+    "precio": "$70.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/joystick-sidewinder-1.jpg"
+    ]
+  },
+  {
+    "id": "item-215",
+    "descripcion": "Kit PlayStation 1: Incluye consola, 2 controladores, cables y más de 20 juegos. ¡Horas de diversión retro!",
+    "descripcionIngles": "PlayStation 1 Kit: Includes console, 2 controllers, cables, and over 20 games. Hours of retro fun!",
+    "categoria": "Electrónica",
+    "precio": "$100.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/playstation-1-kit-1.jpg"
+    ]
+  },
+  {
+    "id": "item-216",
+    "descripcion": "Cargador inalámbrico plegable 4 en 1. Carga varios dispositivos a la vez de forma cómoda.",
+    "descripcionIngles": "4-in-1 foldable wireless charger. Conveniently charges multiple devices at once.",
+    "categoria": "Electrónica",
+    "precio": "$70.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/cargador-inalambrico-1.jpg"
+    ]
+  },
+  {
+    "id": "item-217",
+    "descripcion": "HDMI Splitter 1x2 (2 unidades). Permite duplicar una señal HDMI a dos pantallas.",
+    "descripcionIngles": "HDMI Splitter 1x2 (2 units). Allows duplicating one HDMI signal to two screens.",
+    "categoria": "Electrónica",
+    "precio": "$30.000 COP (cada uno)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/hdmi-splitter-1.jpg"
+    ]
+  },
+  {
+    "id": "item-218",
+    "descripcion": "Parlante para ducha recargable. Disfruta de tu música mientras te duchas.",
+    "descripcionIngles": "Rechargeable shower speaker. Enjoy your music while showering.",
+    "categoria": "Electrónica",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/parlante-ducha-1.jpg",
+      "./images/parlante-ducha-2.jpg"
+    ]
+  },
+  {
+    "id": "item-219",
+    "descripcion": "Procesador eléctrico Black+Decker con todos los accesorios. 100% funcional, contenedor plástico roto (fácil de reemplazar).",
+    "descripcionIngles": "Black+Decker electric food processor with all accessories. 100% functional, plastic container broken (easy to replace).",
+    "categoria": "Electrodomésticos",
+    "precio": "$90.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/procesador-blackdecker-1.jpg"
+    ]
+  },
+  {
+    "id": "item-221",
+    "descripcion": "Soporte para televisores de 17-32 pulgadas. Fijo o con inclinación, ideal para optimizar espacio.",
+    "descripcionIngles": "TV mount for 17-32 inch TVs. Fixed or tilting, ideal for optimizing space.",
+    "categoria": "Electrónica",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/soporte-tv-1.jpg"
+    ]
+  },
+  {
+    "id": "item-222",
+    "descripcion": "Monopatín Bodyflex profesional. Robusto y en buen estado, ideal para transporte o diversión.",
+    "descripcionIngles": "Bodyflex professional scooter. Sturdy and in good condition, ideal for transport or fun.",
+    "categoria": "Deportes",
+    "precio": "$120.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/monopatin-bodyflex-1.jpg",
+      "./images/monopatin-bodyflex-2.jpg"
+    ]
+  },
+  {
+    "id": "item-223",
+    "descripcion": "Fuentes para servir en plata. Elegantes, ideales para eventos o decoración de mesa.",
+    "descripcionIngles": "Silver serving platters. Elegant, ideal for events or table decoration.",
+    "categoria": "Cocina",
+    "precio": "$70.000 COP (cada una)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/fuentes-plata-1.jpg"
+    ]
+  },
+  {
+    "id": "item-225",
+    "descripcion": "Juguetes de baño en miniatura: ballenas y delfines. Ideal para la diversión de los más pequeños.",
+    "descripcionIngles": "Miniature bath toys: whales and dolphins. Ideal for little ones' fun.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$5.000 COP (set)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/juguetes-bano-1.jpg"
+    ]
+  },
+  {
+    "id": "item-226",
+    "descripcion": "Kit de soldadura con baquelita y papel para impresión de circuitos. Para proyectos de electrónica.",
+    "descripcionIngles": "Soldering kit with bakelite and paper for circuit printing. For electronics projects.",
+    "categoria": "Herramienta",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/kit-soldadura-1.jpg"
+    ]
+  },
+  {
+    "id": "item-227",
+    "descripcion": "Individuales decorativos desechables en papel. Ideales para fiestas o eventos.",
+    "descripcionIngles": "Decorative disposable paper placemats. Ideal for parties or events.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP (paquete)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/individuales-papel-1.jpg"
+    ]
+  },
+  {
+    "id": "item-228",
+    "descripcion": "Carpeta decorativa bordada. Varias unidades disponibles. Elegante para documentos o decoración.",
+    "descripcionIngles": "Embroidered decorative folder. Several units available. Elegant for documents or decoration.",
+    "categoria": "Decoración",
+    "precio": "$15.000 COP (cada una)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/carpeta-bordada-1.jpg"
+    ]
+  },
+  {
+    "id": "item-229",
+    "descripcion": "Perchero en madera ajustable. Práctico y versátil para organizar ropa o accesorios.",
+    "descripcionIngles": "Adjustable wooden coat rack. Practical and versatile for organizing clothes or accessories.",
+    "categoria": "Muebles",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/perchero-madera-1.jpg"
+    ]
+  },
+  {
+    "id": "item-230",
+    "descripcion": "Sistema de sonido para reproducir y grabar en cassettes, con consola ajustable y radio integrada. Ideal para amantes de la música retro.",
+    "descripcionIngles": "Sound system for playing and recording cassettes, with adjustable console and integrated radio. Ideal for retro music lovers.",
+    "categoria": "Electrónica",
+    "precio": "$60.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/sistema-sonido-cassette-1.jpg"
+    ]
+  },
+  {
+    "id": "item-231",
+    "descripcion": "Discos de música. Gran variedad de géneros y artistas. Precio por unidad.",
+    "descripcionIngles": "Music discs. Wide variety of genres and artists. Price per unit.",
+    "categoria": "Música",
+    "precio": "$2.000 COP (cada uno)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/discos-musica-1.jpg"
+    ]
+  },
+  {
+    "id": "item-232",
+    "descripcion": "Candado de guaya de seguridad para bicicletas con combinación. Protege tu bicicleta de forma segura.",
+    "descripcionIngles": "Bicycle cable lock with combination. Securely protect your bike.",
+    "categoria": "Deportes",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/candado-bici-combinacion-1.jpg"
+    ]
+  },
+  {
+    "id": "item-233",
+    "descripcion": "Candado de guaya de seguridad para bicicletas con llave (2 unidades). Mayor seguridad para tu bicicleta.",
+    "descripcionIngles": "Bicycle cable lock with key (2 units). Enhanced security for your bike.",
+    "categoria": "Deportes",
+    "precio": "$20.000 COP (cada uno)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/candado-bici-llave-1.jpg"
+    ]
+  },
+  {
+    "id": "item-234",
+    "descripcion": "Cables varios: HDMI, de red UTP, teléfono. Pregúntanos por el WhatsApp para disponibilidad y precios específicos.",
+    "descripcionIngles": "Various cables: HDMI, UTP network, phone. Ask us on WhatsApp for specific availability and prices.",
+    "categoria": "Electrónica",
+    "precio": "Consultar por WhatsApp",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/cables-varios-1.jpg",
+      "./images/cables-varios-2.jpg"
+    ]
+  },
+  {
+    "id": "item-235",
+    "descripcion": "Maleta para viajes en cuero con ruedas. Resistente y elegante, ideal para tus aventuras.",
+    "descripcionIngles": "Leather travel suitcase with wheels. Durable and elegant, ideal for your adventures.",
+    "categoria": "Hogar",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/maleta-cuero-1.jpg",
+      "./images/maleta-cuero-2.jpg"
+    ]
+  },
+  {
+    "id": "item-236",
+    "descripcion": "Coca artesanal en madera. Decorativa y funcional para guardar pequeños objetos.",
+    "descripcionIngles": "Artisanal wooden bowl. Decorative and functional for storing small items.",
+    "categoria": "Decoración",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/coca-madera-1.jpg"
+    ]
+  },
+  {
+    "id": "item-237",
+    "descripcion": "Trompo artesanal en madera. Juguete clásico y decorativo.",
+    "descripcionIngles": "Artisanal wooden spinning top. Classic and decorative toy.",
+    "categoria": "Juguetes y Peluches",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/trompo-madera-1.jpg"
+    ]
+  },
+  {
+    "id": "item-238",
+    "descripcion": "Kit de dibujo técnico con escala, escuadras, compás y tabla para planchas. Completo para estudiantes o profesionales.",
+    "descripcionIngles": "Technical drawing kit with scale, set squares, compass, and drawing board. Complete for students or professionals.",
+    "categoria": "Oficina",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/kit-dibujo-tecnico-1.jpg"
+    ]
+  },
+  {
+    "id": "item-239",
+    "descripcion": "Tendedero escualizable. Ideal para optimizar espacio al secar ropa, se pliega fácilmente.",
+    "descripcionIngles": "Extendable clothesline. Ideal for optimizing space when drying clothes, folds easily.",
+    "categoria": "Hogar",
+    "precio": "$50.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/tendedero-1.jpg"
+    ]
+  },
+  {
+    "id": "item-240",
+    "descripcion": "Chaleco reflectivo talla L. Aumenta tu visibilidad y seguridad, ideal para actividades al aire libre.",
+    "descripcionIngles": "Reflective vest size L. Increases your visibility and safety, ideal for outdoor activities.",
+    "categoria": "Ropa",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/chaleco-reflectivo-1.jpg"
+    ]
+  },
+  {
+    "id": "item-241",
+    "descripcion": "Porta CD. Ideal para organizar y proteger tu colección de CDs.",
+    "descripcionIngles": "CD holder. Ideal for organizing and protecting your CD collection.",
+    "categoria": "Hogar",
+    "precio": "$15.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/porta-cd-1.jpg"
+    ]
+  },
+  {
+    "id": "item-242",
+    "descripcion": "Collares con avispa atrapada en resina. Diseño único y natural, ideal para amantes de la naturaleza.",
+    "descripcionIngles": "Necklaces with wasp trapped in resin. Unique and natural design, ideal for nature lovers.",
+    "categoria": "Accesorios",
+    "precio": "$15.000 COP (cada uno)",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/collar-avispa-1.jpg"
+    ]
+  },
+  {
+    "id": "item-244",
+    "descripcion": "Billetera en cuero Levi's. Resistente y con estilo, ideal para uso diario.",
+    "descripcionIngles": "Levi's leather wallet. Durable and stylish, ideal for daily use.",
+    "categoria": "Accesorios",
+    "precio": "$40.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/billetera-levis-1.jpg",
+      "./images/billetera-levis-2.jpg"
+    ]
+  },
+  {
+    "id": "item-245",
+    "descripcion": "Telescopio ajustable. Ideal para aficionados a la astronomía o para observar paisajes.",
+    "descripcionIngles": "Adjustable telescope. Ideal for astronomy enthusiasts or landscape viewing.",
+    "categoria": "Electrónica",
+    "precio": "$180.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/telescopio-1.jpg"
+    ]
+  },
+  {
+    "id": "item-246",
+    "descripcion": "Maletín en cuero. Elegante y práctico para documentos, portátil o uso diario.",
+    "descripcionIngles": "Leather briefcase. Elegant and practical for documents, laptop, or daily use.",
+    "categoria": "Accesorios",
+    "precio": "$250.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/maletin-cuero-1.jpg"
+    ]
+  },
+  {
+    "id": "item-247",
+    "descripcion": "Resistencia para estufa eléctrica. Repuesto esencial para mantener tu estufa funcionando.",
+    "descripcionIngles": "Electric stove heating element. Essential replacement to keep your stove working.",
+    "categoria": "Electrodomésticos",
+    "precio": "$20.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/resistencia-estufa-1.jpg"
+    ]
+  },
+  {
+    "id": "item-248",
+    "descripcion": "Cartuchera circular Duracell. Ideal para guardar lápices, bolígrafos u otros objetos pequeños.",
+    "descripcionIngles": "Duracell circular pencil case. Ideal for storing pencils, pens, or other small items.",
+    "categoria": "Oficina",
+    "precio": "$10.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/cartuchera-duracell-1.jpg"
+    ]
   }
+
+
+
+
+
+
 ]

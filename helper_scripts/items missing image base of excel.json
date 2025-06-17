@@ -1,180 +1,6 @@
 [
-  {
-    "id": "item-003",
-    "descripcion": "Cama doble en Cedro con su respectivo colchón",
-    "descripcionIngles": "Cedar double bed with mattress.",
-    "categoria": "Muebles",
-    "precio": "$800.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/cama-doble-en.jpg"
-    ]
-  },
-  {
-    "id": "item-008",
-    "descripcion": "Comedor redondo de 2.20 Mt diámetro con vidrio y 6 sillas tapizadas y espaldar en mimbre",
-    "descripcionIngles": "Round dining set, 2.20m diameter glass top, 6 upholstered chairs with wicker backs.",
-    "categoria": "Muebles",
-    "precio": "$500.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/comedor-redondo-de.jpg"
-    ]
-  },
-  {
-    "id": "item-016",
-    "descripcion": "Váscula análoga de peso",
-    "descripcionIngles": "Analog weighing scale.",
-    "categoria": "Hogar",
-    "precio": "$30.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/vascula-analoga-de.jpg"
-    ]
-  },
-  {
-    "id": "item-037",
-    "descripcion": "Bombin clasico talla 51",
-    "descripcionIngles": "Bowler hat classic size .",
-    "categoria": "Ropa",
-    "precio": "$50.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/vestiombin-clasico-talla.jpg"
-    ]
-  },
-  {
-    "id": "item-062",
-    "descripcion": "Botella para mantener liquidos frios o calientes tapa de rosca",
-    "descripcionIngles": "Insulated bottle for hot or cold liquids.",
-    "categoria": "Hogar",
-    "precio": "$300.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/botella-termica-rosca.jpg"
-    ]
-  },
-  {
-    "id": "item-072",
-    "descripcion": "Juego de te japones original en porcelana",
-    "descripcionIngles": "Original Japanese porcelain tea set.",
-    "categoria": "Hogar",
-    "precio": "$20.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/juego-de-te.jpg"
-    ]
-  },
-  {
-    "id": "item-077",
-    "descripcion": "Florero en vidrio rectangular para lucir tus arreglos florales 30 cm Alto (3 unidades)",
-    "descripcionIngles": "Rectangular glass vase for floral arrangements, 30cm H (3 units).",
-    "categoria": "Decoración",
-    "precio": "$25.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/florero-en-vidrio.jpg"
-    ]
-  },
-  {
-    "id": "item-078",
-    "descripcion": "Florero en vidrio cilindrico para lucir tus arreglos florales 20 cm Alto(3 unidades)",
-    "descripcionIngles": "Cylindrical glass vase for floral arrangements, 20cm H (3 units).",
-    "categoria": "Decoración",
-    "precio": "$30.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/florero-en-vidrio.jpg"
-    ]
-  },
-  {
-    "id": "item-085",
-    "descripcion": "Kit de bar con hielera, saca corchos, separador de huevos, medidor de licor, Mixer, decoración navidella para botellas de vidri1o",
-    "descripcionIngles": "Bar kit with ice bucket, corkscrew, egg separator, liquor jigger, mixer, and holiday bottle decor.",
-    "categoria": "Hogar",
-    "precio": "$10.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/kit-de-bar.jpg"
-    ]
-  },
-  {
-    "id": "item-091",
-    "descripcion": "Panera",
-    "descripcionIngles": "Bread box.",
-    "categoria": "Hogar",
-    "precio": "$15.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/panera.jpg"
-    ]
-  },
-  {
-    "id": "item-092",
-    "descripcion": "Canasta artesanal multiusos",
-    "descripcionIngles": "Multipurpose artisan basket.",
-    "categoria": "Hogar",
-    "precio": "$15.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/canasta-artesanal-multiusos.jpg"
-    ]
-  },
-  {
-    "id": "item-093",
-    "descripcion": "Panera",
-    "descripcionIngles": "Bread box.",
-    "categoria": "Hogar",
-    "precio": "$15.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/panera-2.jpg"
-    ]
-  },
-  {
-    "id": "item-094",
-    "descripcion": "Panera metálica",
-    "descripcionIngles": "Metal bread box.",
-    "categoria": "Hogar",
-    "precio": "$15.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/panera-metalica.jpg"
-    ]
-  },
-  {
-    "id": "item-095",
-    "descripcion": "Panera",
-    "descripcionIngles": "Bread box.",
-    "categoria": "Hogar",
-    "precio": "$25.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/panera.jpg"
-    ]
-  },
-  {
-    "id": "item-096",
-    "descripcion": "Guantes de carnaza",
-    "descripcionIngles": "Leather work gloves.",
-    "categoria": "Herramientas",
-    "precio": "$15.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/guantes-de-carnaza.jpg"
-    ]
-  },
-  {
-    "id": "item-102",
-    "descripcion": "Refractaria cuadrada de vidrio de 21 x 21 cm",
-    "descripcionIngles": "Square glass baking dish, 21 x 21 cm.",
-    "categoria": "Cocina",
-    "precio": "$30.000 COP",
-    "disponibilidad": "si",
-    "fotos": [
-      "./images/refractaria-cuadrada-de.jpg"
-    ]
-  },
+
+
   {
     "id": "item-125",
     "descripcion": "Mugs únicos, perfectos para regalar o disfrutar tu bebida favorita con estilo (Valor por unidad)",
@@ -206,6 +32,17 @@
     "disponibilidad": "si",
     "fotos": [
       "./images/set-de-tazas.jpg"
+    ]
+  },
+    {
+    "id": "item-204",
+    "descripcion": "Set de macetas plásticas con platos. Ideales para plantas de interior o exterior.",
+    "descripcionIngles": "Set of plastic pots with saucers. Ideal for indoor or outdoor plants.",
+    "categoria": "Jardinería",
+    "precio": "$25.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/set-macetas-1.jpg"
     ]
   }
 ]
