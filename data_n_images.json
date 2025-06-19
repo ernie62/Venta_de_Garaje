@@ -66,7 +66,7 @@
     "descripcionIngles": "Large wooden folding table, 2.24m L x 80cm W.",
     "categoria": "Muebles",
     "precio": "$300.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mesa-grande-plegable-1.jpg",
       "./images/mesa-grande-plegable-2.jpg"
@@ -726,7 +726,7 @@
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/botella-para-mantener.jpg"
     ]
@@ -1474,7 +1474,7 @@
     "descripcionIngles": "Container with lid. 20cm L x 15cm W x 10cm D.",
     "categoria": "Cocina",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/contenedor-con-tapa.jpg"
     ]
@@ -1649,7 +1649,7 @@
     "descripcionIngles": "Metal container with airtight seal.",
     "categoria": "Cocina",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/recipiente-metalico-con.jpg"
     ]
@@ -2311,7 +2311,7 @@
     "precio": "$30.000 COP",
     "disponibilidad": "si",
     "fotos": [
-      "./images/kit-Jardineria-1.jpg"
+      "./images/kit-jardineria-1.jpg"
     ]
   },
   {
@@ -2465,7 +2465,7 @@
     "descripcionIngles": "Adjustable wooden coat rack. Practical and versatile for organizing clothes or accessories.",
     "categoria": "Muebles",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/perchero-madera-1.jpg"
     ]
