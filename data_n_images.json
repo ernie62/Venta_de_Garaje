@@ -2670,11 +2670,18 @@
     "fotos": [
       "./images/cartuchera-duracell-1.jpg"
     ]
+  },
+  {
+  "id": "item-249",
+  "descripcion": "Televisor LCD LG 22LG30R de 22 pulgadas. Imágenes claras, ideal para espacios compactos.",
+  "descripcionIngles": "LG 22LG30R 22-inch LCD TV. Clear visuals, perfect for compact spaces.",
+  "categoria": "Electrodomésticos",
+  "precio": "$150.000 COP",
+  "disponibilidad": "si",
+  "fotos": [
+    "./images/lg-22lg30r-1.jpg"
+    ]
   }
-
-
-
-
 
 
 ]
