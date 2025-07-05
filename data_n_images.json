@@ -2681,7 +2681,42 @@
   "fotos": [
     "./images/lg-22lg30r-1.jpg"
     ]
+  },
+  {
+    "id": "item-250",
+    "descripcion": "Molde para Tortas Desmontable con Gancho de 13 cm. Ideal para repostería, dimensiones: 13cm de ancho x 3cm de alto x 13cm de diámetro.",
+    "descripcionIngles": "Detachable Cake Pan with 13 cm Hook. Ideal for baking, dimensions: 13cm width x 3cm height x 13cm diameter.",
+    "categoria": "Cocina",
+    "precio": "$30.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/molde-torta-1.jpg",
+      "./images/molde-torta-2.jpg"
+    ]
+  },
+  {
+    "id": "item-251",
+    "descripcion": "Router TP-Link WR941HP Negro (Usado). Alta potencia de hasta 450 Mbps, conexión inalámbrica, banda única de 2.4 GHz, 3 antenas externas y 1 interna. Color: Negro.",
+    "descripcionIngles": "Used TP-Link WR941HP Black Router. High power up to 450 Mbps, wireless connection, single 2.4 GHz band, 3 external and 1 internal antennas. Color: Black.",
+    "categoria": "Electrodomésticos",
+    "precio": "$130.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/router-tp-link-wr941hp-1.jpg",
+      "./images/router-tp-link-wr941hp-2.jpg",
+      "./images/router-tp-link-wr941hp-3.jpg"
+    ]
+  },
+  {
+    "id": "item-252",
+    "descripcion": "Repetidor Smart Wifi 5G, Base Port Doble Señal. Conexión inalámbrica de hasta 125 MB/s, doble banda (2.4 y 5 MHz), 2 antenas internas, 5 puertos y firewall integrado. Soporta protocolo de seguridad DMZ, control parental y función Adaptive QoS. Color: Blanco. Dimensiones: 22.75cm ancho x 4.83cm alto x 19cm profundidad.",
+    "descripcionIngles": "Smart Wifi 5G Repeater, Dual Signal Base Port. Wireless connection up to 125 MB/s, dual band (2.4 and 5 MHz), 2 internal antennas, 5 ports and integrated firewall. Supports DMZ security protocol, parental control, and Adaptive QoS function. Color: White. Dimensions: 22.75cm width x 4.83cm height x 19cm depth.",
+    "categoria": "Electrodomésticos",
+    "precio": "$80.000 COP",
+    "disponibilidad": "si",
+    "fotos": [
+      "./images/repetidor-smart-wifi-1.jpg",
+      "./images/repetidor-smart-wifi-2.jpg"
+    ]
   }
-
-
 ]
