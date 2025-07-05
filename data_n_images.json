@@ -26,10 +26,10 @@
   },
    {
     "id": "item-003",
-    "descripcion": "Cama doble en Cedro con su respectivo colchón",
-    "descripcionIngles": "Cedar double bed with mattress.",
+    "descripcion": "Cama doble en madera y cabecera con decoración en  hierro. Incluye 1 colchón",
+    "descripcionIngles": "Wooden double bed with mattress.",
     "categoria": "Muebles",
-    "precio": "$800.000 COP",
+    "precio": "$1.500.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/cama-doble-en.jpg",
@@ -42,7 +42,7 @@
     "descripcionIngles": "Wooden cabinet, 2 doors, 15 shelves. 1.97m H x 90cm W x 27cm D.",
     "categoria": "Muebles",
     "precio": "$700.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mueble-de-madera.jpg",
       "./images/mueble-de-madera-2.jpg"
@@ -54,7 +54,7 @@
     "descripcionIngles": "2 nightstands with lamps.",
     "categoria": "Muebles",
     "precio": "$350.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/2-mesas-de-1.jpg",
       "./images/2-mesas-de-2.jpg"
@@ -78,7 +78,7 @@
     "descripcionIngles": "Wooden desk, 1.20m L x 42cm W x 75cm H.",
     "categoria": "Muebles",
     "precio": "$350.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/escritorio-en-madera.jpg"
     ]
@@ -100,7 +100,7 @@
     "descripcionIngles": "White Orchid.",
     "categoria": "Jardinería",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/orquidea-blanca-1.jpg",
       "./images/orquidea-blanca-2.jpg"
@@ -133,7 +133,7 @@
     "descripcion": "Zapatera blanca de madera forrada en formica y ruedas bloqueantes 134m L X 35 cm P X 52 cm A",
     "descripcionIngles": "White wooden shoe rack, formica-covered, with locking wheels. 134cm L x 35cm D x 52cm H.",
     "categoria": "Muebles",
-    "precio": "$300.000 COP",
+    "precio": "$350.000 COP",
     "disponibilidad": "si",
     "fotos": [
       "./images/zapatera-blanca-de.jpg"
@@ -156,7 +156,7 @@
     "descripcionIngles": "Samsung WA19T6260BV washing machine, 19kg capacity.",
     "categoria": "Electrodomésticos",
     "precio": "$1.500.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/lavadora-samsung-modelo-1.jpg",
       "./images/lavadora-samsung-modelo-2.jpg"
@@ -168,7 +168,7 @@
     "descripcionIngles": "Analog weighing scale.",
     "categoria": "Hogar",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/vascula-analoga-de.jpg"
     ]
@@ -235,7 +235,7 @@
     "descripcionIngles": "Electric grilling pan.",
     "categoria": "Electrodomésticos",
     "precio": "$250.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/parrilla-electrica-para-1.jpg",
       "./images/parrilla-electrica-para-2.jpg"
@@ -257,7 +257,7 @@
     "descripcion": "Licuadora Oster con vaso plástico",
     "descripcionIngles": "Oster blender with plastic cup.",
     "categoria": "Electrodomésticos",
-    "precio": "$100.000 COP",
+    "precio": "$100.000 CO-P",
     "disponibilidad": "si",
     "fotos": [
       "./images/licuadora-oster-con.jpg"
@@ -292,7 +292,7 @@
     "descripcionIngles": "Foldable metal ladder, 140cm.",
     "categoria": "Herramienta",
     "precio": "$350.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/escalera-metalica.jpg"
     ]
@@ -303,7 +303,7 @@
     "descripcionIngles": "White wooden electric lamp.",
     "categoria": "Hogar",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/lampara-electrica-en.jpg"
     ]
@@ -314,7 +314,7 @@
     "descripcionIngles": "Hand-painted ceramic candy box, 9cm H, \"Peque Luna\" design, terracotta.",
     "categoria": "Decoración",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bombonera-en-ceramica.jpg"
     ]
@@ -325,7 +325,7 @@
     "descripcionIngles": "Silver-plated photo frame, 10x15cm (1 unit, price per unit).",
     "categoria": "Decoración",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-plateados-10x15.jpg"
     ]
@@ -336,7 +336,7 @@
     "descripcionIngles": "Silver-plated photo frame, 13x18cm (Price per unit).",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-13.jpg"
     ]
@@ -347,7 +347,7 @@
     "descripcionIngles": "Silver-plated photo frame, 35 x 25cm.",
     "categoria": "Decoración",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-plateados'35x25.jpg"
     ]
@@ -358,7 +358,7 @@
     "descripcionIngles": "Wood photo frame, 10x15cm.",
     "categoria": "Decoración",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-madera.jpg"
     ]
@@ -369,7 +369,7 @@
     "descripcionIngles": "Black wood photo frame, 10x15cm.",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-madera-negra.jpg"
     ]
@@ -380,7 +380,7 @@
     "descripcionIngles": "Copper-plated photo frame, 15x10cm (2 units, price per unit).",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-cobre-1.jpg"
     ]
@@ -391,7 +391,7 @@
     "descripcionIngles": "4 photo in one frame.",
     "categoria": "Decoración",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-4fotos.jpg"
     ]
@@ -402,7 +402,7 @@
     "descripcionIngles": "Bowler hat classic size .",
     "categoria": "Ropa",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/vestiombin-clasico-talla-1.jpg",
       "./images/vestiombin-clasico-talla-2.jpg"
@@ -414,7 +414,7 @@
     "descripcionIngles": "12 x 12cm photo frame.",
     "categoria": "Decoración",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-12x12.jpg"
     ]
@@ -425,7 +425,7 @@
     "descripcionIngles": "Gold-plate photo frame, 10x15cm.",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-retratos-dorado.jpg"
     ]
@@ -436,7 +436,7 @@
     "descripcionIngles": "Nicole Miller brand handbag.",
     "categoria": "Ropa",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bolso-de-la.jpg"
     ]
@@ -447,7 +447,7 @@
     "descripcionIngles": "Handcrafted wicker purse.",
     "categoria": "Ropa",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/cartera-artesanal-de.jpg"
     ]
@@ -481,7 +481,7 @@
     "descripcionIngles": "Vintage rotary dial phone, good condition.",
     "categoria": "Electrónica",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/telefono-de-disco.jpg"
     ]
@@ -548,7 +548,7 @@
     "descripcionIngles": "Skateboarding protection gear.",
     "categoria": "Deportes",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/equipo-de-proyteccion.jpg"
     ]
@@ -636,7 +636,7 @@
     "descripcionIngles": "Professional marathon water bottle.",
     "categoria": "Deportes",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/botelito-profesional.jpg"
     ]
@@ -688,7 +688,7 @@
   },
   {
     "id": "item-061",
-    "descripcion": "Un conjunto de anillos de gimnasia de madera",
+    "descripcion": "Conjunto de anillos de gimnasia de madera",
     "descripcionIngles": "Set of wooden gymnastics rings.",
     "categoria": "Deportes",
     "precio": "$250.000 COP",
@@ -703,7 +703,7 @@
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/botella-termica-rosca.jpg"
     ]
@@ -715,7 +715,7 @@
     "descripcionIngles": "Juan Valdez Tupperware plastic cup.",
     "categoria": "Hogar",
     "precio": "15,00 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/vaso-juan-valdez.jpg"
     ]
@@ -737,7 +737,7 @@
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/botella-para-downline.jpg"
     ]
@@ -748,7 +748,7 @@
     "descripcionIngles": "Insulated bottle for hot or cold liquids.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/botella-para-coffe.jpg"
     ]
@@ -759,7 +759,7 @@
     "descripcionIngles": "Tupperware plastic cup with lead .",
     "categoria": "Hogar",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/tupperware-plastic-cup.jpg"
     ]
@@ -770,7 +770,7 @@
     "descripcionIngles": "Tupperware plastic cup with lead .",
     "categoria": "Hogar",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/tupperware-plastic-cup-pink.jpg"
     ]
@@ -781,7 +781,7 @@
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/jarra-de-plastico-1.jpg"
     ]
@@ -792,7 +792,7 @@
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/jarra-de-plastico-2.jpg"
     ]
@@ -803,7 +803,7 @@
     "descripcionIngles": "1 Liter Glass Jug 3 units.",
     "categoria": "Hogar",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/jarra-de-vidrio.jpg"
     ]
@@ -825,7 +825,7 @@
     "descripcionIngles": "Original Japanese porcelain tea set.",
     "categoria": "Hogar",
     "precio": "$350.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-de-te.jpg"
     ]
@@ -869,7 +869,7 @@
     "descripcionIngles": "-Multipurpose glass cup - Elegance and versatility in one piece!",
     "categoria": "Hogar",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/copa-de-vidrio.jpg"
     ]
@@ -891,7 +891,7 @@
     "descripcionIngles": "Rectangular glass vase for floral arrangements, 30cm H (3 units).",
     "categoria": "Decoración",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/florero-en-vidrio-rectangular.jpg"
     ]
@@ -903,7 +903,7 @@
     "descripcionIngles": "Cylindrical glass vase for floral arrangements, 20cm H (3 units).",
     "categoria": "Decoración",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/florero-en-vidrio-cilindrico.jpg"
     ]
@@ -914,7 +914,7 @@
     "descripcionIngles": "Glass vase for floral arrangements, 25cm H (3 units).",
     "categoria": "Decoración",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/florero-en-vidrio.jpg"
     ]
@@ -991,7 +991,7 @@
     "descripcionIngles": "Bar kit with ice bucket, corkscrew, egg separator, liquor jigger, mixer, and holiday bottle decor.",
     "categoria": "Hogar",
     "precio": "$70.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/kit-de-bar.jpg"
     ]
@@ -1025,7 +1025,7 @@
     "descripcionIngles": "2 black Raquira clay pots with artisan basket.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/2-cazuela-negras.jpg"
     ]
@@ -1036,7 +1036,7 @@
     "descripcionIngles": "2 terracotta Raquira clay pots with artisan basket.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/2-cazuela-de.jpg"
     ]
@@ -1047,7 +1047,7 @@
     "descripcionIngles": "Bread box.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/panera.jpg"
     ]
@@ -1058,7 +1058,7 @@
     "descripcionIngles": "Multipurpose artisan basket.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/canasta-artesanal-multiusos.jpg"
     ]
@@ -1069,7 +1069,7 @@
     "descripcionIngles": "Bread box.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/panera-2.jpg"
     ]
@@ -1080,7 +1080,7 @@
     "descripcionIngles": "Metal bread box.",
     "categoria": "Hogar",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/panera-metalica-1.jpg",
       "./images/panera-metalica.jpg"
@@ -1114,7 +1114,7 @@
     "descripcionIngles": "Grilling set - Everything for a perfect BBQ!",
     "categoria": "Cocina",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-para-asar-1.jpg",
       "./images/juego-para-asar-2.jpg"
@@ -1137,7 +1137,7 @@
     "descripcionIngles": "Glass baking dish, 27.5 x 19 cm.",
     "categoria": "Cocina",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/refractaria-de-vidrio-27.5.jpg"
     ]
@@ -1159,7 +1159,7 @@
     "descripcionIngles": "Glass baking dish, 30 x 19 cm.",
     "categoria": "Cocina",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/refractaria-de-vidrio30.jpg"
     ]
@@ -1170,7 +1170,7 @@
     "descripcionIngles": "Square glass baking dish, 21 x 21 cm.",
     "categoria": "Cocina",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/refractaria-cuadrada-de.jpg"
     ]
@@ -1214,7 +1214,7 @@
     "descripcionIngles": "Pizza baking trays, 30cm and 27.5cm diameters.",
     "categoria": "Cocina",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bandejas-para-pizza.jpg"
     ]
@@ -1225,7 +1225,7 @@
     "descripcionIngles": "Aluminum baking mold, 38cm L x 28cm W x 7cm D.",
     "categoria": "Cocina",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/molde-de-aluminio-1.jpg",
       "./images/molde-de-aluminio-2.jpg"
@@ -1237,7 +1237,7 @@
     "descripcionIngles": "Cookie cutters.",
     "categoria": "Cocina",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/cortadores-de-galletas.jpg"
     ]
@@ -1282,7 +1282,7 @@
     "descripcionIngles": "Set of 8 plastic placemats",
     "categoria": "Hogar",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-de-8-individuales.jpg"
     ]
@@ -1293,7 +1293,7 @@
     "descripcionIngles": "Set of 3 fabric placemats.",
     "categoria": "Hogar",
     "precio": "$6.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-de-3-individuales.jpg"
     ]
@@ -1348,7 +1348,7 @@
     "descripcionIngles": "White oval crochet folder.",
     "categoria": "Hogar",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/carpeta-blanca-ovalada.jpg"
     ]
@@ -1439,7 +1439,7 @@
     "descripcionIngles": "Universal brand pressure cooker.",
     "categoria": "Cocina",
     "precio": "$100.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/olla-a-presion.jpg"
     ]
@@ -1450,7 +1450,7 @@
     "descripcionIngles": "Dutch Oven.",
     "categoria": "Cocina",
     "precio": "$200.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/olla-de-coccion.jpg",
       "./images/olla-de-coccion-2.jpg",
@@ -1463,7 +1463,7 @@
     "descripcionIngles": "Pot with adjustable lid.",
     "categoria": "Cocina",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/olla-con-tapa-ajustable.jpg"
     ]
@@ -1496,7 +1496,7 @@
     "descripcionIngles": "Japanese porcelain bowl.",
     "categoria": "Cocina",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/cuenco-japones-de.jpg"
     ]
@@ -1540,7 +1540,7 @@
     "descripcionIngles": "Set of 6 small coffee cups.",
     "categoria": "Hogar",
     "precio": "$40.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-de-6.jpg"
     ]
@@ -1551,7 +1551,7 @@
     "descripcionIngles": "Utensil hanging rack.",
     "categoria": "Cocina",
     "precio": "$40.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/soporte-para-colgar.jpg"
     ]
@@ -1605,7 +1605,7 @@
     "descripcionIngles": "Plastic pitcher.",
     "categoria": "Cocina",
     "precio": "$8.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/jarra-plastica.jpg"
     ]
@@ -1627,7 +1627,7 @@
     "descripcionIngles": "Glass container set.",
     "categoria": "Cocina",
     "precio": "$35.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juego-de-recipientes-vidrio.jpg"
     ]
@@ -1660,7 +1660,7 @@
     "descripcionIngles": "2 plastic containers (price per unit).",
     "categoria": "Cocina",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/2-contenedores-de-grano.jpg"
     ]
@@ -1682,7 +1682,7 @@
     "descripcionIngles": "Rotating metal tray.",
     "categoria": "Cocina",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bandeja-metalica-giratoria.jpg"
     ]
@@ -1704,7 +1704,7 @@
     "descripcionIngles": "5 cutting boards.",
     "categoria": "Cocina",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/5-tablas-para.jpg"
     ]
@@ -1715,7 +1715,7 @@
     "descripcionIngles": "Kitchen utensil set.",
     "categoria": "Cocina",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/set-de-utencilios-1.jpg"
     ]
@@ -1726,7 +1726,7 @@
     "descripcionIngles": "Kitchen utensil set.",
     "categoria": "Cocina",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/set-de-utencilios-2.jpg"
     ]
@@ -1737,7 +1737,7 @@
     "descripcionIngles": "4 reusable wine bottle stoppers.",
     "categoria": "Hogar",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/tapon-para-botella.jpg"
     ]
@@ -1941,7 +1941,7 @@
     "descripcionIngles": "Parker Brothers French card game: Mille Bornes. Complete and in good condition.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mille-bornes-1.jpg"
     ]
@@ -1952,7 +1952,7 @@
     "descripcionIngles": "USA flag design plush bear. Great for decoration or collection.",
     "categoria": "Juguetes y Peluches",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/oso-felpa-usa-1.jpg"
     ]
@@ -1974,7 +1974,7 @@
     "descripcionIngles": "Looney Tunes Bingo game. Complete and in good condition, great for the whole family.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/bingo-looney-tunes-1.jpg"
     ]
@@ -1985,7 +1985,7 @@
     "descripcionIngles": "Batman airplane toy, without Batman figure. Great for collectors or kids.",
     "categoria": "Juguetes y Peluches",
     "precio": "$25.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/avion-batman-1.jpg"
     ]
@@ -1996,7 +1996,7 @@
     "descripcionIngles": "ThunderCats sword, toy or replica. In good condition, for fans of the series.",
     "categoria": "Juguetes y Peluches",
     "precio": "$5000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/espada-thundercats-1.jpg"
     ]
@@ -2007,7 +2007,7 @@
     "descripcionIngles": "Plush bear with bow tie. Soft and in perfect condition, ideal for a gift.",
     "categoria": "Juguetes y Peluches",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/oso-peluche-corbatin.jpg"
     ]
@@ -2018,7 +2018,7 @@
     "descripcionIngles": "Christmas panda plush bear. Perfect for the holiday season or as decoration.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/oso-panda-navidad-1.jpg"
     ]
@@ -2029,7 +2029,7 @@
     "descripcionIngles": "Nursing pillow. Comfortable and practical for mothers and babies.",
     "categoria": "Hogar",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/almohada-amamantar-1.jpg"
     ]
@@ -2040,7 +2040,7 @@
     "descripcionIngles": "5-in-1 magnetic board game set. Includes chess, checkers, backgammon, and more. Compact and portable.",
     "categoria": "Juguetes y Peluches",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juegos-mesa-magnetico-1.jpg"
     ]
@@ -2051,7 +2051,7 @@
     "descripcionIngles": "LEGO Bionicle set. Various figures or pieces, great for collectors or builders.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/lego-bionicle-1.jpg"
     ]
@@ -2062,7 +2062,7 @@
     "descripcionIngles": "Pellets for toy gun. Large pack, ideal for refills.",
     "categoria": "Juguetes y Peluches",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/balines-juguete-1.jpg"
     ]
@@ -2073,7 +2073,7 @@
     "descripcionIngles": "Spalding brand toy boxing gloves set. Ideal for kids and play.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/guantes-boxeo-spalding-1.jpg"
     ]
@@ -2084,7 +2084,7 @@
     "descripcionIngles": "Taekwondo gloves set. Suitable size for training or light practice.",
     "categoria": "Deportes",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/guantes-taekwondo-1.jpg"
     ]
@@ -2095,7 +2095,7 @@
     "descripcionIngles": "Variety of marbles in multiple sizes and colors. Lot of 100 marbles, large ones also available individually ($1,000 COP each).",
     "categoria": "Juguetes y Peluches",
     "precio": "$5.000 COP (100 canicas) / $1.000 COP (canica grande c/u)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/canicas-varias-1.jpg"
     ]
@@ -2106,7 +2106,7 @@
     "descripcionIngles": "Set of 3 picture frames 36x30 cm (1 without glass). Ideal for photos or art.",
     "categoria": "Decoración",
     "precio": "$45.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/marcos-36x30-1.jpg"
     ]
@@ -2117,7 +2117,7 @@
     "descripcionIngles": "Picture frame 33x24 cm (1 unit). Ideal for photos or art.",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/marco-33x24-1.jpg"
     ]
@@ -2128,7 +2128,7 @@
     "descripcionIngles": "Picture frame 31x24 cm (1 unit). Ideal for photos or art.",
     "categoria": "Decoración",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/marco-31x24-1.jpg"
     ]
@@ -2139,7 +2139,7 @@
     "descripcionIngles": "Picture frame 43x33 cm (1 unit). Ideal for photos or art.",
     "categoria": "Decoración",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/marco-31x24-1.jpg"
     ]
@@ -2150,7 +2150,7 @@
     "descripcionIngles": "Xerox transparencies. Pack of sheets for overhead projector or crafts.",
     "categoria": "Oficina",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/transparencias-xerox-1.jpg"
     ]
@@ -2161,7 +2161,7 @@
     "descripcionIngles": "3Com Router. Ideal for extending network connectivity at home or office.",
     "categoria": "Electrónica",
     "precio": "$5.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/router-3com-1.jpg"
     ]
@@ -2194,7 +2194,7 @@
     "descripcionIngles": "Round Christmas tablecloth 2.4 m in diameter. Perfect for large tables during the festive season.",
     "categoria": "Hogar",
     "precio": "$35.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mantel-navidad-1.jpg"
     ]
@@ -2205,7 +2205,7 @@
     "descripcionIngles": "Round white tablecloth 2.4 m in diameter. Classic and versatile for any occasion.",
     "categoria": "Hogar",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mantel-blanco-1.jpg"
     ]
@@ -2216,7 +2216,7 @@
     "descripcionIngles": "Round green and white checkered tablecloth 2.4 m in diameter. Fresh and decorative.",
     "categoria": "Hogar",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mantel-cuadros-1.jpg"
     ]
@@ -2229,7 +2229,7 @@
     "descripcionIngles": "Dell laptop (Core Duo 2.16GHz processor, 4GB RAM, 295GB HDD). Windows 10 Pro. Requires new battery.",
     "categoria": "Electrónica",
     "precio": "$200.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/portatil-dell-1-1.jpg",
       "./images/portatil-dell-1-2.jpg"
@@ -2241,7 +2241,7 @@
     "descripcionIngles": "Dell laptop (Core Duo 1.5GHz processor, 2GB RAM, 148GB HDD). Windows 7. Requires new battery.",
     "categoria": "Electrónica",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/portatil-dell-2-1.jpg",
       "./images/portatil-dell-2-2.jpg"
@@ -2253,7 +2253,7 @@
     "descripcionIngles": "iPad 30GB, 3rd generation. Ideal for reading, light gaming, or Browse.",
     "categoria": "Electrónica",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/ipad-3gen-1.jpg",
       "./images/ipad-3gen-2.jpg"
@@ -2265,7 +2265,7 @@
     "descripcionIngles": "LEGO Bionicle set. Various figures or pieces, great for collectors or builders.",
     "categoria": "Juguetes y Peluches",
     "precio": "$20.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/lego-bionicle-2.jpg"
     ]
@@ -2287,7 +2287,7 @@
     "descripcionIngles": "Mandoline set with 5 cutting selectors. Ideal for easily slicing vegetables and fruits.",
     "categoria": "Cocina",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/mandolina-1.jpg"
     ]
@@ -2309,7 +2309,7 @@
     "descripcionIngles": "3-piece gardening kit. Includes basic tools for caring for your garden.",
     "categoria": "Jardinería",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/kit-jardineria-1.jpg"
     ]
@@ -2353,7 +2353,7 @@
     "descripcionIngles": "HDMI Splitter 1x2 (2 units). Allows duplicating one HDMI signal to two screens.",
     "categoria": "Electrónica",
     "precio": "$30.000 COP (cada uno)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/hdmi-splitter-1.jpg"
     ]
@@ -2364,7 +2364,7 @@
     "descripcionIngles": "Rechargeable shower speaker. Enjoy your music while showering.",
     "categoria": "Electrónica",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/parlante-ducha-1.jpg",
       "./images/parlante-ducha-2.jpg"
@@ -2387,7 +2387,7 @@
     "descripcionIngles": "TV mount for 17-32 inch TVs. Fixed or tilting, ideal for optimizing space.",
     "categoria": "Electrónica",
     "precio": "$30.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/soporte-tv-1.jpg"
     ]
@@ -2398,7 +2398,7 @@
     "descripcionIngles": "Bodyflex professional scooter. Sturdy and in good condition, ideal for transport or fun.",
     "categoria": "Deportes",
     "precio": "$80.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/monopatin-bodyflex-1.jpg",
       "./images/monopatin-bodyflex-2.jpg"
@@ -2410,7 +2410,7 @@
     "descripcionIngles": "Silver serving platters. Elegant, ideal for events or table decoration.",
     "categoria": "Cocina",
     "precio": "$70.000 COP (cada una)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/fuentes-plata-1.jpg"
     ]
@@ -2421,7 +2421,7 @@
     "descripcionIngles": "Miniature bath toys: whales and dolphins. Ideal for little ones' fun.",
     "categoria": "Juguetes y Peluches",
     "precio": "$5.000 COP (set)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/juguetes-bano-1.jpg"
     ]
@@ -2432,7 +2432,7 @@
     "descripcionIngles": "Soldering kit with bakelite and paper for circuit printing. For electronics projects.",
     "categoria": "Herramienta",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/kit-soldadura-1.jpg"
     ]
@@ -2443,7 +2443,7 @@
     "descripcionIngles": "Decorative disposable paper placemats. Ideal for parties or events.",
     "categoria": "Hogar",
     "precio": "$15.000 COP (paquete)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/individuales-papel-1.jpg"
     ]
@@ -2454,7 +2454,7 @@
     "descripcionIngles": "Embroidered decorative folder. Several units available. Elegant for documents or decoration.",
     "categoria": "Decoración",
     "precio": "$15.000 COP (cada una)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/carpeta-bordada-1.jpg"
     ]
@@ -2476,7 +2476,7 @@
     "descripcionIngles": "Sound system for playing and recording cassettes, with adjustable console and integrated radio. Ideal for retro music lovers.",
     "categoria": "Electrónica",
     "precio": "$60.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/sistema-sonido-cassette-1.jpg"
     ]
@@ -2487,7 +2487,7 @@
     "descripcionIngles": "Music discs. Wide variety of genres and artists. Price per unit.",
     "categoria": "Música",
     "precio": "$2.000 COP (cada uno)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/discos-musica-1.jpg"
     ]
@@ -2520,7 +2520,7 @@
     "descripcionIngles": "Various cables: HDMI, UTP network, phone. Ask us on WhatsApp for specific availability and prices.",
     "categoria": "Electrónica",
     "precio": "Consultar por WhatsApp",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/cables-varios-1.jpg",
       "./images/cables-varios-2.jpg"
@@ -2544,7 +2544,7 @@
     "descripcionIngles": "Artisanal wooden bowl. Decorative and functional for storing small items.",
     "categoria": "Juguetes y Peluches",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/coca-madera-1.jpg"
     ]
@@ -2555,7 +2555,7 @@
     "descripcionIngles": "Artisanal wooden spinning top. Classic and decorative toy.",
     "categoria": "Juguetes y Peluches",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/trompo-madera-1.jpg"
     ]
@@ -2566,7 +2566,7 @@
     "descripcionIngles": "Technical drawing kit with scale, set squares, compass, and drawing board. Complete for students or professionals.",
     "categoria": "Oficina",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/kit-dibujo-tecnico-1.jpg"
     ]
@@ -2577,7 +2577,7 @@
     "descripcionIngles": "Extendable clothesline. Ideal for optimizing space when drying clothes, folds easily.",
     "categoria": "Hogar",
     "precio": "$50.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/tendedero-1.jpg"
     ]
@@ -2599,7 +2599,7 @@
     "descripcionIngles": "CD holder. Ideal for organizing and protecting your CD collection.",
     "categoria": "Hogar",
     "precio": "$15.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/porta-cd-1.jpg"
     ]
@@ -2610,7 +2610,7 @@
     "descripcionIngles": "Necklaces with wasp trapped in resin. Unique and natural design, ideal for nature lovers.",
     "categoria": "Accesorios",
     "precio": "$15.000 COP (cada uno)",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/collar-avispa-1.jpg"
     ]
@@ -2633,7 +2633,7 @@
     "descripcionIngles": "Adjustable telescope. Ideal for astronomy enthusiasts or landscape viewing.",
     "categoria": "Electrónica",
     "precio": "$180.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/telescopio-1.jpg"
     ]
@@ -2644,7 +2644,7 @@
     "descripcionIngles": "Leather briefcase. Elegant and practical for documents, laptop, or daily use.",
     "categoria": "Accesorios",
     "precio": "$250.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/maletin-cuero-1.jpg"
     ]
@@ -2666,7 +2666,7 @@
     "descripcionIngles": "Duracell circular pencil case. Ideal for storing pencils, pens, or other small items.",
     "categoria": "Oficina",
     "precio": "$10.000 COP",
-    "disponibilidad": "si",
+    "disponibilidad": "no",
     "fotos": [
       "./images/cartuchera-duracell-1.jpg"
     ]
